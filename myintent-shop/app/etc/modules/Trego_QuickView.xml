@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<config>
-    <modules>
-        <Trego_QuickView>
-            <active>true</active>
-            <codePool>community</codePool>
-        </Trego_QuickView>
-    </modules>
-</config>
