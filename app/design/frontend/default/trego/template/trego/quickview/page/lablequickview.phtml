@@ -1,0 +1,26 @@
+<?php
+    $_dialogWidth   = Mage::helper('quickview/quickview')->getDialogWidth();
+    $_dialogHeight  = 'auto';
+    $_quickviewTitle = Mage::helper('quickview/quickview')->getTitle();
+	$currentUrl =  Mage::helper("core/url")->getCurrentUrl();
+	if (strpos($currentUrl,'index.php') !== false) {
+		$url = $this->getUrl();
+	}else{
+
+		$url = str_replace('index.php/','',$this->getUrl());
+	}
+?>
+<script type="text/javascript">
+//<![CDATA[
+	if (typeof Trego == 'undefined') Trego = {};
+	Trego.Quickview = {
+		BASE_URL : "<?php echo $url?>",
+		QV_FRM_WIDTH :"<?php echo $_dialogWidth?>",
+		QV_FRM_HEIGHT : "<?php echo $_dialogHeight?>",
+		QV_TITLE: "<?php echo $_quickviewTitle; ?>"
+	};
+//]]	
+</script> 
+<style>
+#fancybox-loading-overlay{background-color:<?php echo '#'.Mage::getStoreConfig('quickview/viewsetting/text_color1'); ?> !important;}
+</style>

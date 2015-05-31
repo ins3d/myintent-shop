@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Trego_QuickView>
+            <version>1.0.0</version>
+        </Trego_QuickView>
+    </modules>
+
+    <global>
+        <blocks>
+            <quickview>
+                <class>Trego_QuickView_Block</class>
+            </quickview>
+        </blocks>
+        <helpers>
+            <quickview>
+                <class>Trego_QuickView_Helper</class>
+            </quickview>
+        </helpers>
+
+        <models>
+            <quickview>
+                <class>Trego_QuickView_Model</class>
+            </quickview>
+        </models>
+    </global>
+    <frontend>
+        <routers>
+            <quickview>
+                <use>standard</use>
+                <args>
+                    <module>Trego_QuickView</module>
+                    <frontName>quickview</frontName>
+                </args>
+            </quickview>
+        </routers>
+        <layout>
+            <updates>
+                <quickview>
+                    <file>trego_quickview.xml</file>
+                </quickview>
+            </updates>
+        </layout>
+    </frontend>
+
+    <frontend>
+        <events>
+            <controller_action_postdispatch_catalog_product_compare_add>
+                <observers>
+                    <quickview>
+                        <type>singleton</type>
+                        <class>quickview/observer</class>
+                        <method>compareRedirect</method>
+                    </quickview>
+                </observers>
+            </controller_action_postdispatch_catalog_product_compare_add>
+            <controller_action_layout_load_before>
+                <observers>
+                    <quickview_check_referer_url>
+                        <type>singleton</type>
+                        <class>quickview/observer</class>
+                        <method>checkRefererUrl</method>
+                    </quickview_check_referer_url>
+                </observers>
+            </controller_action_layout_load_before>
+        </events>
+    </frontend>
+
+    <default>
+        <quickview>
+            <viewsetting>
+                <enableview>1</enableview>
+                <dialog_width>890</dialog_width>
+                <title><![CDATA[<i class='icon-eye'></i>]]></title>
+            </viewsetting>
+        </quickview>
+    </default>
+</config>
