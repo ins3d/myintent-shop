@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Trego_Ajaxcart>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Trego_Ajaxcart>
+    </modules>
+</config> 
