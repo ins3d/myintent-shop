@@ -448,3 +448,22 @@
 2015-05-31T00:17:36+00:00 ERR (3): Warning: ksort() expects parameter 1 to be array, boolean given  in /var/www/html/magento/downloader/lib/Mage/Connect/Rest.php on line 240
 2015-05-31T00:17:36+00:00 ERR (3): Warning: array_combine(): Both parameters should have at least 1 element  in /var/www/html/magento/downloader/lib/Mage/Connect/Rest.php on line 239
 2015-05-31T00:17:36+00:00 ERR (3): Warning: ksort() expects parameter 1 to be array, boolean given  in /var/www/html/magento/downloader/lib/Mage/Connect/Rest.php on line 240
+2015-06-07T22:18:20+00:00 ERR (3): Notice: Undefined variable: code  in /srv/www/prod_myintent_shop/releases/20150603044746/app/design/frontend/default/trego/template/trego/topmenu/type2.phtml on line 104
+2015-06-07T22:18:20+00:00 ERR (3): Notice: Undefined variable: code  in /srv/www/prod_myintent_shop/releases/20150603044746/app/design/frontend/default/trego/template/trego/topmenu/type2.phtml on line 105
+2015-06-07T22:33:39+00:00 ERR (3): Notice: Undefined variable: code  in /srv/www/prod_myintent_shop/releases/20150603044746/app/design/frontend/default/trego/template/trego/topmenu/type2.phtml on line 104
+2015-06-07T22:33:39+00:00 ERR (3): Notice: Undefined variable: code  in /srv/www/prod_myintent_shop/releases/20150603044746/app/design/frontend/default/trego/template/trego/topmenu/type2.phtml on line 105
+2015-06-07T22:38:30+00:00 ERR (3): Notice: Undefined variable: code  in /srv/www/prod_myintent_shop/releases/20150603044746/app/design/frontend/default/trego/template/trego/topmenu/type2.phtml on line 104
+2015-06-07T22:38:30+00:00 ERR (3): Notice: Undefined variable: code  in /srv/www/prod_myintent_shop/releases/20150603044746/app/design/frontend/default/trego/template/trego/topmenu/type2.phtml on line 105
+2015-06-07T22:38:35+00:00 ERR (3): Notice: Uninitialized string offset: 0  in /srv/www/prod_myintent_shop/releases/20150603044746/app/code/community/Trego/QuickView/controllers/IndexController.php on line 14
+2015-06-07T22:40:08+00:00 ERR (3): Notice: Undefined variable: code  in /srv/www/prod_myintent_shop/releases/20150603044746/app/design/frontend/default/trego/template/trego/topmenu/type2.phtml on line 104
+2015-06-07T22:40:08+00:00 ERR (3): Notice: Undefined variable: code  in /srv/www/prod_myintent_shop/releases/20150603044746/app/design/frontend/default/trego/template/trego/topmenu/type2.phtml on line 105
+2015-06-07T22:40:53+00:00 ERR (3): Notice: Undefined variable: code  in /srv/www/prod_myintent_shop/releases/20150603044746/app/design/frontend/default/trego/template/trego/topmenu/type2.phtml on line 104
+2015-06-07T22:40:53+00:00 ERR (3): Notice: Undefined variable: code  in /srv/www/prod_myintent_shop/releases/20150603044746/app/design/frontend/default/trego/template/trego/topmenu/type2.phtml on line 105
+2015-06-07T23:00:41+00:00 ERR (3): Notice: Undefined variable: code  in /srv/www/prod_myintent_shop/releases/20150603044746/app/design/frontend/default/trego/template/trego/topmenu/type2.phtml on line 104
+2015-06-07T23:00:41+00:00 ERR (3): Notice: Undefined variable: code  in /srv/www/prod_myintent_shop/releases/20150603044746/app/design/frontend/default/trego/template/trego/topmenu/type2.phtml on line 105
+2015-06-07T23:04:07+00:00 ERR (3): Notice: Undefined variable: code  in /srv/www/prod_myintent_shop/releases/20150603044746/app/design/frontend/default/trego/template/trego/topmenu/type2.phtml on line 104
+2015-06-07T23:04:07+00:00 ERR (3): Notice: Undefined variable: code  in /srv/www/prod_myintent_shop/releases/20150603044746/app/design/frontend/default/trego/template/trego/topmenu/type2.phtml on line 105
+2015-06-07T23:08:55+00:00 ERR (3): Notice: Undefined variable: code  in /srv/www/prod_myintent_shop/releases/20150603044746/app/design/frontend/default/trego/template/trego/topmenu/type2.phtml on line 104
+2015-06-07T23:08:55+00:00 ERR (3): Notice: Undefined variable: code  in /srv/www/prod_myintent_shop/releases/20150603044746/app/design/frontend/default/trego/template/trego/topmenu/type2.phtml on line 105
+2015-06-07T23:11:30+00:00 ERR (3): Notice: Undefined variable: code  in /srv/www/prod_myintent_shop/releases/20150603044746/app/design/frontend/default/trego/template/trego/topmenu/type2.phtml on line 104
+2015-06-07T23:11:30+00:00 ERR (3): Notice: Undefined variable: code  in /srv/www/prod_myintent_shop/releases/20150603044746/app/design/frontend/default/trego/template/trego/topmenu/type2.phtml on line 105
