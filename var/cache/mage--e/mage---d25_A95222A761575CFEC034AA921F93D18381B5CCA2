@@ -1,0 +1,59 @@
+
+<div class="nav-container">
+    <a id="mobnav">Menu</a>
+<ul id="nav" class="menutype2"><li class="level0"><a href ="http://shop.myintent.org/create.html"><span>CREATE</span><em class="clear"></em></a><span class="plus"></span><ul class="level1"><li class="level1"><a href ="http://shop.myintent.org/create/bracelet.html"><span>BRACELET</span><em class="clear"></em></a></li><li class="level1"><a href ="http://shop.myintent.org/create/necklace.html"><span>NECKLACE</span><em class="clear"></em></a></li></ul></li><li class="level0"><a href ="http://shop.myintent.org/about-us.html"><span>ABOUT US</span><em class="clear"></em></a></li><li class="level0"><a href ="http://shop.myintent.org/resources.html"><span>RESOURCES</span><em class="clear"></em></a></li><li class="level0"><a href ="http://shop.myintent.org/news.html"><span>NEWS</span><em class="clear"></em></a></li><li class="level0"><a href ="http://shop.myintent.org/contacts.html"><span>CONTACTS</span><em class="clear"></em></a></li><li class="level0"><a href ="http://shop.myintent.org/terms.html"><span>TERMS</span><em class="clear"></em></a></li><li class="level0"><a href ="http://shop.myintent.org/my-account.html"><span>MY ACCOUNT</span><em class="clear"></em></a></li></ul></div><script type="text/javascript">
+jQuery(document).ready(function(){
+    jQuery('.header-bground').append('<div class="tablet-overlay"></div>');
+    jQuery("#nav li span.plus").click(function(event){
+        event.stopPropagation();
+        jQuery(".form-language .select-language .sbOptions").slideUp('fast');
+        jQuery(".form-language .select-language .sbToggle").removeClass('sbToggleOpen');
+        if(jQuery(this).hasClass('expanded')){
+            jQuery(this).removeClass('expanded');
+            jQuery(this).parent().removeClass('expanded');
+            if(jQuery(this).parent().hasClass('level0'))
+            {
+                jQuery('.header-bground').removeClass('menu-expanded');
+            }
+            if(jQuery(window).width()>1024)
+                jQuery(this).parent().children('ul').slideUp('fast');
+            else if(jQuery(window).width()<768){
+                jQuery(this).parent().children('ul').slideUp('fast');
+            }
+            else{
+                jQuery(this).parent().children('ul').hide();
+                jQuery('.tablet-overlay').hide();
+            }
+        } else {
+            jQuery(this).parent().parent().children('li.expanded').children('ul').hide();
+            jQuery(this).parent().parent().children('li.expanded').children('ul.expended').removeClass('expanded');
+            jQuery(this).parent().parent().children('li.expanded').children('span.expanded').removeClass('expanded');
+            jQuery(this).parent().parent().children('li').children('ul').children('li.expanded').children('ul').hide();
+            jQuery(this).parent().parent().children('li').children('ul').children('li.expanded').children('span.expanded').removeClass('expanded');
+            jQuery(this).parent().parent().children('li').children('ul').children('li.expanded').removeClass('expanded');
+            jQuery(this).parent().parent().children('li.expanded').removeClass('expanded');
+            jQuery('.tablet-overlay').hide();
+            jQuery(this).addClass('expanded');
+            jQuery(this).parent().addClass('expanded');
+            if(jQuery(this).parent().hasClass('level0'))
+            {
+                jQuery('.header-bground').addClass('menu-expanded');
+            }
+            if(jQuery(window).width()>1024)
+                jQuery(this).parent().children('ul').slideDown('fast');
+            else if(jQuery(window).width()<768){
+                jQuery(this).parent().children('ul').slideDown('fast');
+            }
+            else{
+                jQuery(this).parent().children('ul').fadeIn();
+                if(jQuery('li.level1.expanded').length > 0)
+                {
+                    var count = jQuery('li.level1.expanded').children('ul').children().length;
+                    jQuery('.tablet-overlay').css('height', ((Math.ceil(count/2))*81+22)+'px');
+                    jQuery('.tablet-overlay').fadeIn();
+                }
+            }
+        }
+    });
+});
+</script>
