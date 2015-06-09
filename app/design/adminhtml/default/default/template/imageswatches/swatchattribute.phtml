@@ -1,0 +1,155 @@
+<?php
+/**
+ * ShopShark Image Swatches Extension
+ * @version   1.0 09.05.2014
+ * @author    ShopShark http://www.shopshark.net <info@shopshark.net>
+ * @copyright Copyright (C) 2010 - 2014 ShopShark
+ */
+
+$optionList = $this->getAttribute()->getSource()->getAllOptions(false);
+if (count($optionList) > 0): ?>
+<?php echo $this->helper('adminhtml/js')->includeScript('lib/flex.js') ?>
+<?php echo $this->helper('adminhtml/js')->includeScript('mage/adminhtml/flexuploader.js') ?>
+<?php echo $this->helper('adminhtml/js')->includeScript('lib/FABridge.js') ?>
+<script type="text/javascript">
+	var maxUploadFileSizeInBytes = <?php echo $this->getDataMaxSizeInBytes() ?>;
+	var maxUploadFileSize = '<?php echo $this->getDataMaxSize() ?>';
+	var uploaderList = [];
+</script>
+<?php endif; ?>
+<table class="form-list" cellspacing="0" id="swatches_table" width="100%"><tbody><tr><td class="value" colspan="3" style="width: 100%;">
+<div class="grid">
+<table class="data border" cellspacing="0" id="swatches_table_grid" width="100%">
+    <thead>
+    	<tr class="headings">
+            <th width="100">
+                <span class="nobr"><?php echo $this->__('Label Name');?></span>
+            </th>
+            <th>
+                <span class="nobr"><?php echo $this->__('Image Preview');?></span>
+            </th>
+            <th width="70">
+                <span class="nobr"><?php echo $this->__('Remove');?></span>
+            </th>
+            <th width="200" class="last">
+                <span class="nobr"><?php echo $this->__('Image Upload');?></span>
+            </th>
+    	</tr>
+    </thead>
+    <tbody>
+        <?php if (count($optionList) == 0): ?>
+            <tr><th><?php echo $this->__('No options for this attribute');?></th></tr>
+        <?php else: ?>
+            <?php $sizes = ShopShark_Imageswatches_Helper_Data::getThumbnailSize(); ?>
+            <?php foreach ($optionList as $option) : ?>
+                <tr>
+                    <td class="a-center">
+                        <strong><?php echo $option['label']; ?></strong>
+                    </td>
+                    <td class="a-center">
+                        <div>
+                            <div id="is-image-preview-<?php echo $option['value'] ?>" >
+                                <?php $swatchModel = $this->getSwatchByOptionId($option['value']); ?>
+                                <?php $thumbnail = $swatchModel->getThumbnail(); ?>
+                                <?php if ($thumbnail):?>
+                                    <img height="<?php echo $sizes['height'] ?>" width="<?php echo $sizes['width'] ?>" src="<?php echo $thumbnail?>" />
+                                <?php else:?>
+                                    <div style="text-align:center; border:1px solid grey; height:<?php echo $sizes['height'] ?>px; width:<?php echo $sizes['width'] ?>px; display: inline-block;"><?php echo $this->__('No Image');?></div>
+                                <?php endif;?>
+                            </div>
+                            <input type="hidden" name="is[swatch][<?php echo $option['value'] ?>][option]" value="<?php echo $option['value']; ?>" />
+                            <input type="hidden" name="is[swatch][<?php echo $option['value'] ?>][file]" value="<?php echo $swatchModel->getImage(); ?>" />
+                        </div>
+                    </td>
+                    <td class="a-center">
+                    	<input type="checkbox" id="is-delete-<?php echo $option['value'] ?>" <?php if(!$thumbnail): ?>disabled<?php endif?> name="is[swatch][<?php echo $option['value'] ?>][delete_image]" value="<?php echo $option['value'] ?>">
+					</td>
+                    <td class="last">
+                        <?php $htmlId = "IS" . $option['value']; ?>
+
+                        <div class="no-display" id="<?php echo $htmlId ?>-template">
+                            <div id="{{id}}" class="file-row file-row-narrow">
+                            <span class="file-info">
+                                <span class="file-info-name">{{name}}</span>
+                                <span class="file-info-size">({{size}})</span>
+                            </span>
+                                <div class="progress-text"></div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+
+                        <div id="<?php echo $htmlId ?>" class="uploader">
+                            <div id="<?php echo $htmlId ?>-old" class="file-row-info"></div>
+                            <div id="<?php echo $htmlId ?>-new" class="file-row-info"></div>
+                            <div class="buttons">
+                                <div id="<?php echo $htmlId; ?>-install-flash" style="display:none">
+                                    <?php echo Mage::helper('media')->__('This content requires last version of Adobe Flash Player. <a href="%s">Get Flash</a>', 'http://www.adobe.com/go/getflash/') ?>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="no-display" id="<?php echo $htmlId ?>-template-progress">
+                                {{percent}}% {{uploaded}} / {{total}}
+                            </div>
+                        </div>
+
+                        <script type="text/javascript">
+                            var is_option_<?php echo $option['value'] ?> = new Flex.Uploader('<?php echo $htmlId ?>', '<?php echo $this->getSkinUrl('media/uploaderSingle.swf') ?>', <?php echo $this->getConfigJson($htmlId) ?>);
+                            is_option_<?php echo $option['value'] ?>.onFilesComplete = function(completedFiles) {
+                                completedFiles.each(
+                                    function (file) {
+                                        try {
+                                            eval('var result = ' + file.response);
+                                        } catch(e) {
+                                            return;
+                                        }
+
+                                        var imageInputContainer = is_option_<?php echo $option['value'] ?>.container.up('tr').down('td').next();
+                                        imageInputContainer.select('input[name="is[swatch][<?php echo $option['value'] ?>][file]"]').first().setValue(result['file_name']);
+                                        imageInputContainer.next().select('input[name="is[swatch][<?php echo $option['value'] ?>][delete_image]"]').first().enable();
+
+                                        var imageContainer = $('is-image-preview-<?php echo $option['value'] ?>');
+                                        var image = new Element('img');
+                                        var imageUrl = '<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'shopshark' . DS . 'imageswatches' . DS; ?>' + result['file_name'];
+                                        image.setAttribute('src', imageUrl);
+                                        image.setAttribute('height', '<?php echo $sizes['height'] ?>');
+                                        image.setAttribute('width', '<?php echo $sizes['width'] ?>');
+                                        imageContainer.update(image);
+
+                                        is_option_<?php echo $option['value'] ?>.removeFile(file.id);
+                                    }
+                                );
+                                MediabrowserInstance.handleUploadComplete();
+                            };
+                            uploaderList.push(is_option_<?php echo $option['value'] ?>);
+                            if ($('<?php echo $htmlId ?>-flash') != undefined) {
+                                $('<?php echo $htmlId ?>-flash').setStyle({float:'left'});
+                            }
+                        </script>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+        <?php endif; ?>
+    </tbody>
+    <tfoot>
+    <tr>
+        <td colspan="100" class="a-right">
+			<?php if (count($optionList) > 0): ?>
+                <div style="padding: 10px;"><?php echo $this->getUploadAllButtonHtml(); ?></div>
+                <script type="text/javascript">
+                    Event.observe($('is-upload-all'), 'click', function (e) {
+                        uploaderList.each(
+                            function (item) {
+                                item.upload();
+                            }
+                        );
+                        Event.stop(e);
+                    });
+                </script>
+            <?php endif; ?>
+        </td>
+    </tr>
+	</tfoot>
+</table>
+</div>
+</td></tr></tbody>
+</table>
