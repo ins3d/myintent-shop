@@ -1,1 +1,1 @@
-/srv/www/prod_myintent_shop/shared/config/opsworks.php
+/srv/www/myintent_shop/shared/config/opsworks.php
