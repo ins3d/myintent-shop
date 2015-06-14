@@ -21,7 +21,7 @@
  *
  * @category    design
  * @package     rwd_default
- * @copyright   Copyright (c) 2006-2014 X.commerce, Inc. (http://www.magento.com)
+ * @copyright   Copyright (c) 2006-2015 X.commerce, Inc. (http://www.magento.com)
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 -->
@@ -36,17 +36,9 @@
             <block type="core/template" name="product_list.swatches" template="configurableswatches/catalog/product/list/swatches.phtml" />
         </reference>
         <reference name="product_list.after">
-            <block type="trego/configurableswatches_catalog_media_js_list" name="configurableswatches.media.js.list" />
+            <block type="configurableswatches/catalog_media_js_list" name="configurableswatches.media.js.list" />
         </reference>
     </product_list>
-
-	<default>
-		<reference name="head">
-			<action method="addItem"><type>skin_js</type><name>js/lib/imagesloaded.js</name></action>
-			<action method="addItem"><type>skin_js</type><name>js/configurableswatches/app.js</name></action>
-			<action method="addCss"><stylesheet>css/configurableswatches.css</stylesheet></action>
-		</reference>
-	</default>
 
     <catalog_category_default>
         <update handle="product_list"/>
@@ -74,7 +66,7 @@
             <action method="setGalleryFilterMethod"><method>filterImageInGallery</method></action>
         </reference>
         <reference name="product.info.media.after">
-            <block type="trego/configurableswatches_catalog_media_js_product" name="configurableswatches.media.js.product" />
+            <block type="configurableswatches/catalog_media_js_product" name="configurableswatches.media.js.product" />
         </reference>
         <reference name="product.info.options.configurable.renderers">
             <block type="configurableswatches/catalog_product_view_type_configurable_swatches" template="configurableswatches/catalog/product/view/type/options/configurable/swatches.phtml" />
