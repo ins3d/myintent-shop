@@ -2,36 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="867323e0-38a2-4be6-adab-f5cedd440f87" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/skin/frontend/default/default/images/bg_x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/skin/frontend/default/trego/images/bg_x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/skin/frontend/default/trego/js/app.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/skin/frontend/default/trego/js/lib/enquire.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/skin/frontend/default/trego/js/lib/fastclick.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/skin/frontend/default/trego/js/lib/jquery.cycle2.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/skin/frontend/default/trego/js/lib/jquery.cycle2.swipe.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/skin/frontend/default/trego/js/lib/elevatezoom/jquery.elevateZoom-3.0.8.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/skin/frontend/default/trego/js/lib/elevatezoom/jquery.elevatezoom.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/skin/frontend/default/trego/js/lib/matchMedia.addListener.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/skin/frontend/default/trego/js/lib/matchMedia.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/skin/frontend/default/trego/js/minicart.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/skin/frontend/default/trego/js/lib/modernizr.custom.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/skin/frontend/default/trego/js/lib/selectivizr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/skin/frontend/default/trego/js/slideshow.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/design/frontend/default/trego/template/catalog/product/view/type/options/configurable.phtml" afterPath="$PROJECT_DIR$/app/design/frontend/default/trego/template/catalog/product/view/type/options/configurable.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/design/frontend/default/trego/layout/configurableswatches.xml" afterPath="$PROJECT_DIR$/app/design/frontend/default/trego/layout/configurableswatches.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/design/frontend/default/trego/template/configurableswatches/catalog/media/js.phtml" afterPath="$PROJECT_DIR$/app/design/frontend/default/trego/template/configurableswatches/catalog/media/js.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/design/frontend/default/trego/layout/local.xml" afterPath="$PROJECT_DIR$/app/design/frontend/default/trego/layout/local.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/design/frontend/default/trego/template/catalog/product/view/media.phtml" afterPath="$PROJECT_DIR$/app/design/frontend/default/trego/template/catalog/product/view/media.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skin/frontend/default/trego/js/configurableswatches/product-media.js" afterPath="$PROJECT_DIR$/skin/frontend/default/trego/js/configurableswatches/product-media.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skin/frontend/default/trego/css/styles.css" afterPath="$PROJECT_DIR$/skin/frontend/default/trego/css/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/design/frontend/default/trego/template/configurableswatches/catalog/product/view/type/configurable/swatch-js.phtml" afterPath="$PROJECT_DIR$/app/design/frontend/default/trego/template/configurableswatches/catalog/product/view/type/configurable/swatch-js.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/design/frontend/default/trego/template/configurableswatches/catalog/layer/state/swatch.phtml" afterPath="$PROJECT_DIR$/app/design/frontend/default/trego/template/configurableswatches/catalog/layer/state/swatch.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skin/frontend/default/trego/js/configurableswatches/swatches-list.js" afterPath="$PROJECT_DIR$/skin/frontend/default/trego/js/configurableswatches/swatches-list.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skin/frontend/default/trego/js/configurableswatches/swatches-product.js" afterPath="$PROJECT_DIR$/skin/frontend/default/trego/js/configurableswatches/swatches-product.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/design/frontend/default/trego/template/configurableswatches/catalog/layer/filter/swatches.phtml" afterPath="$PROJECT_DIR$/app/design/frontend/default/trego/template/configurableswatches/catalog/layer/filter/swatches.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/design/frontend/default/trego/template/configurableswatches/catalog/product/list/swatches.phtml" afterPath="$PROJECT_DIR$/app/design/frontend/default/trego/template/configurableswatches/catalog/product/list/swatches.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/design/frontend/default/trego/template/configurableswatches/catalog/product/view/type/options/configurable/swatches.phtml" afterPath="$PROJECT_DIR$/app/design/frontend/default/trego/template/configurableswatches/catalog/product/view/type/options/configurable/swatches.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/etc/local.xml" afterPath="$PROJECT_DIR$/app/etc/local.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="myintent-shop.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -54,19 +26,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="local.xml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="local.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/etc/local.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="36" selection-start="1262" selection-end="1262" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="1080">
+            <state line="42" column="97" selection-start="1554" selection-end="1554" vertical-scroll-proportion="0.57877815" vertical-offset="270" max-vertical-offset="1080">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="swatch.phtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/design/frontend/default/trego/template/configurableswatches/catalog/layer/state/swatch.phtml">
+      <file leaf-file-name=".htaccess" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.htaccess">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="630">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4515">
               <folding />
             </state>
           </provider>
@@ -75,7 +47,7 @@
       <file leaf-file-name="configurable.phtml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/design/frontend/default/trego/template/catalog/product/view/type/options/configurable.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="750">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1095">
               <folding />
             </state>
           </provider>
@@ -84,7 +56,7 @@
       <file leaf-file-name="media.phtml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/design/frontend/default/trego/template/catalog/product/view/media.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="885">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1230">
               <folding />
             </state>
           </provider>
@@ -102,7 +74,7 @@
       <file leaf-file-name="enquire.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/skin/frontend/default/trego/js/lib/enquire.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4410">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4470">
               <folding />
             </state>
           </provider>
@@ -129,16 +101,16 @@
       <file leaf-file-name="local.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/design/frontend/default/trego/layout/local.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="171" column="20" selection-start="12965" selection-end="12965" vertical-scroll-proportion="210.65384" vertical-offset="8042" max-vertical-offset="8625">
+            <state line="171" column="20" selection-start="12965" selection-end="12965" vertical-scroll-proportion="0.0" vertical-offset="8042" max-vertical-offset="8625">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="styles.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="styles.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/skin/frontend/default/trego/css/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5822" column="16" selection-start="199487" selection-end="199487" vertical-scroll-proportion="0.45969126" vertical-offset="87062" max-vertical-offset="90255">
+            <state line="5822" column="16" selection-start="199487" selection-end="199487" vertical-scroll-proportion="0.0" vertical-offset="87062" max-vertical-offset="90255">
               <folding />
             </state>
           </provider>
@@ -159,12 +131,13 @@
       <list>
         <option value="$PROJECT_DIR$/app/design/frontend/default/trego/layout/local.xml" />
         <option value="$PROJECT_DIR$/skin/frontend/default/trego/css/styles.css" />
+        <option value="$PROJECT_DIR$/app/etc/local.xml" />
       </list>
     </option>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
   <component name="ProjectFrameBounds">
-    <option name="y" value="57" />
+    <option name="y" value="24" />
     <option name="width" value="1280" />
     <option name="height" value="742" />
   </component>
@@ -255,27 +228,28 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="57" width="1280" height="742" extended-state="0" />
+    <frame x="0" y="24" width="1280" height="742" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -295,11 +269,79 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/trego/template/trego/homeslider/homeslider.phtml">
+    <entry file="file://$PROJECT_DIR$/app/etc/local.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="107" selection-start="3490" selection-end="3496" vertical-scroll-proportion="-11.25" vertical-offset="690" max-vertical-offset="3105">
+        <state line="38" column="47" selection-start="1371" selection-end="1371" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="1080">
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4515">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/trego/template/catalog/product/view/type/options/configurable.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1095">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/trego/template/catalog/product/view/media.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1230">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skin/frontend/default/trego/js/configurableswatches/product-media.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skin/frontend/default/trego/js/lib/enquire.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4470">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skin/frontend/default/trego/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="19260">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/trego/layout/configurableswatches.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1275">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/trego/layout/local.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="171" column="20" selection-start="12965" selection-end="12965" vertical-scroll-proportion="0.0" vertical-offset="8042" max-vertical-offset="8625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skin/frontend/default/trego/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5822" column="16" selection-start="199487" selection-end="199487" vertical-scroll-proportion="0.0" vertical-offset="87062" max-vertical-offset="90255">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/default/trego/template/trego/homeslider/homeslider.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="107" selection-start="3490" selection-end="3496" vertical-scroll-proportion="-11.25" vertical-offset="690" max-vertical-offset="3105" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LICENSE.html">
@@ -332,43 +374,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="622">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="622" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Mage.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="7" selection-start="1424" selection-end="1424" vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="14595">
-          <folding />
-        </state>
+        <state line="38" column="7" selection-start="1424" selection-end="1424" vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="14595" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="17.875" vertical-offset="429" max-vertical-offset="1050">
-          <folding>
-            <marker date="1434315782000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1434315782000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434315782000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1434315782000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434315782000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1434315782000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434315782000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/get.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="65.083336" vertical-offset="1562" max-vertical-offset="2850">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/etc/local.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="36" selection-start="1262" selection-end="1262" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="1080">
           <folding />
         </state>
       </provider>
@@ -424,14 +447,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/design/frontend/default/trego/layout/local.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="171" column="20" selection-start="12965" selection-end="12965" vertical-scroll-proportion="210.65384" vertical-offset="8042" max-vertical-offset="8625">
+        <state line="171" column="20" selection-start="12965" selection-end="12965" vertical-scroll-proportion="0.0" vertical-offset="8042" max-vertical-offset="8625">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/skin/frontend/default/trego/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5822" column="16" selection-start="199487" selection-end="199487" vertical-scroll-proportion="0.45969126" vertical-offset="87062" max-vertical-offset="90255">
+        <state line="5822" column="16" selection-start="199487" selection-end="199487" vertical-scroll-proportion="0.0" vertical-offset="87062" max-vertical-offset="90255">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4515">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/etc/local.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="97" selection-start="1554" selection-end="1554" vertical-scroll-proportion="0.57877815" vertical-offset="270" max-vertical-offset="1080">
           <folding />
         </state>
       </provider>
