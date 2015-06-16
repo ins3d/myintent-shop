@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="867323e0-38a2-4be6-adab-f5cedd440f87" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skin/frontend/default/trego/js/app.js" afterPath="$PROJECT_DIR$/skin/frontend/default/trego/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skin/frontend/default/trego/js/configurableswatches/product-media.js" afterPath="$PROJECT_DIR$/skin/frontend/default/trego/js/configurableswatches/product-media.js" />
     </list>
     <ignored path="myintent-shop.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,10 +46,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/skin/frontend/default/trego/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="112" column="3" selection-start="4157" selection-end="4157" vertical-scroll-proportion="0.46061644" vertical-offset="1411" max-vertical-offset="19290">
+            <state line="114" column="0" selection-start="4184" selection-end="4184" vertical-scroll-proportion="-2.8846154" vertical-offset="1635" max-vertical-offset="19290">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="product-media.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/skin/frontend/default/trego/js/configurableswatches/product-media.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="3" selection-start="946" selection-end="946" vertical-scroll-proportion="0.59075344" vertical-offset="0" max-vertical-offset="3630">
               <folding />
             </state>
           </provider>
@@ -139,6 +149,7 @@
         <option value="$PROJECT_DIR$/app/design/frontend/default/trego/layout/local.xml" />
         <option value="$PROJECT_DIR$/app/etc/local.xml" />
         <option value="$PROJECT_DIR$/skin/frontend/default/trego/js/app.js" />
+        <option value="$PROJECT_DIR$/skin/frontend/default/trego/js/configurableswatches/product-media.js" />
       </list>
     </option>
   </component>
@@ -277,6 +288,40 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myintent-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myintent-shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="skin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trego" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="configurableswatches" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -668,11 +713,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="750" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/skin/frontend/default/trego/js/configurableswatches/product-media.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3615" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/skin/frontend/default/trego/js/lib/enquire.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4410" />
@@ -873,7 +913,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/skin/frontend/default/trego/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="3" selection-start="4157" selection-end="4157" vertical-scroll-proportion="0.46061644" vertical-offset="1411" max-vertical-offset="19290">
+        <state line="114" column="0" selection-start="4184" selection-end="4184" vertical-scroll-proportion="-2.8846154" vertical-offset="1635" max-vertical-offset="19290">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skin/frontend/default/trego/js/configurableswatches/product-media.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="3" selection-start="946" selection-end="946" vertical-scroll-proportion="0.59075344" vertical-offset="0" max-vertical-offset="3630">
           <folding />
         </state>
       </provider>
