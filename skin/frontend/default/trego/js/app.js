@@ -111,6 +111,8 @@ Varien.searchForm.prototype.blur = function (event) {
  *   is using touch pointer input, or has switched from mouse to touch input.
  *   It can be observed in this manner: $j(window).on('touch-detected', function(event) { // custom code });
  */
+$j = jQuery.noConflict();
+
 var PointerManager = {
     MOUSE_POINTER_TYPE: 'mouse',
     TOUCH_POINTER_TYPE: 'touch',
