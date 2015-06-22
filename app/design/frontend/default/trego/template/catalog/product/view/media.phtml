@@ -45,12 +45,16 @@ $_helper = $this->helper('catalog/output');
              title="<?php echo $this->escapeHtml($this->getImageLabel()); ?>" />
 
         <?php $i=0; foreach ($this->getGalleryImages() as $_image): ?>
-            <?php if ($this->isGalleryImageVisible($_image)): ?>
+            <?php
+
+                //if ($this->isGalleryImageVisible($_image)): ?>
                 <img id="image-<?php echo $i; ?>"
                      class="gallery-image"
                      src="<?php echo $this->getGalleryImageUrl($_image); ?>"
                      data-zoom-image="<?php echo  $this->getGalleryImageUrl($_image); ?>" />
-            <?php endif; ?>
+            <?php
+
+                //endif; ?>
             <?php $i++; endforeach; ?>
     </div>
 </div>
