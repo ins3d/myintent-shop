@@ -22,7 +22,7 @@
  * @copyright   Copyright (c) 2006-2015 X.commerce, Inc. (http://www.magento.com)
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
-$j = jQuery.noConflict();
+//$j = jQuery.noConflict();
 
 var ConfigurableMediaImages = {
     imageType: null,

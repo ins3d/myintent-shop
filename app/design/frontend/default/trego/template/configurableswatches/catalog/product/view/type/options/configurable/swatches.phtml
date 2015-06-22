@@ -72,7 +72,7 @@ $_swatchArray = $_config->attributes->$_id;
                        style="height: <?php echo $_swatchOuterHeight ?>px; <?php if (!$_hasImage): ?>min-<?php endif; ?>width: <?php echo $_swatchOuterWidth ?>px;">
                 <span class="swatch-label" style="height: <?php echo $_swatchInnerHeight ?>px; <?php if (!$_hasImage): ?>min-<?php endif; ?>width: <?php echo $_swatchInnerWidth ?>px; line-height: <?php echo $_swatchInnerHeight ?>px;">
                 <?php if ($_hasImage): ?>
-                    <img src="<?php echo $_swatchUrl; ?>" alt="<?php echo $_option->label; ?>" width="<?php echo $_swatchInnerWidth ?>" height="<?php echo $_swatchInnerHeight ?>" />
+                    <img src="<?php echo $_swatchUrl; ?>" alt="<?php echo $_option->label; ?>" width="<?php echo $_swatchInnerWidth ?>" height="<?php echo $_swatchInnerHeight ?>" onclick="" />
                 <?php else: ?>
                     <?php echo $_option->label; ?>
                 <?php endif; ?>
