@@ -12,8 +12,6 @@ Default layout, loads most of the pages
             <action method="setTemplate"><template>page/1column.phtml</template></action>
         </reference>
         <reference name="head">
-            <action method="addJs"><script>trego/jquery/jquery-1.9.1.min.js</script></action>
-            <action method="addJs"><script>trego/jquery/jquery-noconflict.js</script></action>
             <action method="addJs"><script>trego/jquery/plugins/jquery.easing.min.js</script></action>
             <action method="addJs"><script>trego/jquery/plugins/jquery-ui-1.9.2.min.js</script></action>
             <action method="addJs"><script>trego/jquery/plugins/jquery.placeholder.1.3.min.js</script></action>
@@ -22,12 +20,28 @@ Default layout, loads most of the pages
             <action method="addItem"><type>js_css</type><name>ajaxcart/fancybox/jquery.fancybox.css</name></action>
             <action method="addItem"><type>js_css</type><name>ajaxcart/ajaxaddto.css</name></action>
             <block type="core/template" name="ajaxcart_head" template="ajaxcart/head.phtml"/>
+
             
             <action method="addItem"><type>skin_js</type><name>js/mobile-custom.js</name><params/></action>
             <action method="addItem"><type>skin_js</type><name>js/css3-mediaqueries.js</name><params/><if>lt IE 9</if></action>
             <action method="addItem"><type>skin_js</type><name>js/jquery.selectbox.js</name><params/></action>
             <action method="addItem"><type>skin_js</type><name>jquery_nicescroll/jquery.nicescroll.js</name><params/></action>
             <action method="addItem"><type>skin_js</type><name>js/twitterfetcher.js</name><params/></action>
+            <action method="addItem"><type>skin_js</type><name>js/lib/modernizr.custom.min.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/lib/selectivizr.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/lib/matchMedia.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/lib/matchMedia.addListener.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/lib/enquire.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/app.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/lib/jquery.cycle2.min.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/lib/jquery.cycle2.swipe.min.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/slideshow.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/lib/imagesloaded.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/minicart.js</name></action>
+
+            <action method="addItem"><type>skin_js</type><name>js/configurableswatches/swatches-product.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/configurableswatches/product-media.js</name></action>
+
             <action method="addCss"><stylesheet>css/styles-menu.css</stylesheet></action>
             <action method="addCss"><stylesheet>css/jquery-ui-1.9.2.css</stylesheet></action>
             <action method="addCss"><stylesheet>css/selectbox.css</stylesheet></action>
@@ -133,6 +147,7 @@ Default layout, loads most of the pages
             <action method="addCss"><stylesheet>jquery_accordion/jquery.akordeon.css</stylesheet></action>
             <action method="addCss"><stylesheet>jquery_etalage/etalage.css</stylesheet></action>
             <action method="addCss"><stylesheet>jquery_bxslider/jquery.bxslider.css</stylesheet></action>
+            <action method="addItem"><type>skin_js</type><script>js/lib/elevatezoom/jquery.elevateZoom-3.0.8.min.js</script></action>
         </reference>
         <reference name="product.info.upsell">
             <action method="setTemplate"><template>catalog/product/view/upsell.phtml</template></action>
@@ -143,8 +158,21 @@ Default layout, loads most of the pages
             <block type="review/product_view_list" name="product.info.product_additional_data" as="reviews" template="catalog/product/view/review_summary.phtml" />
             <block type="catalog/product_list_related" name="catalog.product.related" after="-" template="catalog/product/view/related.phtml"/>
         </reference>
+        <reference name="product.info.media">
+            <block type="core/text_list" name="product.info.media.after" as="after" />
+        </reference>
         <remove name="product.info.options.wrapper.bottom"/>
     </catalog_product_view>
+    <PRODUCT_TYPE_configurable>
+        <reference name="product.info.options.configurable">
+            <block type="core/text_list" name="product.info.options.configurable.renderers" as="attr_renderers">
+                <block type="configurableswatches/catalog_product_view_type_configurable_swatches" template="configurableswatches/catalog/product/view/type/options/configurable/swatches.phtml" />
+            </block>
+            <block type="core/text_list" name="product.info.options.configurable.after" as="after">
+                <block type="core/template" template="configurableswatches/catalog/product/view/type/configurable/swatch-js.phtml" />
+            </block>
+        </reference>
+    </PRODUCT_TYPE_configurable>
     <checkout_cart_index>
         <reference name="head">
             <action method="addItem"><type>skin_js</type><name>jquery_accordion/jquery.akordeon.js</name><params/></action>

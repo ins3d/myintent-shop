@@ -1,87 +1,80 @@
 <?php
-    $_product = $this->getProduct();
-    $_helper = $this->helper('catalog/output');
-    $store = Mage::app()->getStore();
-    $code  = $store->getCode();
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magento.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magento.com for more information.
+ *
+ * @category    design
+ * @package     rwd_default
+ * @copyright   Copyright (c) 2006-2015 X.commerce, Inc. (http://www.magento.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+
+/**
+ * Product media data template
+ *
+ * @see Mage_Catalog_Block_Product_View_Media
+ */
+
+/* @var $this Mage_Catalog_Block_Product_View_Media */
 ?>
 <?php
-    $ratio_width = Mage::getStoreConfig("trego_settings/product_view/ratio_width", $code);
-    $ratio_height = Mage::getStoreConfig("trego_settings/product_view/ratio_height", $code);
-    $ratio = $ratio_height / $ratio_width;
-    $rnd_str = rtrim(base64_encode(md5(microtime())),"=");
+$_product = $this->getProduct();
+$_helper = $this->helper('catalog/output');
 ?>
-<?php if (count($this->getGalleryImages()) > 0): ?>
-<ul id="etalage">
-<?php foreach ($this->getGalleryImages() as $_image): ?>
-    <li>
-        <?php
-            $image_src = $this->helper('catalog/image')->init($_product, 'thumbnail', $_image->getFile())->resize(700, 700*$ratio);
-        ?>
-        <a rel="gallery" class="fancy-images fancy-images_<?php echo $rnd_str; ?>" href="<?php echo $image_src; ?>"><span class="glyphicon glyphicon-search"></span></a>
-        <img class="etalage_thumb_image" src="<?php echo $image_src; ?>">
-        <img class="etalage_source_image" src="<?php echo $this->helper('catalog/image')->init($_product, 'thumbnail', $_image->getFile())->resize(100, 100*$ratio)?>" alt="<?php echo $this->htmlEscape($_image->getLabel()) ?>">
-    </li>
-<?php endforeach; ?>
-</ul>
-<?php else: ?>
-<ul id="etalage">
-    <li>
-        <?php
-            $image_src = $this->helper('catalog/image')->init($_product, 'image')->resize(700, 1000*$ratio);
-        ?>
-        <a class="fancy-images fancy-images_<?php echo $rnd_str; ?>" href="<?php echo $image_src; ?>"><span class="glyphicon glyphicon-search"></span></a>
-        <img class="etalage_thumb_image" src="<?php echo $image_src; ?>">
-        <img class="etalage_source_image" src="<?php echo $this->helper('catalog/image')->init($_product, 'image')->resize(100, 100*$ratio)?>" alt="<?php echo $this->htmlEscape($this->getImageLabel()) ?>">
-    </li>
-</ul>
-<?php endif; ?>
-<div class="etalage-control">
-    <a href="javascript:void(0)" class="etalage-prev">Previous</a>
-    <a href="javascript:void(0)" class="etalage-next">Next</a>
-</div>
-<script type="text/javascript">
-    jQuery(document).ready(function(){
-        reloadEtalage();
-        jQuery(".product-img-box .etalage li.etalage_thumb").zoom();
-        setTimeout(function(){reloadEtalage();}, 500);
-        jQuery(window).resize(function(e){
-            reloadEtalage();
-        });
-        jQuery('.etalage-prev').on('click', function(){
-            etalage_previous();
-        });
+<div class="product-image product-image-zoom">
+    <div class="product-image-gallery">
+        <img id="image-main"
+             class="gallery-image visible"
+             src="<?php echo $this->helper('catalog/image')->init($_product, 'image') ?>"
+             alt="<?php echo $this->escapeHtml($this->getImageLabel()) ?>"
+             title="<?php echo $this->escapeHtml($this->getImageLabel()); ?>" />
 
-        jQuery('.etalage-next').on('click', function(){
-            etalage_next();
-        });
-        jQuery("a.fancy-images_<?php echo $rnd_str; ?>").fancybox();
-        function reloadEtalage(){
-            var width = jQuery('.product-view .product-img-box').width();
-            var src_img_width = 1000;
-            var src_img_height = 1000;
-            var ratio_width = <?php echo $ratio_width; ?>;
-            var ratio_height = <?php echo $ratio_height; ?>;
-            
-            src_img_width = 700 * ratio_width / ratio_height;
-            src_img_height = 700;
-            var height = width * ratio_height / ratio_width;
-            zoom_enabled = false;
-			jQuery('#etalage img.gallery-image').remove();
-            jQuery('#etalage').etalage({
-                thumb_image_width: width,
-                thumb_image_height: height,
-                source_image_width: src_img_width,
-                source_image_height: src_img_height,
-                zoom_area_width: width,
-                zoom_area_height: height,
-                zoom_enable: zoom_enabled,
-                smallthumb_hide_single: false,
-                smallthumbs_position: 'bottom',
-                show_icon: false,
-                autoplay: false
-            });
-            jQuery('.product-view .product-img-box .etalage-control a').css('bottom',((jQuery('.etalage_small_thumbs').height()-25)/2)+"px");
-        }
-    });
-</script>
-<div class="clear"></div>
+        <?php $i=0; foreach ($this->getGalleryImages() as $_image): ?>
+            <?php
+
+                if ($this->isGalleryImageVisible($_image)): ?>
+                <img id="image-<?php echo $i; ?>"
+                     class="gallery-image"
+                     src="<?php echo $this->getGalleryImageUrl($_image); ?>"
+                     data-zoom-image="<?php echo  $this->getGalleryImageUrl($_image); ?>" />
+            <?php
+
+                endif; ?>
+            <?php $i++; endforeach; ?>
+    </div>
+</div>
+
+<?php if (count($this->getGalleryImages()) > 0): ?>
+    <div class="more-views">
+        <h2><?php echo $this->__('More Views') ?></h2>
+        <ul class="product-image-thumbs">
+            <?php $i=0; foreach ($this->getGalleryImages() as $_image): ?>
+                <?php if ($this->isGalleryImageVisible($_image)): ?>
+                    <li>
+                        <a class="thumb-link" href="#" title="<?php echo $this->escapeHtml($_image->getLabel()) ?>" data-image-index="<?php echo $i; ?>">
+                            <img src="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize(75); ?>"
+                                 width="75" height="75" alt="<?php echo $this->escapeHtml($_image->getLabel()) ?>" />
+                        </a>
+                    </li>
+                <?php endif; ?>
+                <?php $i++; endforeach; ?>
+        </ul>
+    </div>
+<?php endif; ?>
+
+<?php echo $this->getChildHtml('after'); ?>
