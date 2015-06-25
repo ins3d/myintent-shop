@@ -1,0 +1,25 @@
+a:5:{i:0;s:1602:"Error in file: "C:\Sites\myintent-shop\app\code\core\Mage\Catalog\sql\catalog_setup\install-1.6.0.0.php" - SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'catalog_product_entity' already exists, query was: CREATE TABLE `catalog_product_entity` (
+  `entity_id` int UNSIGNED NOT NULL auto_increment COMMENT 'Entity ID' ,
+  `entity_type_id` smallint UNSIGNED NOT NULL default '0' COMMENT 'Entity Type ID' ,
+  `attribute_set_id` smallint UNSIGNED NOT NULL default '0' COMMENT 'Attribute Set ID' ,
+  `type_id` varchar(32) NOT NULL default 'simple' COMMENT 'Type ID' ,
+  `sku` varchar(64) NULL COMMENT 'SKU' ,
+  `has_options` smallint NOT NULL default '0' COMMENT 'Has Options' ,
+  `required_options` smallint UNSIGNED NOT NULL default '0' COMMENT 'Required Options' ,
+  `created_at` timestamp NULL default NULL COMMENT 'Creation Time' ,
+  `updated_at` timestamp NULL default NULL COMMENT 'Update Time' ,
+  PRIMARY KEY (`entity_id`),
+  INDEX `IDX_CATALOG_PRODUCT_ENTITY_ENTITY_TYPE_ID` (`entity_type_id`),
+  INDEX `IDX_CATALOG_PRODUCT_ENTITY_ATTRIBUTE_SET_ID` (`attribute_set_id`),
+  INDEX `IDX_CATALOG_PRODUCT_ENTITY_SKU` (`sku`),
+  CONSTRAINT `FK_CAT_PRD_ENTT_ATTR_SET_ID_EAV_ATTR_SET_ATTR_SET_ID` FOREIGN KEY (`attribute_set_id`) REFERENCES `eav_attribute_set` (`attribute_set_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `FK_CAT_PRD_ENTT_ENTT_TYPE_ID_EAV_ENTT_TYPE_ENTT_TYPE_ID` FOREIGN KEY (`entity_type_id`) REFERENCES `eav_entity_type` (`entity_type_id`) ON DELETE CASCADE ON UPDATE CASCADE
+) COMMENT='Catalog Product Table' ENGINE=INNODB charset=utf8 COLLATE=utf8_general_ci";i:1;s:942:"#0 C:\Sites\myintent-shop\app\code\core\Mage\Core\Model\Resource\Setup.php(645): Mage::exception('Mage_Core', 'Error in file: ...')
+#1 C:\Sites\myintent-shop\app\code\core\Mage\Core\Model\Resource\Setup.php(421): Mage_Core_Model_Resource_Setup->_modifyResourceDb('install', '', '1.6.0.0.19')
+#2 C:\Sites\myintent-shop\app\code\core\Mage\Core\Model\Resource\Setup.php(327): Mage_Core_Model_Resource_Setup->_installResourceDb('1.6.0.0.19')
+#3 C:\Sites\myintent-shop\app\code\core\Mage\Core\Model\Resource\Setup.php(235): Mage_Core_Model_Resource_Setup->applyUpdates()
+#4 C:\Sites\myintent-shop\app\code\core\Mage\Core\Model\App.php(417): Mage_Core_Model_Resource_Setup::applyAllUpdates()
+#5 C:\Sites\myintent-shop\app\code\core\Mage\Core\Model\App.php(343): Mage_Core_Model_App->_initModules()
+#6 C:\Sites\myintent-shop\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#7 C:\Sites\myintent-shop\index.php(87): Mage::run('', 'store')
+#8 {main}";s:3:"url";s:1:"/";s:11:"script_name";s:10:"/index.php";s:4:"skin";s:7:"default";}

@@ -1,0 +1,36 @@
+<?php
+//Enter your IDs
+define("Access_Key_ID", "AKIAIX4TLBTKXJHN5RXQ");
+define("Secret_Access_Key", "hhdAgkosqUE4bOUy5YnCCAbTi/nis2icUJnBpP1/");
+define("Associate_tag", "myintent-20");
+
+include("aws_signed_request.php");
+
+$operation = "ItemLookup"; // For API ItemLookup operations, see http://docs.aws.amazon.com/AWSECommerceService/latest/DG/ItemLookup.html
+$itemID = "B008GG93YE";
+
+//Define the request:
+// For more parameters, see: http://associates-amazon.s3.amazonaws.com/scratchpad/index.html
+$request = aws_signed_request("com", array(
+        "Operation" => $operation,
+        "ItemId" => "1401902162, 1878424319, 0990811808, 147675540X, 1118809424, 1451639619, B00JWA4WZS, 0061122416, 0060927488, 031032906X",
+        "Condition"=> "New",
+        "ResponseGroup" => "Images,ItemAttributes,Offers"), // http://docs.aws.amazon.com/AWSECommerceService/latest/DG/CHAP_ResponseGroupsList.html
+        Access_Key_ID, Secret_Access_Key, Associate_tag);
+
+//Catch the response in the $response object
+$response = file_get_contents($request);
+$parsed_xml = simplexml_load_string($response);
+
+//Verify a successful request
+foreach($parsed_xml->OperationRequest->Errors->Error as $error){
+   echo "Error code: " . $error->Code . "\r\n";
+   echo $error->Message . "\r\n";
+   echo "\r\n";
+}
+
+include("aws_print_results.php");
+
+printSearchResults($parsed_xml);
+
+?>
