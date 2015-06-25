@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Myintent_Amazon>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Myintent_Amazon>
+    </modules>
+</config> 

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<layout version="0.1.0">
+    
+    <catalog_product_view>
+        <reference name="head">
+           <action method="addItem" ifconfig="easy_lightbox/general/enabled"><type>skin_css</type><name>css/easylightbox.css</name></action>
+           <action method="addItem" ifconfig="easy_lightbox/general/enabled"><type>skin_js</type><name>js/lightbox.js</name></action>
+        </reference>
+        <reference name="content">
+            <block type="cms/block" name="word_help">
+                <action method="setBlockId"><block_id>word_help</block_id></action>
+            </block> 
+        </reference>
+    </catalog_product_view>
+    
+</layout>

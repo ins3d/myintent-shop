@@ -534,8 +534,11 @@ img.mfp-img {
     right: 0;
     padding-top: 0;
 }
-.rtg-images .overlay { position: absolute; background: url(../images/overlay.png); z-index: 10; box-sizing:border-box; -moz-box-sizing:border-box; transition: all 300ms ease-in-out; -moz-transition: all 300ms ease-in-out; -webkit-transition: all 300ms ease-in-out; -o-transition: all 300ms ease-in-out; }
-.rtg-images .overlay:hover, .rtg-images .active .overlay { background: none; border-right: 4px solid #2f3538; }
+
+// myintent customization:
+//.rtg-images .overlay { position: absolute; background: url(../images/overlay.png); z-index: 10; box-sizing:border-box; -moz-box-sizing:border-box; transition: all 300ms ease-in-out; -moz-transition: all 300ms ease-in-out; -webkit-transition: all 300ms ease-in-out; -o-transition: all 300ms ease-in-out; }
+//.rtg-images .overlay:hover, .rtg-images .active .overlay { background: none; border-right: 4px solid #2f3538; }
+
 @media only screen and (min-width: 768px) and (max-width: 1024px)  {
     .cms-index-index .col-main {
         padding-top: 190px;
