@@ -202,7 +202,10 @@ a.pinterest-icon {
 
 .lightbox-content {
 	display: none;
-	line-height: normal;
+}
+
+#imageContainer {
+	line-height: normal;	
 }
 
 .question_mark{

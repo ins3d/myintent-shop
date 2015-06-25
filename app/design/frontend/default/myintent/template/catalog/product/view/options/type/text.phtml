@@ -1,7 +1,6 @@
 <?php $_option = $this->getOption(); ?>
 <dt><label<?php if ($_option->getIsRequire()) echo ' class="required"' ?>><?php if ($_option->getIsRequire()) echo '<em>*</em>' ?><?php echo  $this->htmlEscape($_option->getTitle()) ?></label>
 
-
 <?php  
     if ($_option->getTitle() == "Your Word") 
     {
@@ -35,10 +34,7 @@
     rel="lightbox" 
     title=""
     onclick="return false;"
->
-<img src="http://localhost/skin/frontend/default/myintent/images/question_mark.png" class="question_mark"/>
-
-</a>
+><img src="<?php echo $this->getSkinUrl('images/question_mark.png'); ?>" class="question_mark"/></a>
 
 <?php
     } 
@@ -66,10 +62,10 @@
 
 function initLightbox(){
     new Lightbox({
-        fileLoadingImage: 'http://localhost/skin/frontend/default/default/images/lightbox/loading.gif',
-        fileBottomNavCloseImage: 'http://localhost/skin/frontend/default/default/images/lightbox/closelabel.gif',
-//        fileLoadingImage: '<?php echo $this->getSkinUrl('images/lightbox/loading.gif') ?>',
-//        fileBottomNavCloseImage: '<?php echo $this->getSkinUrl('images/lightbox/closelabel.gif') ?>',
+//        fileLoadingImage: "http://localhost/skin/frontend/default/default/images/lightbox/loading.gif",
+//        fileBottomNavCloseImage: 'http://localhost/skin/frontend/default/default/images/lightbox/closelabel.gif',
+        fileLoadingImage: "<?php echo $this->getSkinUrl('images/lightbox/loading.gif'); ?>",
+        fileBottomNavCloseImage: "<?php echo $this->getSkinUrl('images/lightbox/closelabel.gif'); ?>",
         overlayOpacity: <?php echo $_lightboxConfig['overlayOpacity'] ?>,
         animate: <?php echo (($_lightboxConfig['animate'] > 0)? "1":"0"); ?>,
         resizeSpeed: <?php echo $_lightboxConfig['resizeSpeed'] ?>,
