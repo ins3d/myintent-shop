@@ -19,7 +19,7 @@
  *
  * @category    design
  * @package     rwd_default
- * @copyright   Copyright (c) 2006-2014 X.commerce, Inc. (http://www.magento.com)
+ * @copyright   Copyright (c) 2006-2015 X.commerce, Inc. (http://www.magento.com)
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 
@@ -480,6 +480,9 @@ Product.ConfigurableSwatches.prototype = {
         // Since browsers like Safari on iOS will emulate a hover event, use custom event detection to determine
         // whether if input is touch. If event *is* touch, then don't run this code so that the onOptionClick
         // method will be triggered.
+        if(PointerManager.getPointer() == PointerManager.TOUCH_POINTER_TYPE) {
+            return;
+        }
 
         var opt = this._E.optionOver;
         var attr = opt.attr;
@@ -534,6 +537,10 @@ Product.ConfigurableSwatches.prototype = {
         // Since browsers like Safari on iOS will emulate a hover event, use custom event detection to determine
         // whether if input is touch. If event *is* touch, then don't run this code so that the onOptionClick
         // method will be triggered.
+        if (PointerManager.getPointer() == PointerManager.TOUCH_POINTER_TYPE) {
+            return;
+        }
+
         var opt = this._E.optionOver;
 
         // Set timeout
@@ -721,7 +728,6 @@ Product.ConfigurableSwatches.prototype = {
             ConfigurableMediaImages.updateImage(attr._e.optionSelect);
             this.productConfig.handleSelectChange(attr._e.optionSelect);
             this._F.nativeSelectChange = true;
-			jQuery(".product-img-box .etalage li.etalage_thumb").zoom();
         };
     },
     /**

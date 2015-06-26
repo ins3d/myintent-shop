@@ -148,13 +148,20 @@ $code  = $store->getCode();
                 $_blockid = 'home_slider_6';
             }
 ?>
+<!-- debug:
+    <div>window width:<span id="windowwidth"></span></div>
+    <div>container width:<span id="containerwidth"></span></div>
+    <div>item width:<span id="itemwidth"></span></div>
+-->
             <div class="tile-container">
+<!--                
                 <div class="rtg-caption">
                     <div id="tileCaption">
                     </div>
                     <div id="tileCaption_clone">
                     </div>
                 </div>
+-->                
                 <div id="tileGallery" class="rtg-gallery">
 <?php
                     echo $this->getLayout()->createBlock('cms/block')->setBlockId($_blockid)->toHtml();
@@ -163,12 +170,17 @@ $code  = $store->getCode();
                 </div>
                 <div style="clear:both;"></div>
             </div>
+
+
+
             <script>
                 jQuery(function($) {
+
                     $(document).ready(function(){
+/* myintent customization                       
                         var item_columns = 3;
                         var container_width = ($(document).width()-235)*0.6;
-                        
+
                         if($(window).width()<=1024){
                             container_width = ($(window).width()-10)*0.7;
                         }
@@ -176,8 +188,23 @@ $code  = $store->getCode();
                             item_columns = 3;
                             container_width = $(window).width();
                         }
-                        
+*/
+// myintent customization:
+                        var item_columns = 6;
+
+                        if($(window).width()<=767){
+                            item_columns = 3;
+                        }
+
+                        var container_width = $(window).width()-17;
                         var item_width = (container_width-item_columns)/item_columns;
+// customization end
+
+// debug:
+// $("#windowwidth").text($(window).width());
+// $("#containerwidth").text(container_width);
+// $("#itemwidth").text(item_width);
+
                         //alert(container_width+","+item_width);
                         $('#tileGallery').rtg({
                             imageWidth: item_width,
@@ -187,10 +214,13 @@ $code  = $store->getCode();
                             center: false,
                             initialHeight: 500
                         });
+/* myintent customization:                        
                         $('.tile-container').css('height', $(window).height()+'px');
+                        
                         if($(window).width()<=767){
                             $('.tile-container').css('height', 'auto');
                         }
+*/                        
                     });
                     
                 });

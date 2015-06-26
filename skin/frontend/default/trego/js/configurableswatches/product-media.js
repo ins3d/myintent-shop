@@ -19,9 +19,10 @@
  *
  * @category    design
  * @package     rwd_default
- * @copyright   Copyright (c) 2006-2014 X.commerce, Inc. (http://www.magento.com)
+ * @copyright   Copyright (c) 2006-2015 X.commerce, Inc. (http://www.magento.com)
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
+//$j = jQuery.noConflict();
 
 var ConfigurableMediaImages = {
     imageType: null,
@@ -101,7 +102,7 @@ var ConfigurableMediaImages = {
         }
 
         //second, get any product which is compatible with currently selected option(s)
-        jQuery.each(fallback['option_labels'], function(key, value) {
+        $j.each(fallback['option_labels'], function(key, value) {
             var image = value['configurable_product'][ConfigurableMediaImages.imageType];
             var products = value['products'];
 
@@ -139,7 +140,7 @@ var ConfigurableMediaImages = {
     getImageObject: function(productId, imageUrl) {
         var key = productId+'-'+imageUrl;
         if(!ConfigurableMediaImages.imageObjects[key]) {
-            var image = jQuery('<img />');
+            var image = $j('<img />');
             image.attr('src', imageUrl);
             ConfigurableMediaImages.imageObjects[key] = image;
         }
@@ -147,15 +148,15 @@ var ConfigurableMediaImages = {
     },
 
     updateImage: function(el) {
-        var select = jQuery(el);
+        var select = $j(el);
         var label = select.find('option:selected').attr('data-label');
         var productId = optionsPrice.productId; //get product ID from options price object
 
         //find all selected labels
         var selectedLabels = new Array();
 
-        jQuery('.product-options .super-attribute-select').each(function() {
-            var $option = jQuery(this);
+        $j('.product-options .super-attribute-select').each(function() {
+            var $option = $j(this);
             if($option.val() != '') {
                 selectedLabels.push($option.find('option:selected').attr('data-label'));
             }
@@ -172,19 +173,19 @@ var ConfigurableMediaImages = {
     },
 
     wireOptions: function() {
-        jQuery('.product-options .super-attribute-select').change(function(e) {
+        $j('.product-options .super-attribute-select').change(function(e) {
             ConfigurableMediaImages.updateImage(this);
         });
     },
 
     swapListImage: function(productId, imageObject) {
-        var originalImage = jQuery('#product-collection-image-' + productId);
+        var originalImage = $j('#product-collection-image-' + productId);
 
         if(imageObject[0].complete) { //swap image immediately
 
             //remove old image
             originalImage.addClass('hidden');
-            jQuery('.product-collection-image-' + productId).remove();
+            $j('.product-collection-image-' + productId).remove();
 
             //add new image
             imageObject.insertAfter(originalImage);
@@ -203,7 +204,7 @@ var ConfigurableMediaImages = {
 
                 //remove old image
                 originalImage.addClass('hidden');
-                jQuery('.product-collection-image-' + productId).remove();
+                $j('.product-collection-image-' + productId).remove();
 
                 //add new image
                 imageObject.insertAfter(originalImage);

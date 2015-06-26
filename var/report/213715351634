@@ -1,0 +1,13 @@
+a:4:{i:0;s:217:"SQLSTATE[42S02]: Base table or view not found: 1146 Table 'localhost_magento.core_website' doesn't exist, query was: SELECT `core_website`.`website_id`, `core_website`.`code`, `core_website`.`name` FROM `core_website`";i:1;s:1542:"#0 /Users/matthewtruebe/myintent-shop/lib/Varien/Db/Statement/Pdo/Mysql.php(110): Zend_Db_Statement_Pdo->_execute(Array)
+#1 /Users/matthewtruebe/myintent-shop/app/code/core/Zend/Db/Statement.php(291): Varien_Db_Statement_Pdo_Mysql->_execute(Array)
+#2 /Users/matthewtruebe/myintent-shop/lib/Zend/Db/Adapter/Abstract.php(480): Zend_Db_Statement->execute(Array)
+#3 /Users/matthewtruebe/myintent-shop/lib/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('SELECT `core_we...', Array)
+#4 /Users/matthewtruebe/myintent-shop/lib/Varien/Db/Adapter/Pdo/Mysql.php(428): Zend_Db_Adapter_Pdo_Abstract->query('SELECT `core_we...', Array)
+#5 /Users/matthewtruebe/myintent-shop/lib/Zend/Db/Adapter/Abstract.php(776): Varien_Db_Adapter_Pdo_Mysql->query(Object(Varien_Db_Select), Array)
+#6 /Users/matthewtruebe/myintent-shop/app/code/core/Mage/Core/Model/Resource/Config.php(63): Zend_Db_Adapter_Abstract->fetchAssoc(Object(Varien_Db_Select))
+#7 /Users/matthewtruebe/myintent-shop/app/code/core/Mage/Core/Model/Config.php(354): Mage_Core_Model_Resource_Config->loadToXml(Object(Mage_Core_Model_Config))
+#8 /Users/matthewtruebe/myintent-shop/app/code/core/Mage/Core/Model/Config.php(260): Mage_Core_Model_Config->loadDb()
+#9 /Users/matthewtruebe/myintent-shop/app/code/core/Mage/Core/Model/App.php(270): Mage_Core_Model_Config->init(Array)
+#10 /Users/matthewtruebe/myintent-shop/app/Mage.php(616): Mage_Core_Model_App->init('default', 'store', Array)
+#11 /Users/matthewtruebe/myintent-shop/install.php(128): Mage::app('default')
+#12 {main}";s:3:"url";s:26:"/myintent-shop/install.php";s:11:"script_name";s:26:"/myintent-shop/install.php";}

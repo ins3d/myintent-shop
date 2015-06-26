@@ -1,1 +1,0 @@
-/srv/www/myintent_shop/shared/config/opsworks.php

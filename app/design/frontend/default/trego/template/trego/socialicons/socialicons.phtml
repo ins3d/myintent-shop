@@ -17,12 +17,27 @@ $code  = $store->getCode();
     $_googleplus_visible = Mage::getStoreConfig('socialicons/options/googleplus_visible', $code);
     $_googleplus_url = Mage::getStoreConfig('socialicons/options/googleplus_url', $code);
     $_googleplus_sortorder = Mage::getStoreConfig('socialicons/options/googleplus_sortorder', $code);
+
+// myintent customization:
+    $_instagram_visible = 1; // Mage::getStoreConfig('socialicons/options/instagram_visible', $code);
+    $_instagram_url = "http://www.instagram.com/myintent"; // Mage::getStoreConfig('socialicons/options/instagram_url', $code);
+    $_instagram_sortorder = 6; //Mage::getStoreConfig('socialicons/options/instagram_sortorder', $code);
+
+    $_pinterest_visible = 1; // Mage::getStoreConfig('socialicons/options/pinterest_visible', $code);
+    $_pinterest_url = "http://www.pinterest.com/myintent"; // Mage::getStoreConfig('socialicons/options/pinterest_url', $code);
+    $_pinterest_sortorder = 7; //Mage::getStoreConfig('socialicons/options/pinterest_sortorder', $code);
+// customization end 
+
     $_links = array(
         array('visible'=>$_facebook_visible,'url'=>$_facebook_url,'class'=>'facebook-icon','title'=>'Facebook','sortorder'=>$_facebook_sortorder),
         array('visible'=>$_twitter_visible,'url'=>$_twitter_url,'class'=>'twitter-icon','title'=>'Twitter','sortorder'=>$_twitter_sortorder),
         array('visible'=>$_linkedin_visible,'url'=>$_linkedin_url,'class'=>'linkedin-icon','title'=>'Linkedin','sortorder'=>$_linkedin_sortorder),
         array('visible'=>$_flickr_visible,'url'=>$_flickr_url,'class'=>'flickr-icon','title'=>'Flickr','sortorder'=>$_flickr_sortorder),
-        array('visible'=>$_googleplus_visible,'url'=>$_googleplus_url,'class'=>'googleplus-icon','title'=>'Googleplus','sortorder'=>$_googleplus_sortorder)
+        array('visible'=>$_googleplus_visible,'url'=>$_googleplus_url,'class'=>'googleplus-icon','title'=>'Googleplus','sortorder'=>$_googleplus_sortorder),
+// myintent customization:        
+        array('visible'=>$_instagram_visible,'url'=>$_instagram_url,'class'=>'instagram-icon','title'=>'Instagram','sortorder'=>$_instagram_sortorder),
+        array('visible'=>$_pinterest_visible,'url'=>$_pinterest_url,'class'=>'pinterest-icon','title'=>'Pinterest','sortorder'=>$_pinterest_sortorder)
+// customization end         
     );
     if (!function_exists('sortorder')) {
     function sortorder($item1,$item2)
