@@ -1,4 +1,5 @@
 
 .idea/workspace.xml
 /var/*
+/media/*
 /app/etc/local.xml
