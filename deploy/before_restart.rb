@@ -1,10 +1,3 @@
-cookbook_file "/etc/httpd/sites-available/myintent_shop.conf" do
-  source "myintent_shop.conf"
-  owner "root"
-  group "apache"
-  mode 00777
-  action :create
-end
 
 link "/srv/www/myintent_shop/current/media" do
   to "/s3"
