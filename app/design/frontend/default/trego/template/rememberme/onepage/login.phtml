@@ -77,13 +77,11 @@
             <?php $user = $this->helper('fblogin')->getFbUser()?>
                 <?php if(!$user || !$user['email']){?>
                     <a class="fb_button fb_button_medium f-right" onclick="login();return false;" href="#">
-                        <img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/default/images/magestore/fblogin/fb_icon.gif">
-                        <span class="fb_button_text"><?php echo $this->__('Login') ?></span>
+                        <img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/default/images/magestore/fblogin/f_login.png">
                     </a>
                 <?php }else{?>
                     <a class="fb_button fb_button_medium f-right" onclick="window.location.href = '<?php echo $this->getFbloginUrl() ?>';">
-                        <img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/default/images/magestore/fblogin/fb_icon.gif">
-                        <span class="fb_button_text"><?php echo $this->__('Login') ?></span>
+                        <img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/default/images/magestore/fblogin/f_login.png">
                     </a>
                 <?php }?>
             <script src="http://connect.facebook.net/en_US/all.js"></script>
