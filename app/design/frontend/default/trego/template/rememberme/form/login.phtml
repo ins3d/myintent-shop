@@ -5,9 +5,6 @@
  * @see Mage_Customer_Block_Form_Login
  */
 
-$this->getLayout()->createBlock('fblogin/fblogin')->setTemplate('fblogin/bt_fblogin.phtml')->toHtml();
-$isLogin = $this->helper('customer')->isLoggedIn();
-
 ?>
 <div class="account-login">
     <div class="page-title">
@@ -24,48 +21,7 @@ $isLogin = $this->helper('customer')->isLoggedIn();
                 </div>
                 <div class="buttons-set for-mobile">
                     <button type="button" title="<?php echo $this->__('Create an Account') ?>" class="button" onclick="window.location='<?php echo $this->getCreateAccountUrl() ?>';"><span><span><?php echo $this->__('Create an Account') ?></span></span></button>
-                    <?php if(!$isLogin){?>
-                        <?php $user = $this->helper('fblogin')->getFbUser()?>
-                        <?php if(!$user || !$user['email']){?>
-                        <a class="fb_button fb_button_medium f-right" onclick="login();return false;" href="#">
-                            <img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/default/images/magestore/fblogin/f_login.png" >
-                        </a>
-                    <?php }else{?>
-                        <a class="fb_button fb_button_medium f-right" onclick="window.location.href = '<?php echo $this->getFbloginUrl() ?>';">
-                            <img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/default/images/magestore/fblogin/f_login.png">
-                        </a>
-                    <?php }?>
-                        <script src="http://connect.facebook.net/en_US/all.js"></script>
-                        <script type="text/javascript">
-                            <?php if (!$user) { ?>
-                            var newwindow;
-                            var intId;
-                            function login(){
-                                var  screenX    = typeof window.screenX != 'undefined' ? window.screenX : window.screenLeft;
-                                var	 screenY    = typeof window.screenY != 'undefined' ? window.screenY : window.screenTop;
-                                var	 outerWidth = typeof window.outerWidth != 'undefined' ? window.outerWidth : document.body.clientWidth;
-                                var	 outerHeight = typeof window.outerHeight != 'undefined' ? window.outerHeight : (document.body.clientHeight - 22);
-                                var	 width    = 500;
-                                var	 height   = 270;
-                                var	 left     = parseInt(screenX + ((outerWidth - width) / 2), 10);
-                                var	 top      = parseInt(screenY + ((outerHeight - height) / 2.5), 10);
-                                var	 features = (
-                                    'width=' + width +
-                                        ',height=' + height +
-                                        ',left=' + left +
-                                        ',top=' + top
-                                    );
-
-                                newwindow=window.open('<?php echo $this->getFbLoginButtonUrl() ?>','Login_by_facebook',features);
-
-                                if (window.focus) {
-                                    newwindow.focus()
-                                }
-                                return false;
-                            }
-                            <?php } ?>
-                        </script>
-                    <?php }?>
+                    <?php $this->getLayout()->createBlock('fblogin/fblogin')->setTemplate('fblogin/bt_fblogin.phtml')->toHtml(); ?>
                 </div>
             </div>
             <div class="col-2 registered-users">
@@ -98,18 +54,7 @@ $isLogin = $this->helper('customer')->isLoggedIn();
                 <div class="buttons-set for-mobile">
                     <button type="submit" class="button" title="<?php echo $this->__('Login') ?>" name="send" id="send2"><span><span><?php echo $this->__('Login') ?></span></span></button>
                     <a href="<?php echo $this->getForgotPasswordUrl() ?>"><?php echo $this->__('Forgot Your Password?') ?></a>
-                    <?php if(!$isLogin){?>
-                        <?php $user = $this->helper('fblogin')->getFbUser()?>
-                        <?php if(!$user || !$user['email']){?>
-                            <a class="fb_button fb_button_medium f-left" onclick="login();return false;" href="#">
-                                <img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/default/images/magestore/fblogin/f_login.png" >
-                            </a>
-                        <?php }else{?>
-                            <a class="fb_button fb_button_medium f-left" onclick="window.location.href = '<?php echo $this->getFbloginUrl() ?>';">
-                                <img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/default/images/magestore/fblogin/f_login.png">
-                            </a>
-                        <?php }?>
-                    <?php }?>
+                    <?php $this->getLayout()->createBlock('fblogin/fblogin')->setTemplate('fblogin/bt_fblogin.phtml')->toHtml(); ?>
                 </div>
             </div>
         </div>
@@ -121,18 +66,7 @@ $isLogin = $this->helper('customer')->isLoggedIn();
                 </div>
                 <div class="buttons-set">
                     <button type="button" title="<?php echo $this->__('Create an Account') ?>" class="button" onclick="window.location='<?php echo $this->getCreateAccountUrl() ?>';"><span><span><?php echo $this->__('Create an Account') ?></span></span></button>
-                    <?php if(!$isLogin){?>
-                        <?php $user = $this->helper('fblogin')->getFbUser()?>
-                        <?php if(!$user || !$user['email']){?>
-                        <a class="fb_button fb_button_medium f-right" onclick="login();return false;" href="#">
-                            <img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/default/images/magestore/fblogin/f_login.png" >
-                        </a>
-                    <?php }else{?>
-                        <a class="fb_button fb_button_medium f-right" onclick="window.location.href = '<?php echo $this->getFbloginUrl() ?>';">
-                            <img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/default/images/magestore/fblogin/f_login.png">
-                        </a>
-                    <?php }?>
-                    <?php }?>
+                    <?php $this->getLayout()->createBlock('fblogin/fblogin')->setTemplate('fblogin/bt_fblogin.phtml')->toHtml(); ?>
                 </div>
             </div>
             <div class="col-2 registered-users">
