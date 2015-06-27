@@ -1,8 +1,7 @@
 <?php
 
-$this->getLayout()->createBlock('fblogin/fblogin');
+$this->getLayout()->createBlock('fblogin/fblogin')->setTemplate('fblogin/bt_fblogin.phtml')->toHtml();
 $isLogin = $this->helper('customer')->isLoggedIn();
-
 ?>
 
 <div class="col2-set for-mobile">
