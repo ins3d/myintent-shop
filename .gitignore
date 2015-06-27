@@ -1,5 +1,64 @@
 
 .idea/workspace.xml
-/var/*
-/media/*
+# Misc
+/.buildpath
+/.project
+/nbproject
+/catalog.xml
+/sitemap.xml
+/.settings
+/.idea
+/staging
+/.modman
+/.modgit
+.DS_Store
+.~*
+*.sublime-*
+ 
+# Magneto Debug
+/app/code/community/Magneto/
+/app/design/adminhtml/base/default/layout/debug.xml
+/app/design/adminhtml/base/default/template/debug/
+/app/design/frontend/base/default/layout/debug.xml
+/app/design/frontend/base/default/template/debug
+/app/etc/modules/Magneto_Debug.xml
+/skin/frontend/base/default/debug
+ 
+# Bubble Debug
+app/code/community/Bubble/Debug/*
+app/code/local/Zend/Db/Adapter/Pdo/Abstract.php
+app/etc/modules/Bubble_Debug.xml
+ 
+# /app/etc
 /app/etc/local.xml
+ 
+# /errors
+/errors/local.xml
+ 
+# /downloader
+/downloader/*.cfg
+/downloader/.cache
+ 
+# /includes
+/includes/src
+ 
+# /media
+/media/catalog
+/media/captcha
+/media/tmp
+/media/css
+/media/js
+/media/css_secure
+/media/import
+/media/wysiwyg
+/media/cms
+/media/downloadable
+/media/sales
+/media/email
+ 
+# /media/xmlconnect/themes/
+/media/xmlconnect/themes/*.xml
+ 
+# /var
+/var/*
+!/var/package
