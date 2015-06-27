@@ -1,3 +1,10 @@
+<?php
+
+$this->getLayout()->createBlock('fblogin/fblogin');
+$isLogin = $this->helper('customer')->isLoggedIn();
+
+?>
+
 <div class="col2-set for-mobile">
     <?php echo $this->getChildHtml('login_before')?>
     <div class="col-1">
@@ -29,7 +36,6 @@
         <?php endif; ?>
         <div class="buttons-set for-mobile">
             <button type="button" class="button" onclick="checkout.setMethod();"><span><span><?php echo ($this->getQuote()->isAllowedGuestCheckout() ? $this->__('Continue') : $this->__('Register')) ?></span></span></button>
-            <?php $isLogin = $this->helper('customer')->isLoggedIn()?>
             <?php if(!$isLogin){?>
                 <?php $user = $this->helper('fblogin')->getFbUser()?>
                 <?php if(!$user || !$user['email']){?>
@@ -107,7 +113,6 @@
             <?php $this->getLayout()->createBlock('fblogin/fblogin')->setTemplate('fblogin/bt_fblogin.phtml')->toHtml(); ?>
             <a href="<?php echo $this->getUrl('customer/account/forgotpassword') ?>" class="f-right"><?php echo $this->__('Forgot your password?') ?></a>
             <button type="submit" class="button" onclick="onepageLogin(this)"><span><span><?php echo $this->__('Login') ?></span></span></button>
-            <?php $isLogin = $this->helper('customer')->isLoggedIn()?>
             <?php if(!$isLogin){?>
                 <?php $user = $this->helper('fblogin')->getFbUser()?>
                 <?php if(!$user || !$user['email']){?>
@@ -128,7 +133,6 @@
     <div class="col-1">
         <div class="buttons-set">
             <button type="button" class="button" onclick="checkout.setMethod();"><span><span><?php echo ($this->getQuote()->isAllowedGuestCheckout() ? $this->__('Continue') : $this->__('Register')) ?></span></span></button>
-            <?php $isLogin = $this->helper('customer')->isLoggedIn()?>
             <?php if(!$isLogin){?>
                 <?php $user = $this->helper('fblogin')->getFbUser()?>
                     <?php if(!$user || !$user['email']){?>

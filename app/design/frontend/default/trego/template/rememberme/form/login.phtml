@@ -4,6 +4,10 @@
  *
  * @see Mage_Customer_Block_Form_Login
  */
+
+$this->getLayout()->createBlock('fblogin/fblogin');
+$isLogin = $this->helper('customer')->isLoggedIn();
+
 ?>
 <div class="account-login">
     <div class="page-title">
@@ -20,7 +24,6 @@
                 </div>
                 <div class="buttons-set for-mobile">
                     <button type="button" title="<?php echo $this->__('Create an Account') ?>" class="button" onclick="window.location='<?php echo $this->getCreateAccountUrl() ?>';"><span><span><?php echo $this->__('Create an Account') ?></span></span></button>
-                    <?php $isLogin = $this->helper('customer')->isLoggedIn()?>
                     <?php if(!$isLogin){?>
                         <?php $user = $this->helper('fblogin')->getFbUser()?>
                         <?php if(!$user || !$user['email']){?>
@@ -95,7 +98,6 @@
                 <div class="buttons-set for-mobile">
                     <button type="submit" class="button" title="<?php echo $this->__('Login') ?>" name="send" id="send2"><span><span><?php echo $this->__('Login') ?></span></span></button>
                     <a href="<?php echo $this->getForgotPasswordUrl() ?>"><?php echo $this->__('Forgot Your Password?') ?></a>
-                    <?php $isLogin = $this->helper('customer')->isLoggedIn()?>
                     <?php if(!$isLogin){?>
                         <?php $user = $this->helper('fblogin')->getFbUser()?>
                         <?php if(!$user || !$user['email']){?>
@@ -119,7 +121,6 @@
                 </div>
                 <div class="buttons-set">
                     <button type="button" title="<?php echo $this->__('Create an Account') ?>" class="button" onclick="window.location='<?php echo $this->getCreateAccountUrl() ?>';"><span><span><?php echo $this->__('Create an Account') ?></span></span></button>
-                    <?php $isLogin = $this->helper('customer')->isLoggedIn()?>
                     <?php if(!$isLogin){?>
                         <?php $user = $this->helper('fblogin')->getFbUser()?>
                         <?php if(!$user || !$user['email']){?>
