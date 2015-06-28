@@ -8,24 +8,26 @@ $product_image = $this->helper('catalog/image')->init($_item->getProduct(), 'sma
 $_product = $_item->getProduct();
 
 
-    $childProducts= array();
-    $id = $_product['entity_id'];
-    $childProducts[$id] = Mage::getModel('catalog/product_type_configurable')->getChildrenIds($id); // get the Id of configurable product
+$childProducts= array();
+$id = $_product['entity_id'];
+$childProducts[$id] = Mage::getModel('catalog/product_type_configurable')->getChildrenIds($id); // get the Id of configurable product
 
-    $new_arr= array();
-    foreach($childProducts as $childProduct){
-        foreach($childProduct as $pro){
-            foreach($pro as $prods){
-                $product_data = Mage::getModel('catalog/product')->load($prods)
-                    ->getData(); // Get the collection of associated product from the configurable product
+$new_arr= array();
+foreach($childProducts as $childProduct){
+    foreach($childProduct as $pro){
+        foreach($pro as $prods){
+            $product_data = Mage::getModel('catalog/product')->load($prods)
+                ->getData(); // Get the collection of associated product from the configurable product
 
-                if ($_item->getProduct()->getSku() == $product_data['sku']){
-                    $product_image = $product_data['image'];
-                }
+            echo 'product sku: ' . $_item->getProduct()->getSku();
+            echo 'child sku: ' . $product_data['sku'];
+            if ($_item->getProduct()->getSku() == $product_data['sku']){
+                $product_image = $product_data['image'];
             }
         }
-
     }
+
+}
 
 
 ?>
