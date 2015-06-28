@@ -22,7 +22,7 @@ foreach($childProducts as $childProduct){
                 ->getData(); // Get the collection of associated product from the configurable product
 
             if (strpos($product_data['sku'], $_item->getProduct()->getSku()) >=0){
-                $product_image = $this->helper('catalog/image')->$product_data['image']->constrainOnly(FALSE)->keepAspectRatio(TRUE)->keepFrame(FALSE)->resize(65);
+                $product_image = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'tmp/catalog/product' . $product_data['image'];
             }
         }
     }
