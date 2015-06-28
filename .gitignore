@@ -30,8 +30,7 @@ app/code/local/Zend/Db/Adapter/Pdo/Abstract.php
 app/etc/modules/Bubble_Debug.xml
  
 # /app/etc
-/app/etc/local.xml
- 
+
 # /errors
 /errors/local.xml
  
