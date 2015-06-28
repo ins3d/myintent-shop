@@ -35,7 +35,7 @@ foreach($childProducts as $childProduct){
     <?php if ($this->hasProductUrl()): ?>
         <a href="<?php echo $this->getProductUrl()?>" title="<?php echo $this->htmlEscape($this->getProductName()) ?>" class="product-image"><img src="<?php if(Mage::getStoreConfig("trego_settings/category/aspect_ratio",$code)):?><?php echo $this->helper('catalog/image')->init($_product, 'small_image')->constrainOnly(FALSE)->keepAspectRatio(TRUE)->keepFrame(FALSE)->resize(65);?><?php else: ?><?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(65, 65 * Mage::getStoreConfig("trego_settings/category/ratio_height",$code) / Mage::getStoreConfig("trego_settings/category/ratio_width",$code)); ?><?php endif; ?>" alt="<?php echo $this->htmlEscape($this->getProductName()) ?>" /></a>
     <?php else: ?>
-        <span class="product-image"><img src="<?php if(Mage::getStoreConfig("trego_settings/category/aspect_ratio",$code)):?><?php echo $product_image;?><?php else: ?><?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(65, 65 * Mage::getStoreConfig("trego_settings/category/ratio_height",$code) / Mage::getStoreConfig("trego_settings/category/ratio_width",$code)); ?><?php endif; ?>" alt="<?php echo $this->htmlEscape($this->getProductName()) ?>" /></span>
+        <span class="product-image"><img src="<?php echo $product_image; ?>" alt="<?php echo $this->htmlEscape($this->getProductName()) ?>" /></span>
     <?php endif; ?>
     <div class="product-details">
         <p class="product-name">
