@@ -3,30 +3,29 @@ $_item = $this->getItem();
 $isVisibleProduct = $_item->getProduct()->isVisibleInSiteVisibility();
 $canApplyMsrp = Mage::helper('catalog')->canApplyMsrp($_item->getProduct(), Mage_Catalog_Model_Product_Attribute_Source_Msrp_Type::TYPE_BEFORE_ORDER_CONFIRM);
 
-$product_image= $this->helper('catalog/image')->init($_item->getProduct(), 'small_image')->constrainOnly(FALSE)->keepAspectRatio(TRUE)->keepFrame(FALSE)->resize(140);
+$product_image = $this->helper('catalog/image')->init($_item->getProduct(), 'small_image')->constrainOnly(FALSE)->keepAspectRatio(TRUE)->keepFrame(FALSE)->resize(140);
 
-$_product = $_item->getProduct()
-    ->addAttributeToFilter('type_id','configurable')
-    ->getData(); // Get all the configurable product
+$_product = $_item->getProduct();
 
-$childProducts= array();
-$id = $_product['entity_id'];
-$childProducts[$id] = Mage::getModel('catalog/product_type_configurable')->getChildrenIds($id); // get the Id of configurable product
 
-$new_arr= array();
-foreach($childProducts as $childProduct){
-    foreach($childProduct as $pro){
-        foreach($pro as $prods){
-            $product_data = Mage::getModel('catalog/product')->load($prods)
-                ->getData(); // Get the collection of associated product from the configurable product
+    $childProducts= array();
+    $id = $_product['entity_id'];
+    $childProducts[$id] = Mage::getModel('catalog/product_type_configurable')->getChildrenIds($id); // get the Id of configurable product
 
-            if ($_item->getProduct()->getSku() == $childProduct->getSku()){
-                $product_image = $product_data['image'];
+    $new_arr= array();
+    foreach($childProducts as $childProduct){
+        foreach($childProduct as $pro){
+            foreach($pro as $prods){
+                $product_data = Mage::getModel('catalog/product')->load($prods)
+                    ->getData(); // Get the collection of associated product from the configurable product
+
+                if ($_item->getProduct()->getSku() == $product_data['sku']){
+                    $product_image = $product_data['image'];
+                }
             }
         }
-    }
 
-}
+    }
 
 
 ?>
