@@ -22,6 +22,8 @@ foreach($childProducts as $childProduct){
                 ->getData(); // Get the collection of associated product from the configurable product
 
             if (strpos($product_data['sku'], $_item->getProduct()->getSku()) !== FALSE){
+                echo 'found product';
+                echo $product_data['image'];
                 $product_image = $this->helper('catalog/image')->$product_data['image']->constrainOnly(FALSE)->keepAspectRatio(TRUE)->keepFrame(FALSE)->resize(65);
             }
         }
