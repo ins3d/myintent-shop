@@ -5,13 +5,37 @@ $isVisibleProduct = $_item->getProduct()->isVisibleInSiteVisibility();
 
 $store = Mage::app()->getStore();
 $code  = $store->getCode();
+
+$_product = $_item->getProduct();
+
+$product_image = $this->helper('catalog/image')->init($_product, 'small_image')->constrainOnly(FALSE)->keepAspectRatio(TRUE)->keepFrame(FALSE)->resize(65);
+
+$childProducts= array();
+$id = $_product['entity_id'];
+$childProducts[$id] = Mage::getModel('catalog/product_type_configurable')->getChildrenIds($id); // get the Id of configurable product
+
+$new_arr= array();
+foreach($childProducts as $childProduct){
+    foreach($childProduct as $pro){
+        foreach($pro as $prods){
+            $product_data = Mage::getModel('catalog/product')->load($prods)
+                ->getData(); // Get the collection of associated product from the configurable product
+
+            if (strpos($product_data['sku'], $_item->getProduct()->getSku()) !== FALSE){
+                $product_image = $this->helper('catalog/image')->$product_data['image']->constrainOnly(FALSE)->keepAspectRatio(TRUE)->keepFrame(FALSE)->resize(65);
+            }
+        }
+    }
+
+}
+
 //$canApplyMsrp = Mage::helper('catalog')->canApplyMsrp($_item->getProduct(), Mage_Catalog_Model_Product_Attribute_Source_Msrp_Type::TYPE_BEFORE_ORDER_CONFIRM);
 ?>
 <li class="item">
     <?php if ($this->hasProductUrl()): ?>
         <a href="<?php echo $this->getProductUrl()?>" title="<?php echo $this->htmlEscape($this->getProductName()) ?>" class="product-image"><img src="<?php if(Mage::getStoreConfig("trego_settings/category/aspect_ratio",$code)):?><?php echo $this->helper('catalog/image')->init($_product, 'small_image')->constrainOnly(FALSE)->keepAspectRatio(TRUE)->keepFrame(FALSE)->resize(65);?><?php else: ?><?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(65, 65 * Mage::getStoreConfig("trego_settings/category/ratio_height",$code) / Mage::getStoreConfig("trego_settings/category/ratio_width",$code)); ?><?php endif; ?>" alt="<?php echo $this->htmlEscape($this->getProductName()) ?>" /></a>
     <?php else: ?>
-        <span class="product-image"><img src="<?php if(Mage::getStoreConfig("trego_settings/category/aspect_ratio",$code)):?><?php echo $this->helper('catalog/image')->init($_product, 'small_image')->constrainOnly(FALSE)->keepAspectRatio(TRUE)->keepFrame(FALSE)->resize(65);?><?php else: ?><?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(65, 65 * Mage::getStoreConfig("trego_settings/category/ratio_height",$code) / Mage::getStoreConfig("trego_settings/category/ratio_width",$code)); ?><?php endif; ?>" alt="<?php echo $this->htmlEscape($this->getProductName()) ?>" /></span>
+        <span class="product-image"><img src="<?php if(Mage::getStoreConfig("trego_settings/category/aspect_ratio",$code)):?><?php echo $product_image;?><?php else: ?><?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(65, 65 * Mage::getStoreConfig("trego_settings/category/ratio_height",$code) / Mage::getStoreConfig("trego_settings/category/ratio_width",$code)); ?><?php endif; ?>" alt="<?php echo $this->htmlEscape($this->getProductName()) ?>" /></span>
     <?php endif; ?>
     <div class="product-details">
         <p class="product-name">

@@ -19,9 +19,7 @@ foreach($childProducts as $childProduct){
             $product_data = Mage::getModel('catalog/product')->load($prods)
                 ->getData(); // Get the collection of associated product from the configurable product
 
-            echo 'product sku: ' . $_item->getProduct()->getSku();
-            echo 'child sku: ' . $product_data['sku'];
-            if ($_item->getProduct()->getSku() == $product_data['sku']){
+            if (strpos($product_data['sku'], $_item->getProduct()->getSku()) !== FALSE){
                 $product_image = $product_data['image'];
             }
         }
