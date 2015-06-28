@@ -13,7 +13,7 @@
     <?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
     <form action="<?php echo $this->getPostActionUrl() ?>" method="post" id="login-form">
         <input type="hidden" name="form_key" value="<?php echo Mage::getSingleton('core/session')->getFormKey(); ?>" />
-        <div class="col2-set for-mobile">
+        <div class="col2-set">
             <div class="col-1 new-users">
                 <div class="content">
                     <h2><?php echo $this->__('New Customers') ?></h2>
