@@ -2,9 +2,34 @@
 $_item = $this->getItem();
 $isVisibleProduct = $_item->getProduct()->isVisibleInSiteVisibility();
 $canApplyMsrp = Mage::helper('catalog')->canApplyMsrp($_item->getProduct(), Mage_Catalog_Model_Product_Attribute_Source_Msrp_Type::TYPE_BEFORE_ORDER_CONFIRM);
+
+$product_image = $this->helper('catalog/image')->init($_item->getProduct(), 'small_image')->constrainOnly(FALSE)->keepAspectRatio(TRUE)->keepFrame(FALSE)->resize(140);
+
+$_product = $_item->getProduct();
+
+$childProducts= array();
+$id = $_product['entity_id'];
+$childProducts[$id] = Mage::getModel('catalog/product_type_configurable')->getChildrenIds($id); // get the Id of configurable product
+
+$new_arr= array();
+foreach($childProducts as $childProduct){
+    foreach($childProduct as $pro){
+        foreach($pro as $prods){
+            $product_data = Mage::getModel('catalog/product')->load($prods)
+                ->getData(); // Get the collection of associated product from the configurable product
+
+            if (strpos($product_data['sku'], $_item->getProduct()->getSku()) >=0){
+                $product_image = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'catalog/product' . $product_data['image'];
+            }
+        }
+    }
+
+}
+
+
 ?>
 <tr>
-    <td class="no-border-right pr-img-td"><div class="pos-area"><a href="<?php echo $this->getDeleteUrl()?>" title="<?php echo $this->__('Remove item')?>" class="btn-remove btn-remove2 for-mobile"><?php echo $this->__('Remove item')?></a><?php if ($this->hasProductUrl()):?><a href="<?php echo $this->getProductUrl() ?>" title="<?php echo $this->htmlEscape($this->getProductName()) ?>" class="product-image"><?php endif;?><img src="<?php echo $this->helper('catalog/image')->init($_item->getProduct(), 'small_image')->constrainOnly(FALSE)->keepAspectRatio(TRUE)->keepFrame(FALSE)->resize(140); ?>" alt="<?php echo $this->htmlEscape($this->getProductName()) ?>" /><?php if ($this->hasProductUrl()):?></a><?php endif;?></div></td>
+    <td class="no-border-right pr-img-td"><div class="pos-area"><a href="<?php echo $this->getDeleteUrl()?>" title="<?php echo $this->__('Remove item')?>" class="btn-remove btn-remove2 for-mobile"><?php echo $this->__('Remove item')?></a><?php if ($this->hasProductUrl()):?><a href="<?php echo $this->getProductUrl() ?>" title="<?php echo $this->htmlEscape($this->getProductName()) ?>" class="product-image"><?php endif;?><img src="<?php echo $product_image; ?>" alt="<?php echo $this->htmlEscape($this->getProductName()) ?>" /><?php if ($this->hasProductUrl()):?></a><?php endif;?></div></td>
     <td class="a-right product-name-td">
         <h2 class="product-name">
         <?php if ($this->hasProductUrl()):?>
