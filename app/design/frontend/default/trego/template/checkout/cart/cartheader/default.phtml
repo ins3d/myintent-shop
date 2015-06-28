@@ -20,8 +20,9 @@ foreach($childProducts as $childProduct){
         foreach($pro as $prods){
             $product_data = Mage::getModel('catalog/product')->load($prods)
                 ->getData(); // Get the collection of associated product from the configurable product
-
-            if (strpos($product_data['sku'], $_item->getProduct()->getSku()) !== FALSE){
+            echo $product_data['sku'];
+            echo ' ' . $_item->getProduct()->getSku();
+            if (strpos($product_data['sku'], $_item->getProduct()->getSku()) >=0){
                 $product_image = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'catalog/product' . $product_data['image'];
             }
         }
