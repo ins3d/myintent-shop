@@ -7,6 +7,23 @@ $product_image = $this->helper('catalog/image')->init($_item->getProduct(), 'sma
 
 $_product = $_item->getProduct();
 
+/*
+$product_image_option = '';
+if ($_options = $this->getOptionList()):
+    foreach ($_options as $_option) :
+        $_formatedOptionValue = $this->getFormatedOptionValue($_option);
+        echo $this->htmlEscape($_option['label']);
+        echo $_formatedOptionValue['value'];
+        if (isset($_formatedOptionValue['full_view'])):
+            if ($this->htmlEscape($_option['label']) == 'Color'){
+                $product_image_option =
+            }
+            echo $_formatedOptionValue['full_view'];
+        endif;
+    endforeach;
+endif;
+*/
+
 $childProducts= array();
 $id = $_product['entity_id'];
 $childProducts[$id] = Mage::getModel('catalog/product_type_configurable')->getChildrenIds($id); // get the Id of configurable product
@@ -18,7 +35,7 @@ foreach($childProducts as $childProduct){
             $product_data = Mage::getModel('catalog/product')->load($prods)
                 ->getData(); // Get the collection of associated product from the configurable product
 
-            if (strpos($product_data['sku'], $_item->getProduct()->getSku()) > 0){
+            if (strpos($product_data['sku'], $_item->getProduct()->getSku()) !== FALSE){
                 $product_image = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'catalog/product' . $product_data['image'];
             }
         }
