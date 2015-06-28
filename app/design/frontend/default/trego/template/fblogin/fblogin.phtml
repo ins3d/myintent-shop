@@ -2,15 +2,6 @@
 <?php $isLogin = $this->helper('customer')->isLoggedIn()?>
 <?php if(!$isLogin){?>
     <?php $user = $this->helper('fblogin')->getFbUser()?>
-    <?php if(!$user || !$user['email']){?>
-        <a class="fb_button fb_button_medium f-right" onclick="login();return false;" href="#">
-            <img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/default/images/magestore/fblogin/f_login.png" >
-        </a>
-    <?php }else{?>
-        <a class="fb_button fb_button_medium f-right" onclick="window.location.href = '<?php echo $this->getFbloginUrl() ?>';">
-            <img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/default/images/magestore/fblogin/f_login.png">
-        </a>
-    <?php }?>
     <script src="https://connect.facebook.net/en_US/all.js"></script>
     <script type="text/javascript">
         <?php if (!$user) { ?>
@@ -32,7 +23,7 @@
                     ',top=' + top
                 );
 
-            newwindow=window.open('<?php echo $this->getFbLoginButtonUrl() ?>&app_id=1624961697716654','Login_by_facebook',features);
+            newwindow=window.open('<?php echo $this->getFbLoginButtonUrl() ?>','Login_by_facebook',features);
 
             if (window.focus) {
                 newwindow.focus()

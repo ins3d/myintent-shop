@@ -13,7 +13,7 @@
 
 	<fblogin_index_index>
 		<reference name="content">
-			<block type="fblogin/fblogin" name="bt_fblogin" template="fblogin/bt_fblogin.phtml" />
+			<block type="fblogin/fblogin" name="bt_fblogin" template="fblogin/fblogin.phtml" />
 		</reference>
 	</fblogin_index_index>
 </layout>
