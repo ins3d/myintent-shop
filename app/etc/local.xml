@@ -40,7 +40,7 @@
             </db>
             <default_setup>
                 <connection>
-                    <host><![CDATA[dev-db-magento-1.cofbt5wphl7p.us-east-1.rds.amazonaws.com:33066]]></host>
+                    <host><![CDATA[dev-db-magento-1.cofbt5wphl7p.us-east-1.rds.amazonaws.com:3306]]></host>
                     <username><![CDATA[admin]]></username>
                     <password><![CDATA[a4b5eeca-33f8]]></password>
                     <dbname><![CDATA[magento]]></dbname>
