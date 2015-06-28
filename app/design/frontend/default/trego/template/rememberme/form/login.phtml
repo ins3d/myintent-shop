@@ -54,7 +54,7 @@
                                         ',top=' + top
                                     );
 
-                                newwindow=window.open('https://www.facebook.com/dialog/oauth?redirect_uri=https%3A%2F%2Fcreate.myintent.org%2Ffblogin%2Findex%2Findex%2Fauth%2F1%2F&state=b3d83252351a453cca524f08908a01cb&display=popup&scope=email','Login_by_facebook',features);
+                                newwindow=window.open('<?php echo $this->getFbLoginButtonUrl() ?>','Login_by_facebook',features);
 
                                 if (window.focus) {
                                     newwindow.focus()
@@ -108,36 +108,6 @@
                             <img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/default/images/magestore/fblogin/f_login.png">
                         </a>
                     <?php }?>
-                        <script src="https://connect.facebook.net/en_US/all.js"></script>
-                        <script type="text/javascript">
-                            <?php if (!$user) { ?>
-                            var newwindow;
-                            var intId;
-                            function login(){
-                                var  screenX    = typeof window.screenX != 'undefined' ? window.screenX : window.screenLeft;
-                                var	 screenY    = typeof window.screenY != 'undefined' ? window.screenY : window.screenTop;
-                                var	 outerWidth = typeof window.outerWidth != 'undefined' ? window.outerWidth : document.body.clientWidth;
-                                var	 outerHeight = typeof window.outerHeight != 'undefined' ? window.outerHeight : (document.body.clientHeight - 22);
-                                var	 width    = 500;
-                                var	 height   = 270;
-                                var	 left     = parseInt(screenX + ((outerWidth - width) / 2), 10);
-                                var	 top      = parseInt(screenY + ((outerHeight - height) / 2.5), 10);
-                                var	 features = (
-                                    'width=' + width +
-                                        ',height=' + height +
-                                        ',left=' + left +
-                                        ',top=' + top
-                                    );
-
-                                newwindow=window.open('https://www.facebook.com/dialog/oauth?redirect_uri=https%3A%2F%2Fcreate.myintent.org%2Ffblogin%2Findex%2Findex%2Fauth%2F1%2F&state=b3d83252351a453cca524f08908a01cb&display=popup&scope=email','Login_by_facebook',features);
-
-                                if (window.focus) {
-                                    newwindow.focus()
-                                }
-                                return false;
-                            }
-                            <?php } ?>
-                        </script>
                     <?php }?>
                 </div>
             </div>
@@ -162,36 +132,6 @@
                             <img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>frontend/default/default/images/magestore/fblogin/f_login.png">
                         </a>
                     <?php }?>
-                        <script src="https://connect.facebook.net/en_US/all.js"></script>
-                        <script type="text/javascript">
-                            <?php if (!$user) { ?>
-                            var newwindow;
-                            var intId;
-                            function login(){
-                                var  screenX    = typeof window.screenX != 'undefined' ? window.screenX : window.screenLeft;
-                                var	 screenY    = typeof window.screenY != 'undefined' ? window.screenY : window.screenTop;
-                                var	 outerWidth = typeof window.outerWidth != 'undefined' ? window.outerWidth : document.body.clientWidth;
-                                var	 outerHeight = typeof window.outerHeight != 'undefined' ? window.outerHeight : (document.body.clientHeight - 22);
-                                var	 width    = 500;
-                                var	 height   = 270;
-                                var	 left     = parseInt(screenX + ((outerWidth - width) / 2), 10);
-                                var	 top      = parseInt(screenY + ((outerHeight - height) / 2.5), 10);
-                                var	 features = (
-                                    'width=' + width +
-                                        ',height=' + height +
-                                        ',left=' + left +
-                                        ',top=' + top
-                                    );
-
-                                newwindow=window.open('https://www.facebook.com/dialog/oauth?redirect_uri=https%3A%2F%2Fcreate.myintent.org%2Ffblogin%2Findex%2Findex%2Fauth%2F1%2F&state=b3d83252351a453cca524f08908a01cb&display=popup&scope=email','Login_by_facebook',features);
-
-                                if (window.focus) {
-                                    newwindow.focus()
-                                }
-                                return false;
-                            }
-                            <?php } ?>
-                        </script>
                     <?php }?>
                 </div>
             </div>
