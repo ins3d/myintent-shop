@@ -47,6 +47,7 @@
                             <div class="input-box">
                                 <label for="rememberme" class="input-box remember"><input type="checkbox" name="login[rememberme]" class="checkbox left" id="rememberme" title="<?php echo $this->__('Remember me') ?>" style="margin-top: 2px" />
                                 <?php echo $this->__('Remember password') ?></label>
+                                <a class="f-right" href="<?php echo $this->getForgotPasswordUrl() ?>"><?php echo $this->__('Forgot Your Password?') ?></a>
                             </div>
                         </li>
 <?php /* End rememberme customisation */ ?>
@@ -54,7 +55,6 @@
                 </div>
                 <div class="buttons-set for-mobile">
                     <button type="submit" class="button" title="<?php echo $this->__('Login') ?>" name="send" id="send2"><span><span><?php echo $this->__('Login') ?></span></span></button>
-                    <a href="<?php echo $this->getForgotPasswordUrl() ?>"><?php echo $this->__('Forgot Your Password?') ?></a>
                     <?php echo $this->getLayout()->createBlock('fblogin/fblogin')->setTemplate('fblogin/bt_fblogin_left.phtml')->toHtml(); ?>
                 </div>
             </div>
@@ -92,6 +92,8 @@
                             <div class="input-box">
                                 <label for="rememberme" class="input-box remember"><input type="checkbox" name="login[rememberme]" class="checkbox left" id="rememberme" title="<?php echo $this->__('Remember me') ?>" style="margin-top: 2px" />
                                     <?php echo $this->__('Remember password') ?></label>
+                                <a class="f-right" href="<?php echo $this->getForgotPasswordUrl() ?>"><?php echo $this->__('Forgot Your Password?') ?></a>
+
                             </div>
                         </li>
                         <?php /* End rememberme customisation */ ?>
@@ -99,8 +101,6 @@
                 </div>
                 <div class="buttons-set">
                     <button type="submit" class="button" title="<?php echo $this->__('Login') ?>" name="send" id="send2"><span><span><?php echo $this->__('Login') ?></span></span></button>
-                    <a href="<?php echo $this->getForgotPasswordUrl() ?>"><?php echo $this->__('Forgot Your Password?') ?></a>
-
                 </div>
             </div>
         </div>
