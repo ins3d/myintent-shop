@@ -6,6 +6,14 @@
     background-image:url("../../images/magestore/fblogin/Connect_white_medium_long.gif");
 }
 
+.fb_button{
+    cursor: pointer;
+}
+
+.fb_button img{
+    height:36px;
+}
+
 .fb-seprate{
 	margin-top:30px;
 }

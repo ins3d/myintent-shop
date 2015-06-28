@@ -1,12 +1,12 @@
-<?php /*
 <div class="fb-seprate"></div>
 <?php $user = $this->helper('fblogin')->getFbUser()?>
 <div class="account-login">
-    <?php /*
     <div class="col2-set">
         <div class="col-1 fb-login">
             <div class="content">
-                <h2><?php echo $this->__('Login by Facebook account') ?></h2>
+                <div>
+                    <h2><?php echo $this->__('Login by Facebook account') ?></h2>
+                </div>
                 <div id="form-loginfb" style="text-align:center">
                 	<?php if($user){?>
                     	<?php if($this->isShowAvatar()){?>
@@ -20,8 +20,6 @@
             </div>
         </div>
     </div>
-
-    ?>
     <div class="col2-set">
         <div class="col-1 new-users">
             <div class="buttons-set">
@@ -70,5 +68,3 @@ function login(){
 }
 <?php } ?>
 </script>
-
-?>
