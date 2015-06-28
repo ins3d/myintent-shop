@@ -56,7 +56,7 @@
                     <div class="input-box">
                         <input type="checkbox" name="login[rememberme]" class="checkbox" id="rememberme" title="<?php echo $this->__('Remember me') ?>" style="margin-top: 2px" />
                         <label for="rememberme" class="input-box"><?php echo $this->__('Remember password') ?></label>
-                        <a href="<?php echo $this->getUrl('customer/account/forgotpassword') ?>" class="f-right"><?php echo $this->__('Forgot your password?') ?></a>
+                        <a href="<?php echo $this->getUrl('customer/account/forgotpassword') ?>" class="f-right" style="margin-top: 2px"><?php echo $this->__('Forgot your password?') ?></a>
 
                     </div>
                 </li>
@@ -65,7 +65,7 @@
         </fieldset>
         </form>
         <div class="buttons-set for-mobile">
-            <a href="<?php echo $this->getUrl('customer/account/forgotpassword') ?>" class="f-right"><?php echo $this->__('Forgot your password?') ?></a>
+            <a href="<?php echo $this->getUrl('customer/account/forgotpassword') ?>" class="f-right" style="margin-top: 2px"><?php echo $this->__('Forgot your password?') ?></a>
             <button type="submit" class="button" onclick="onepageLogin(this)"><span><span><?php echo $this->__('Login') ?></span></span></button>
             <?php echo $this->getLayout()->createBlock('fblogin/fblogin')->setTemplate('fblogin/bt_fblogin.phtml')->toHtml(); ?>
         </div>
