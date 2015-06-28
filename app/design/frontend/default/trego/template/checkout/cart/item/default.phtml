@@ -7,7 +7,6 @@ $product_image = $this->helper('catalog/image')->init($_item->getProduct(), 'sma
 
 $_product = $_item->getProduct();
 
-
 $childProducts= array();
 $id = $_product['entity_id'];
 $childProducts[$id] = Mage::getModel('catalog/product_type_configurable')->getChildrenIds($id); // get the Id of configurable product
@@ -19,8 +18,10 @@ foreach($childProducts as $childProduct){
             $product_data = Mage::getModel('catalog/product')->load($prods)
                 ->getData(); // Get the collection of associated product from the configurable product
 
-
-            if (strpos($product_data['sku'], $_item->getProduct()->getSku()) !== FALSE){
+            echo $product_data['image'];
+            echo ' ' . $product_data['sku'];
+            echo ' ' . $_item->getProduct()->getSku();
+            if (strpos($product_data['sku'], $_item->getProduct()->getSku()) >=0){
                 echo 'found product';
                 echo $product_data['image'];
                 $product_image = $this->helper('catalog/image')->init($_item->getProduct(), 'small_image')->constrainOnly(FALSE)->keepAspectRatio(TRUE)->keepFrame(FALSE)->resize(140);
