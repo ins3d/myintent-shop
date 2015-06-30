@@ -1,10 +1,16 @@
 /**
  * WARNING: Do not change this file. Your changes will be lost.
- * 2015-06-25 20:01:42 */
+ * 2015-06-29 17:14:41 */
 
 
 @media only screen and (max-width: 767px)  {
 }
 
 @media only screen and (min-width: 1025px) and (max-height: 800px)  {
+    #mobnav {
+        display: none;
+    }
+    .nav-container #nav.megamenu { display: block; }
+    .nav-container #nav.default { display: block; }
+    .nav-container #nav.menutype2 { display: block; }
 }

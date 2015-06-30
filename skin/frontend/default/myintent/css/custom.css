@@ -206,3 +206,32 @@ a.pinterest-icon {
 	height: 3%;
 	width: 3%;
 }
+
+#trego_quickview_handler, .block-blog-recent{
+	display: none !important;
+}
+
+#nav.menutype2 > li > a {
+    border-bottom: 0px solid #DDD;
+}
+
+input[type=text], .input-text, #search {
+	background-color: #FFFFFF !important;
+	border-color: #E8E8E8 !important;
+}
+
+.nav-container a#mobnav{
+	color: #797872;
+}
+
+.nav-container.expanded a#mobnav{
+	color: #2f3538;
+}
+
+.h-align {
+	display: inline-block;
+}
+
+button.button{
+   	background: #000FFF none repeat scroll 0% 0%;
+}
