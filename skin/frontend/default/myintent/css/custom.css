@@ -211,6 +211,14 @@ a.pinterest-icon {
 	display: none !important;
 }
 
+a{
+	color: #797872;
+}
+
+a:hover{
+	color: #d64c35;
+}
+
 #nav.menutype2 > li > a {
     border-bottom: 0px solid #DDD;
 }
@@ -232,6 +240,10 @@ input[type=text], .input-text, #search {
 	display: inline-block;
 }
 
-button.button{
-   	background: #000FFF none repeat scroll 0% 0%;
+button.button span{
+   	background: #2f3538 none repeat scroll 0% 0% !important;
+}
+
+button.button:hover span{
+   	background: #686868 none repeat scroll 0% 0% !important;
 }
