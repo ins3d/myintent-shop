@@ -207,43 +207,95 @@ a.pinterest-icon {
 	width: 3%;
 }
 
-#trego_quickview_handler, .block-blog-recent{
-	display: none !important;
-}
-
+/* changing color of text within links */
 a{
 	color: #797872;
 }
 
-a:hover{
-	color: #d64c35;
+a:not(#mobnav):hover{
+	color: #d64c35 !important;
 }
 
+/* removing lines between categories in the left hand menu (non-mobile menu button) */
 #nav.menutype2 > li > a {
     border-bottom: 0px solid #DDD;
 }
-
-input[type=text], .input-text, #search {
+	
+/* input text boxes (and adjacent sibling div elements) - background color and borders */
+.input-text, .input-text  + div , textarea, select {
 	background-color: #FFFFFF !important;
 	border-color: #E8E8E8 !important;
 }
 
-.nav-container a#mobnav{
-	color: #797872;
+/* changing color of price */
+#opc-review .data-table tfoot td.last strong .price, #opc-review td.last .price, .cart .totals tfoot td .price, .cart-table td.sub-total, .top-cart .qty-price .price, .block .regular-price, .block .regular-price .price, .price-box .price, .special-price .price {
+  color: #000000;
 }
 
-.nav-container.expanded a#mobnav{
-	color: #2f3538;
-}
-
+/* align content - same horizontal line */
 .h-align {
 	display: inline-block;
 }
 
+/* button backgrounds */
 button.button span{
    	background: #2f3538 none repeat scroll 0% 0% !important;
 }
 
 button.button:hover span{
    	background: #686868 none repeat scroll 0% 0% !important;
+}
+
+/* remove the gap between the mobile "menu" button and 1) the right side of the page and 2) the list of categories that opens when menu is clicked */
+.nav-container ul#nav.menutype2 {
+  top: 31px;
+  right: 0;
+}
+
+/* remove line underneath "More Views" in product details page */
+.product-view .product-img-box .more-views h2 {
+  border-bottom: 0 solid #ccc;
+}
+
+/* remove top padding to footer */
+.footer-container {
+  padding: 0 10px 24px;
+}  
+
+/* remove bottom line after product description */
+.akordeon {
+  border-bottom: 0px solid #d9d9d9 !important; 
+}
+
+/* left align elements */
+.product-shop dt{
+	margin-top: 0;
+	margin-bottom: 5px;
+}
+
+.product-shop dd{
+	margin: 0 0 10px 0;
+}
+
+.product-options dl.last dd.last {
+	margin: 0 0 10px 0;
+}
+
+/* changing text color of menu categories (full screen only) */
+#nav a {
+	color: #797872;
+}
+
+#nav a:hover, #nav a.active {
+	color: #2F3538 !important;
+}
+
+/* Remove "My Wishlist from footer */
+.footer-menu  a[title="My Wishlist"]{
+	display: none;
+}
+
+/* Remove extra "Forgot Your Password"  link when user is checking out on mobile */
+.buttons-set.for-mobile a.f-right {
+	display: none;
 }
