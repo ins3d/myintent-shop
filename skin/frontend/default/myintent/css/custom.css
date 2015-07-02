@@ -222,9 +222,17 @@ a:not(#mobnav):hover{
 }
 	
 /* input text boxes (and adjacent sibling div elements) - background color and borders */
-.input-text, .input-text  + div , textarea, select {
+input.input-text, .input-text  + div , textarea, select {
 	background-color: #FFFFFF !important;
 	border-color: #E8E8E8 !important;
+}
+
+.product-options dd select {
+  width: 100%;
+}
+
+.product-options dd input.input-text, .product-options dd textarea {
+  width: 98.9%;
 }
 
 /* changing color of price */
@@ -247,9 +255,18 @@ button.button:hover span{
 }
 
 /* remove the gap between the mobile "menu" button and 1) the right side of the page and 2) the list of categories that opens when menu is clicked */
-.nav-container ul#nav.menutype2 {
-  top: 31px;
-  right: 0;
+@media (max-width: 767px) {
+	.nav-container ul#nav.menutype2 {
+		top: 31px;
+		right: 0;
+		width: 250px;
+	}	
+}
+
+.nav-container.expanded a#mobnav {
+  background: none;
+  background-color: #FFFFFF;
+  color: #4e4d49;
 }
 
 /* remove line underneath "More Views" in product details page */
@@ -296,6 +313,7 @@ button.button:hover span{
 }
 
 /* Remove extra "Forgot Your Password"  link when user is checking out on mobile */
-.buttons-set.for-mobile a.f-right {
-	display: none;
-}
+//.buttons-set.for-mobile a.f-right {
+//	display: none;
+//}
+
