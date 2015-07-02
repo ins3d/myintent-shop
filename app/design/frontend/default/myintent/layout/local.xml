@@ -148,6 +148,9 @@ Default layout, loads most of the pages
             <action method="addCss"><stylesheet>jquery_etalage/etalage.css</stylesheet></action>
             <action method="addCss"><stylesheet>jquery_bxslider/jquery.bxslider.css</stylesheet></action>
             <action method="addItem"><type>skin_js</type><script>js/lib/elevatezoom/jquery.elevateZoom-3.0.8.min.js</script></action>
+<!-- customization begin -->			
+			<action method="addJs"><script>prototype/myintent_validation.js</script></action>
+<!-- customization end -->			
         </reference>
         <reference name="product.info.upsell">
             <action method="setTemplate"><template>catalog/product/view/upsell.phtml</template></action>

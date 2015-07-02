@@ -261,11 +261,6 @@ button.button:hover span{
   color: #4e4d49;
 }
 
-
-
-
-
-
 /* remove line underneath "More Views" in product details page */
 .product-view .product-img-box .more-views h2 {
   border-bottom: 0 solid #ccc;
@@ -310,7 +305,7 @@ button.button:hover span{
 }
 
 /* Remove extra "Forgot Your Password"  link when user is checking out on mobile */
-.buttons-set.for-mobile a.f-right {
-	display: none;
-}
+//.buttons-set.for-mobile a.f-right {
+//	display: none;
+//}
 
