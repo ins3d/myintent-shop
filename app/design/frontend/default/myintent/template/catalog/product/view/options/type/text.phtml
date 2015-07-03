@@ -68,22 +68,24 @@
 <script type="text/javascript">
 
 function initLightbox(){
-    new Lightbox({
-//        fileLoadingImage: "http://localhost/skin/frontend/default/default/images/lightbox/loading.gif",
-//        fileBottomNavCloseImage: 'http://localhost/skin/frontend/default/default/images/lightbox/closelabel.gif',
-        fileLoadingImage: "<?php echo $this->getSkinUrl('images/lightbox/loading.gif'); ?>",
-        fileBottomNavCloseImage: "<?php echo $this->getSkinUrl('images/lightbox/closelabel.gif'); ?>",
-        overlayOpacity: <?php
+    try{
 
-                if (empty($_lightboxConfig['overlayOpacity'])){ echo 0;}else{echo $_lightboxConfig['overlayOpacity'];}
+        new Lightbox({
+    //        fileLoadingImage: "http://localhost/skin/frontend/default/default/images/lightbox/loading.gif",
+    //        fileBottomNavCloseImage: 'http://localhost/skin/frontend/default/default/images/lightbox/closelabel.gif',
+            fileLoadingImage: "<?php echo $this->getSkinUrl('images/lightbox/loading.gif'); ?>",
+            fileBottomNavCloseImage: "<?php echo $this->getSkinUrl('images/lightbox/closelabel.gif'); ?>",
+            overlayOpacity: <?php if (empty($_lightboxConfig['overlayOpacity'])){ echo 0;}else{echo $_lightboxConfig['overlayOpacity'];}?>,
+            animate: <?php echo (($_lightboxConfig['animate'] > 0)? "1":"0"); ?>,
+            resizeSpeed: <?php if (empty($_lightboxConfig['resizeSpeed'])){ echo 0;}else{echo $_lightboxConfig['resizeSpeed'];} ?>,
+            borderSize: <?php echo $_lightboxConfig['borderSize'] ?>,
+            labelImage: '<?php echo $_lightboxConfig['labelImage'] ?>',
+            labelOf: '<?php echo $_lightboxConfig['labelOf'] ?>'
+        });
 
-                ?>,
-        animate: <?php echo (($_lightboxConfig['animate'] > 0)? "1":"0"); ?>,
-        resizeSpeed: <?php echo $_lightboxConfig['resizeSpeed'] ?>,
-        borderSize: <?php echo $_lightboxConfig['borderSize'] ?>,
-        labelImage: '<?php echo $_lightboxConfig['labelImage'] ?>',
-        labelOf: '<?php echo $_lightboxConfig['labelOf'] ?>'
-    });
+    }catch(var e){
+        console.log("Lightbox not loaded due to error.");
+    }
 }
 
 
