@@ -16,6 +16,10 @@
     </div>
     <script type="text/javascript">
         jQuery(document).ready(function(){
+			jQuery("#veetest").click(function(){
+				alert("clicked");
+			});
+			
             jQuery("#qty_inc").click(function(){
                 jQuery("#qty").val((+jQuery("#qty").val() + 1) || 0);
             });
