@@ -52,11 +52,15 @@ foreach($childProducts as $childProduct){
         <div class="item-options">
             <?php foreach ($_options as $_option) : ?>
             <?php $_formatedOptionValue = $this->getFormatedOptionValue($_option) ?>
-            <div><?php echo $this->htmlEscape($_option['label']) ?>:&nbsp;<b><?php echo $_formatedOptionValue['value'] ?></b>
+            <div><?php
+                $productAttribute = $_product->getResource()->getAttribute($_option['label']);
+                $_option_store_label = $productAttribute->getStoreLabel(Mage::app()->getStore()->getName());
+
+                echo $this->htmlEscape($_option_store_label) ?>:&nbsp;<b><?php echo $_formatedOptionValue['value'] ?></b>
                 <?php if (isset($_formatedOptionValue['full_view'])): ?>
                 <div class="truncated_full_value">
                     <div class="item-options">
-                        <div><?php echo $this->htmlEscape($_option['label']) ?>:&nbsp;<b><?php echo $_formatedOptionValue['full_view'] ?></b></div>
+                        <div><?php echo $this->htmlEscape($_option_store_label) ?>:&nbsp;<b><?php echo $_formatedOptionValue['full_view'] ?></b></div>
                     </div>
                 </div>
                 <?php endif; ?>
