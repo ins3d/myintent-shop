@@ -41,7 +41,7 @@
 
     <script type="text/javascript">
 
-    function initLightbox<? echo $_option = $this->getOption(); ?>(){
+    function initLightbox(){
         try{
 
         new Lightbox({
@@ -58,18 +58,18 @@
             });
 
         }catch(e){
-        console.log("Lightbox not loaded due to error. " + e);
+            console.log("Lightbox not loaded due to error. " + e);
         }
     }
 
 
     if (Prototype.Browser.IE) {
         Event.observe(window, 'load', function(){ //KB927917 fix
-        initLightbox<? echo $_option = $this->getOption(); ?>();
+            initLightbox();
         });
     } else {
         document.observe("dom:loaded", function(){
-        initLightbox<? echo $_option = $this->getOption(); ?>();
+        initLightbox();
         });
     }
 
