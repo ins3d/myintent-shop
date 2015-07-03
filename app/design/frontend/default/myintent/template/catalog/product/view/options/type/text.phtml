@@ -38,7 +38,44 @@
     onclick="return false;"
 ><img src="<?php echo $this->getSkinUrl('images/question_mark.png'); ?>" class="question_mark"/></a>
 
-<?php
+
+<script type="text/javascript">
+
+function initLightbox<? echo $_option = $this->getOption(); ?>(){
+    try{
+
+    new Lightbox({
+    //        fileLoadingImage: "http://localhost/skin/frontend/default/default/images/lightbox/loading.gif",
+    //        fileBottomNavCloseImage: 'http://localhost/skin/frontend/default/default/images/lightbox/closelabel.gif',
+    fileLoadingImage: "<?php echo $this->getSkinUrl('images/lightbox/loading.gif'); ?>",
+    fileBottomNavCloseImage: "<?php echo $this->getSkinUrl('images/lightbox/closelabel.gif'); ?>",
+    overlayOpacity: <?php if (empty($_lightboxConfig['overlayOpacity'])){ echo 0;}else{echo $_lightboxConfig['overlayOpacity'];}?>,
+    animate: <?php echo (($_lightboxConfig['animate'] > 0)? "1":"0"); ?>,
+    resizeSpeed: <?php if (empty($_lightboxConfig['resizeSpeed'])){ echo 0;}else{echo $_lightboxConfig['resizeSpeed'];} ?>,
+    borderSize: <?php if (empty($_lightboxConfig['borderSize'])){ echo 0;}else{echo $_lightboxConfig['borderSize'];} ?>,
+    labelImage: '<?php echo $_lightboxConfig['labelImage'] ?>',
+    labelOf: '<?php echo $_lightboxConfig['labelOf'] ?>'
+    });
+
+    }catch(e){
+    console.log("Lightbox not loaded due to error. " + e);
+    }
+    }
+
+
+    if (Prototype.Browser.IE) {
+    Event.observe(window, 'load', function(){ //KB927917 fix
+    initLightbox<? echo $_option = $this->getOption(); ?>();
+    });
+    } else {
+    document.observe("dom:loaded", function(){
+    initLightbox<? echo $_option = $this->getOption(); ?>();
+    });
+    }
+
+    </script>
+  <?php
+
     } 
 ?>
 
@@ -65,38 +102,4 @@
 </dd>
 
 
-<script type="text/javascript">
 
-function initLightbox(){
-    try{
-
-        new Lightbox({
-    //        fileLoadingImage: "http://localhost/skin/frontend/default/default/images/lightbox/loading.gif",
-    //        fileBottomNavCloseImage: 'http://localhost/skin/frontend/default/default/images/lightbox/closelabel.gif',
-            fileLoadingImage: "<?php echo $this->getSkinUrl('images/lightbox/loading.gif'); ?>",
-            fileBottomNavCloseImage: "<?php echo $this->getSkinUrl('images/lightbox/closelabel.gif'); ?>",
-            overlayOpacity: <?php if (empty($_lightboxConfig['overlayOpacity'])){ echo 0;}else{echo $_lightboxConfig['overlayOpacity'];}?>,
-            animate: <?php echo (($_lightboxConfig['animate'] > 0)? "1":"0"); ?>,
-            resizeSpeed: <?php if (empty($_lightboxConfig['resizeSpeed'])){ echo 0;}else{echo $_lightboxConfig['resizeSpeed'];} ?>,
-            borderSize: <?php if (empty($_lightboxConfig['borderSize'])){ echo 0;}else{echo $_lightboxConfig['borderSize'];} ?>,
-            labelImage: '<?php echo $_lightboxConfig['labelImage'] ?>',
-            labelOf: '<?php echo $_lightboxConfig['labelOf'] ?>'
-        });
-
-    }catch(e){
-        console.log("Lightbox not loaded due to error. " + e);
-    }
-}
-
-
-if (Prototype.Browser.IE) {
-    Event.observe(window, 'load', function(){ //KB927917 fix
-        initLightbox();
-    });
-} else {
-    document.observe("dom:loaded", function(){
-        initLightbox();
-    });
-}
-
-</script>
