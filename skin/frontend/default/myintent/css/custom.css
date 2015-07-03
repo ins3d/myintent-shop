@@ -246,19 +246,25 @@ button.button:hover span{
    	background: #686868 none repeat scroll 0% 0% !important;
 }
 
-/* remove the gap between the mobile "menu" button and 1) the right side of the page and 2) the list of categories that opens when menu is clicked */
+
 @media (max-width: 767px) {
+	/* removes the dark grey box just to the right of the three horizontal slashes to the right of the mobile menu button */
+	.nav-container.expanded {
+	  background: none;
+	}
+	
+	/* remove the gap between the mobile "menu" button and 1) the right side of the page and 2) the list of categories that opens when menu is clicked */
 	.nav-container ul#nav.menutype2 {
 		top: 31px;
 		right: 0;
 		width: 250px;
-	}	
+	}
 }
 
 .nav-container.expanded a#mobnav {
-  background: none;
-  background-color: #FFFFFF;
-  color: #4e4d49;
+//	background: url(../images/mobnav-hover-icon.png) right 6px no-repeat;
+	background-color: #FFFFFF;
+	color: #4e4d49;
 }
 
 /* remove line underneath "More Views" in product details page */
