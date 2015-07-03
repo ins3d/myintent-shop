@@ -78,13 +78,13 @@ function initLightbox(){
             overlayOpacity: <?php if (empty($_lightboxConfig['overlayOpacity'])){ echo 0;}else{echo $_lightboxConfig['overlayOpacity'];}?>,
             animate: <?php echo (($_lightboxConfig['animate'] > 0)? "1":"0"); ?>,
             resizeSpeed: <?php if (empty($_lightboxConfig['resizeSpeed'])){ echo 0;}else{echo $_lightboxConfig['resizeSpeed'];} ?>,
-            borderSize: <?php echo $_lightboxConfig['borderSize'] ?>,
+            borderSize: <?php if (empty($_lightboxConfig['borderSize'])){ echo 0;}else{echo $_lightboxConfig['borderSize'];} ?>,
             labelImage: '<?php echo $_lightboxConfig['labelImage'] ?>',
             labelOf: '<?php echo $_lightboxConfig['labelOf'] ?>'
         });
 
-    }catch(var e){
-        console.log("Lightbox not loaded due to error.");
+    }catch(e){
+        console.log("Lightbox not loaded due to error. " + e);
     }
 }
 
