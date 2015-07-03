@@ -320,8 +320,7 @@ button.button:hover span{
 	display: none;
 }
 
-/* Remove extra "Forgot Your Password"  link when user is checking out on mobile */
-//.buttons-set.for-mobile a.f-right {
-//	display: none;
-//}
-
+/* Capitalize every letter in "Your Word" fields */
+.validate-myintent-chars{
+	text-transform:uppercase
+}
