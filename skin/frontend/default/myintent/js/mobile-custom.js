@@ -68,7 +68,7 @@ jQuery(document).ready(function(){
 		{
 			var menuTab = "Blog";
 		}
-		jQuery("#" + menuTab).find("a").addClass("active");
+		jQuery("#" + menuTab).find("a").first().addClass("active");
 	});
 
 /* End customization */	
