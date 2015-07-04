@@ -265,16 +265,24 @@ button.button:hover span{
 @media only screen and (min-width: 1025px){
 	/* Using customized arrows for menu bar */
 	#nav.menutype2 span.plus {
-	  background: url(../images/expand-icon2.png) 10px 10px no-repeat;
+		background: url(../images/expand-icon2.png) 10px 10px no-repeat;
+	}
+	
+	#nav.menutype2 > li.level0:hover > span.plus {
+		background-color: transparent;
+	}
+	
+	#nav.menutype2 li.expanded span.plus {
+		background: url(../images/expand-icon2.png) 10px -40px no-repeat;
 	}
 	
 	#nav.menutype2 > li.level0 > span.plus {
-	  top: 3px;
+		top: 3px;
 	}
 	
 	/* background for the left hand menu */
 	.header .header-sidebar {
-	  background: url(../images/left-side-bg.png) repeat-y;
+		background: url(../images/left-side-bg.png) repeat-y;
 	}
 }
 
