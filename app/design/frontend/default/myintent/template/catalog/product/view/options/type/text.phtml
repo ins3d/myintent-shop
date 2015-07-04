@@ -32,12 +32,13 @@
     }
 ?>
 
-<a href="#" 
-    rel="lightbox" 
-    title=""
-    onclick="return false;"
-><img src="<?php echo $this->getSkinUrl('images/question_mark.png'); ?>" class="question_mark"/></a>
+    <a href="#"
+        rel="lightbox"
+        title=""
+        onclick="return false;"
+    ><img src="<?php echo $this->getSkinUrl('images/question_mark.png'); ?>" class="question_mark"/></a>
 
+<<<<<<< HEAD
 <script type="text/javascript">
 
 function initLightbox(){
@@ -97,3 +98,71 @@ if (Prototype.Browser.IE) {
     <?php endif; ?>
     </div>
 </dd>
+=======
+
+    <script type="text/javascript">
+
+    function initLightbox(){
+        try{
+
+        new Lightbox({
+            //        fileLoadingImage: "http://localhost/skin/frontend/default/default/images/lightbox/loading.gif",
+            //        fileBottomNavCloseImage: 'http://localhost/skin/frontend/default/default/images/lightbox/closelabel.gif',
+            fileLoadingImage: "<?php echo $this->getSkinUrl('images/lightbox/loading.gif'); ?>",
+            fileBottomNavCloseImage: "<?php echo $this->getSkinUrl('images/lightbox/closelabel.gif'); ?>",
+            overlayOpacity: <?php if (empty($_lightboxConfig['overlayOpacity'])){ echo 0;}else{echo $_lightboxConfig['overlayOpacity'];}?>,
+            animate: <?php echo (($_lightboxConfig['animate'] > 0)? "1":"0"); ?>,
+            resizeSpeed: <?php if (empty($_lightboxConfig['resizeSpeed'])){ echo 0;}else{echo $_lightboxConfig['resizeSpeed'];} ?>,
+            borderSize: <?php if (empty($_lightboxConfig['borderSize'])){ echo 0;}else{echo $_lightboxConfig['borderSize'];} ?>,
+            labelImage: '<?php echo $_lightboxConfig['labelImage'] ?>',
+            labelOf: '<?php echo $_lightboxConfig['labelOf'] ?>'
+            });
+
+        }catch(e){
+            console.log("Lightbox not loaded due to error. " + e);
+        }
+    }
+
+
+    if (Prototype.Browser.IE) {
+        Event.observe(window, 'load', function(){ //KB927917 fix
+            initLightbox();
+        });
+    } else {
+        document.observe("dom:loaded", function(){
+        initLightbox();
+        });
+    }
+
+    </script>
+<?php
+
+}
+
+?>
+
+    
+<!-- customization end -->
+
+    <?php echo $this->getFormatedPrice() ?></dt>
+<dd<?php if ($_option->decoratedIsLast){?> class="last"<?php }?>>
+    <div class="input-box">
+    <?php if ($_option->getType() == Mage_Catalog_Model_Product_Option::OPTION_TYPE_FIELD): ?>
+<!-- customization begin - only allow uppercase chars, numbers, and & -->	
+        <input type="text" onchange="opConfig.reloadPrice()" id="options_<?php echo $_option->getId() ?>_text" class="input-text<?php echo $_option->getIsRequire() ? ' required-entry' : '' ?> <?php if ($_option->getTitle() == 'Your Word'){ echo 'validate-myintent-chars'; } ?> <?php echo $_option->getMaxCharacters() ? ' validate-length maximum-length-'.$_option->getMaxCharacters() : '' ?> product-custom-option" name="options[<?php echo $_option->getId() ?>]" value="<?php echo $this->escapeHtml($this->getDefaultValue()) ?>" />
+<!-- customization end -->		
+<!-- customization 	
+        <input type="text" onchange="opConfig.reloadPrice()" id="options_<?php echo $_option->getId() ?>_text" class="input-text<?php echo $_option->getIsRequire() ? ' required-entry' : '' ?> <?php echo $_option->getMaxCharacters() ? ' validate-length maximum-length-'.$_option->getMaxCharacters() : '' ?> product-custom-option" name="options[<?php echo $_option->getId() ?>]" value="<?php echo $this->escapeHtml($this->getDefaultValue()) ?>" />
+-->		
+    <?php elseif ($_option->getType() == Mage_Catalog_Model_Product_Option::OPTION_TYPE_AREA): ?>
+        <textarea id="options_<?php echo $_option->getId() ?>_text" onchange="opConfig.reloadPrice()" class="<?php echo $_option->getIsRequire() ? ' required-entry' : '' ?> <?php echo $_option->getMaxCharacters() ? ' validate-length maximum-length-'.$_option->getMaxCharacters() : '' ?> product-custom-option" name="options[<?php echo $_option->getId() ?>]" rows="5" cols="25"><?php echo $this->escapeHtml($this->getDefaultValue()) ?></textarea>
+    <?php endif; ?>
+    <?php if ($_option->getMaxCharacters()): ?>
+        <p class="note"><?php echo Mage::helper('catalog')->__('Maximum number of characters:')?> <strong><?php echo $_option->getMaxCharacters() ?></strong></p>
+    <?php endif; ?>
+    </div>
+</dd>
+
+
+
+>>>>>>> origin/dev
