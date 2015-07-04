@@ -203,8 +203,8 @@ a.pinterest-icon {
 }
 
 .question_mark{
-	height: 3%;
-	width: 3%;
+	height: 2.4%;
+	width: 2.4%;
 }
 
 /* changing color of text within links */
@@ -247,7 +247,7 @@ button.button:hover span{
 }
 
 
-@media (max-width: 767px) {
+@media only screen and (max-width: 767px) {
 	/* removes the dark grey box just to the right of the three horizontal slashes to the right of the mobile menu button */
 	.nav-container.expanded {
 	  background: none;
@@ -261,9 +261,25 @@ button.button:hover span{
 	}
 }
 
+
+@media only screen and (min-width: 1025px){
+	/* Using customized arrows for menu bar */
+	#nav.menutype2 span.plus {
+	  background: url(../images/expand-icon2.png) 10px 10px no-repeat;
+	}
+	
+	#nav.menutype2 > li.level0 > span.plus {
+	  top: 3px;
+	}
+	
+	/* background for the left hand menu */
+	.header .header-sidebar {
+	  background: url(../images/left-side-bg.png) repeat-y;
+	}
+}
+
 .nav-container.expanded a#mobnav {
-//	background: url(../images/mobnav-hover-icon.png) right 6px no-repeat;
-	background-color: #FFFFFF;
+	background: url(../images/mobnav-hover-icon.png) right 6px no-repeat;
 	color: #4e4d49;
 }
 
@@ -308,11 +324,11 @@ button.button:hover span{
 
 /* changing text color of menu categories (full screen only) */
 #nav a {
-	color: #797872;
+	color: #000000;
 }
 
 #nav a:hover, #nav a.active {
-	color: #2F3538 !important;
+	color: #D64C35 !important;
 }
 
 /* Remove "My Wishlist from footer */
