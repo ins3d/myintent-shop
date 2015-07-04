@@ -222,7 +222,7 @@ a:not(#mobnav):hover{
 }
 	
 /* input text boxes (and adjacent sibling div elements) - background color and borders */
-input.input-text, .input-text  + div , textarea, select {
+input.input-text, .input-text  + div:not(.validation-advice) , textarea, select {
 	background-color: #FFFFFF !important;
 	border-color: #E8E8E8 !important;
 }
