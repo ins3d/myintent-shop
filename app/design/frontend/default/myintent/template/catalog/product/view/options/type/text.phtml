@@ -68,7 +68,7 @@
         });
     } else {
         document.observe("dom:loaded", function(){
-        initLightbox();
+			initLightbox();
         });
     }
 
@@ -97,7 +97,16 @@
         <input type="text" onchange="opConfig.reloadPrice()" id="options_<?php echo $_option->getId() ?>_text" class="input-text<?php echo $_option->getIsRequire() ? ' required-entry' : '' ?> <?php echo $_option->getMaxCharacters() ? ' validate-length maximum-length-'.$_option->getMaxCharacters() : '' ?> product-custom-option" name="options[<?php echo $_option->getId() ?>]" value="<?php echo $this->escapeHtml($this->getDefaultValue()) ?>" />
 -->		
     <?php elseif ($_option->getType() == Mage_Catalog_Model_Product_Option::OPTION_TYPE_AREA): ?>
+<!-- customization begin - only allow uppercase chars, numbers, and & -->
+		<?php if ($_option->getTitle() == 'Story'): ?>
+			<textarea id="options_<?php echo $_option->getId() ?>_text" placeholder='Describe why you picked "Your Word"' onchange="opConfig.reloadPrice()" class="<?php echo $_option->getIsRequire() ? ' required-entry' : '' ?> <?php echo $_option->getMaxCharacters() ? ' validate-length maximum-length-'.$_option->getMaxCharacters() : '' ?> product-custom-option" name="options[<?php echo $_option->getId() ?>]" rows="5" cols="25"><?php echo $this->escapeHtml($this->getDefaultValue()) ?></textarea>
+		<?php else: ?>
+	        <textarea id="options_<?php echo $_option->getId() ?>_text" onchange="opConfig.reloadPrice()" class="<?php echo $_option->getIsRequire() ? ' required-entry' : '' ?> <?php echo $_option->getMaxCharacters() ? ' validate-length maximum-length-'.$_option->getMaxCharacters() : '' ?> product-custom-option" name="options[<?php echo $_option->getId() ?>]" rows="5" cols="25"><?php echo $this->escapeHtml($this->getDefaultValue()) ?></textarea>
+		<?php endif; ?>	
+<!-- customization end -->		
+<!-- customization 		
         <textarea id="options_<?php echo $_option->getId() ?>_text" onchange="opConfig.reloadPrice()" class="<?php echo $_option->getIsRequire() ? ' required-entry' : '' ?> <?php echo $_option->getMaxCharacters() ? ' validate-length maximum-length-'.$_option->getMaxCharacters() : '' ?> product-custom-option" name="options[<?php echo $_option->getId() ?>]" rows="5" cols="25"><?php echo $this->escapeHtml($this->getDefaultValue()) ?></textarea>
+-->				
     <?php endif; ?>
     <?php if ($_option->getMaxCharacters()): ?>
         <p class="note"><?php echo Mage::helper('catalog')->__('Maximum number of characters:')?> <strong><?php echo $_option->getMaxCharacters() ?></strong></p>
