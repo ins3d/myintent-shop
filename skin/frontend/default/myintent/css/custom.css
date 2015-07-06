@@ -219,8 +219,8 @@ a:not(#mobnav):hover{
 /* removing lines between categories in the left hand menu (non-mobile menu button) */
 #nav.menutype2 > li > a {
     border-bottom: 0px solid #DDD;
-}
-	
+}		
+		
 /* input text boxes (and adjacent sibling div elements) - background color and borders */
 input.input-text, .input-text  + div:not(.validation-advice) , textarea, select {
 	background-color: #FFFFFF !important;
@@ -330,12 +330,27 @@ button.button:hover span{
 	width: calc(100% - 14px)
 }
 
-/* changing text color of menu categories (full screen only) */
+/* changing text color in menu categories/subcategories (full screen only) */
 #nav a {
-	color: #000000;
+	color: #000000 !important;
 }
 
-#nav a:hover, #nav a.active {
+#nav ul li a {
+	color: #000000 !important;
+}
+
+#nav ul li a:hover, #nav ul li a.active{
+	color: #D64C35 !important;
+}
+
+/* remove background and border while hovering over subcategories in menu */
+#nav.menutype2 ul.level1 li > a:hover, #nav.menutype2 ul.level1 li.over > a {
+  border-right: 0;
+  background: none;
+}
+
+/* Change color of "active" category in menu */
+#nav a.active {
 	color: #D64C35 !important;
 }
 

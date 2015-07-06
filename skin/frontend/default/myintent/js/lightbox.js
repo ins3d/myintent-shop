@@ -52,11 +52,11 @@ Lightbox.prototype = {
         // If animations are turned off, it will be hidden as to prevent a flicker of a
         // white 250 by 250 box.
         var size = (this.options.animate ? 250 : 1) + 'px';
-        
+
+/* customization
         this.pageScroll = document.viewport.getScrollOffsets();
         this.pageHeight = document.viewport.getHeight();
-        
-
+*/
         // Code inserts html at the bottom of the page that looks similar to this:
         //
         //  <div id="overlay"></div>
@@ -98,8 +98,10 @@ Lightbox.prototype = {
         objBody.appendChild(Builder.node('div',{id:'lightbox'}, [
             Builder.node('div',{id:'outerImageContainer'}, 
                 Builder.node('div',{id:'imageContainer', style: 'padding: ' + this.options.borderSize + 'px'}, [
+/* customization begin */
 //                    Builder.node('img',{id:'lightboxImage'}), 
                     Builder.node('div',{id:'word_help'}), 
+/* customization end */					
                     Builder.node('div',{id:'hoverNav'}, [
                         Builder.node('a',{id:'prevLink', href: '#' }),
                         Builder.node('a',{id:'nextLink', href: '#' })
@@ -135,11 +137,12 @@ Lightbox.prototype = {
         $('bottomNavClose').observe('click', (function(event) { event.stop(); this.end(); }).bind(this));
         
         var th = this;
-
+/* customization begin */
         var ids = 
             'overlay lightbox outerImageContainer imageContainer word_help hoverNav prevLink nextLink loading loadingLink ' + 
             'imageDataContainer imageData imageDetails caption numberDisplay bottomNav bottomNavClose';   
-/*            
+/* customization end */			
+/* customization
         var ids = 
             'overlay lightbox outerImageContainer imageContainer lightboximage hoverNav prevLink nextLink loading loadingLink ' + 
             'imageDataContainer imageData imageDetails caption numberDisplay bottomNav bottomNavClose';   
@@ -173,6 +176,12 @@ Lightbox.prototype = {
     //  Display overlay and lightbox. If image is part of a set, add siblings to imageArray.
     //
     start: function(imageLink) {
+
+/* customization begin */
+        this.pageScroll = document.viewport.getScrollOffsets();
+        this.pageHeight = document.viewport.getHeight();
+/* customization end */
+
         if (this.animating) {
             return false;
         }
@@ -180,8 +189,15 @@ Lightbox.prototype = {
 
         // stretch overlay to fill page and fade in
         var arrayPageSize = this.getPageSize();
-
+		
+/* customization begin */
         this.overlay.setStyle({ width: arrayPageSize[0] + 'px', height: arrayPageSize[1] + 'px' });
+		
+		Event.observe(window, "resize", (function(){
+			var arrayPageSize = this.getPageSize();
+			this.overlay.setStyle({ width: arrayPageSize[0] + 'px', height: arrayPageSize[1] + 'px' });
+		}).bind(this));
+/* customization end */
         
         new Effect.Appear(this.overlay, { duration: this.overlayDuration, from: 0.0, to: this.options.overlayOpacity });
         
@@ -191,14 +207,17 @@ Lightbox.prototype = {
         if ((imageLink.rel == 'lightbox')){
             // if image is NOT part of a set, add single image to imageArray
             this.imageArray.push([imageLink.href, imageLink.title]);
-        } /* else {
+        } 
+/* customization
+		else {
             // if image is part of a set..
             this.imageArray = 
                 $$(imageLink.tagName + '[href][rel="' + imageLink.rel + '"]').
                 collect(function(anchor){ return [anchor.href, anchor.title]; }).
                 uniq();		
             while (this.imageArray[imageNum][0] != imageLink.href) { imageNum++; }
-        }*/
+        }
+*/
 
         // calculate top and left offset for the lightbox 
         var lightboxTop = this.pageScroll[1] + (this.pageHeight / 10);
@@ -227,11 +246,13 @@ Lightbox.prototype = {
         this.numberDisplay.hide();
 
         // retrieve content for word_help
+/* customization begin */		
         var word_help_content = document.getElementById("word_help_content").innerHTML;
         document.getElementById("word_help").innerHTML = word_help_content;
         this.resizeImageContainer(265, 265);
+/* customization end */
 
-/*
+/* customization
         var imgPreloader = new Image();
 
         // once image is preloaded, resize image container
@@ -244,9 +265,9 @@ Lightbox.prototype = {
 */
     },
 
-    //
-    //  resizeImageContainer()
-    //
+/* customization    
+      resizeImageContainer()
+*/
     resizeImageContainer: function(imgWidth, imgHeight) {
         // get current width and height
         var widthCurrent  = this.outerImageContainer.getWidth() || (this.options.animate ? 250 : 1);
@@ -435,6 +456,9 @@ Lightbox.prototype = {
     //
     end: function() {
         this.disableKeyboardNav();
+/* customization begin */
+		Event.stopObserving(window, "resize");
+/* customization end */		
         this.lightbox.hide();
         new Effect.Fade(this.overlay, { duration: this.overlayDuration });
         $$('select', 'object', 'embed').each(function(node){ node.style.visibility = 'visible' });
