@@ -203,6 +203,168 @@ a.pinterest-icon {
 }
 
 .question_mark{
-	height: 3%;
-	width: 3%;
+	height: 2.4%;
+	width: 2.4%;
+}
+
+/* changing color of text within links */
+a{
+	color: #797872;
+}
+
+a:not(#mobnav):hover{
+	color: #d64c35 !important;
+}
+
+/* removing lines between categories in the left hand menu (non-mobile menu button) */
+#nav.menutype2 > li > a {
+    border-bottom: 0px solid #DDD;
+}		
+		
+/* input text boxes (and adjacent sibling div elements) - background color and borders */
+input.input-text, .input-text  + div:not(.validation-advice) , textarea, select {
+	background-color: #FFFFFF !important;
+	border-color: #E8E8E8 !important;
+}
+
+/* changing color of price */
+#opc-review .data-table tfoot td.last strong .price, #opc-review td.last .price, .cart .totals tfoot td .price, .cart-table td.sub-total, .top-cart .qty-price .price, .block .regular-price, .block .regular-price .price, .price-box .price, .special-price .price {
+  color: #000000;
+}
+
+/* align content - same horizontal line */
+.h-align {
+	display: inline-block;
+}
+
+/* button backgrounds */
+button.button span{
+   	background: #2f3538 none repeat scroll 0% 0% !important;
+}
+
+button.button:hover span{
+   	background: #686868 none repeat scroll 0% 0% !important;
+}
+
+
+@media only screen and (max-width: 767px) {
+	/* removes the dark grey box just to the right of the three horizontal slashes to the right of the mobile menu button */
+	.nav-container.expanded {
+	  background: none;
+	}
+	
+	/* remove the gap between the mobile "menu" button and 1) the right side of the page and 2) the list of categories that opens when menu is clicked */
+	.nav-container ul#nav.menutype2 {
+		top: 31px;
+		right: 0;
+		width: 250px;
+	}
+}
+
+
+@media only screen and (min-width: 1025px){
+	/* Using customized arrows for menu bar */
+	#nav.menutype2 span.plus {
+		background: url(../images/expand-icon2.png) 10px 10px no-repeat;
+	}
+	
+	#nav.menutype2 > li.level0:hover > span.plus {
+		background-color: transparent;
+	}
+	
+	#nav.menutype2 li.expanded span.plus {
+		background: url(../images/expand-icon2.png) 10px -40px no-repeat;
+	}
+	
+	#nav.menutype2 > li.level0 > span.plus {
+		top: 3px;
+	}
+	
+	/* background for the left hand menu */
+	.header .header-sidebar {
+		background: url(../images/left-side-bg.png) repeat-y;
+	}
+}
+
+.nav-container.expanded a#mobnav {
+	background: url(../images/mobnav-hover-icon.png) right 6px no-repeat;
+	color: #4e4d49;
+}
+
+/* remove line underneath "More Views" in product details page */
+.product-view .product-img-box .more-views h2 {
+  border-bottom: 0 solid #ccc;
+}
+
+/* remove top padding to footer */
+.footer-container {
+  padding: 0 10px 24px;
+}  
+
+/* remove bottom line after product description */
+.akordeon {
+  border-bottom: 0px solid #d9d9d9 !important; 
+}
+
+/* left align elements */
+.product-shop dt{
+	margin-top: 0;
+	margin-bottom: 5px;
+}
+
+.product-shop dd{
+	margin: 0 0 10px 0;
+}
+
+.product-options dl.last dd.last {
+	margin: 0 0 10px 0;
+}
+
+.product-options dd select {
+	padding: 6px;
+	width: 100%;
+}
+
+.product-options dd input.input-text, .product-options dd textarea {
+	padding: 6px;
+	width: calc(100% - 14px)
+}
+
+/* changing text color in menu categories/subcategories (full screen only) */
+#nav a {
+	color: #000000 !important;
+}
+
+#nav ul li a {
+	color: #000000 !important;
+}
+
+#nav ul li a:hover, #nav ul li a.active{
+	color: #D64C35 !important;
+}
+
+/* remove background and border while hovering over subcategories in menu */
+#nav.menutype2 ul.level1 li > a:hover, #nav.menutype2 ul.level1 li.over > a {
+  border-right: 0;
+  background: none;
+}
+
+/* Change color of "active" category in menu */
+#nav a.active {
+	color: #D64C35 !important;
+}
+
+/* Remove "My Wishlist from footer */
+.footer-menu  a[title="My Wishlist"]{
+	display: none;
+}
+
+/* Capitalize every letter in "Your Word" fields */
+.validate-myintent-chars{
+	text-transform:uppercase
+}
+
+/* lowercase words that are in parenthesis within field labels */
+.product-options dt label  span.paren{
+  text-transform: lowercase;
 }

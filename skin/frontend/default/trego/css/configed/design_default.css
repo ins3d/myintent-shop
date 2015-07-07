@@ -1,6 +1,6 @@
 /**
  * WARNING: Do not change this file. Your changes will be lost.
- * 2013-09-17 19:40:12 */
+ * 2015-06-29 22:38:47 */
 
 
 body {
@@ -9,13 +9,13 @@ body {
 a { 
     color: #797872; 
         }
-a:hover { color: #4e4d49; }
+a:hover { color: #d64c35; }
 button.button span { 
-    background: #535451; 
+    background: #2f3538; 
     color: #ffffff; 
         }
-button.button:hover span { background: #2f3538; color: #ffffff; }
-button.button:active span { background: #2f3538; color: #ffffff; }
+button.button:hover span { background: #686868; color: #ffffff; }
+button.button:active span { background: #797872; color: #ffffff; }
 .sale-product-icon { background: #d04d49; color: #ffffff; }
 .new-product-icon { background: #2f3538; color: #ffffff; }
 #opc-review .data-table tfoot td.last strong .price, #opc-review td.last .price, .cart .totals tfoot td .price, .cart-table td.sub-total, .top-cart .qty-price .price, .block .regular-price, .block .regular-price .price, .price-box .price, .special-price .price { 
