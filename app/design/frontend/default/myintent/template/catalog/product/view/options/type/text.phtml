@@ -1,5 +1,20 @@
 <?php $_option = $this->getOption(); ?>
-<dt><label<?php if ($_option->getIsRequire()) echo ' class="required"' ?>><?php if ($_option->getIsRequire()) echo '<em>*</em>' ?><?php echo  $this->htmlEscape($_option->getTitle()) ?></label>
+<dt>
+
+	<label<?php if ($_option->getIsRequire()) echo ' class="required"' ?>><?php if ($_option->getIsRequire()) echo '<em>*</em>' ?>
+
+		<?php if (strpos($_option->getTitle(), "(") !== false): ?>
+			<?php $openParenPosition = strpos($_option->getTitle(), "(") ?>
+			<?php $closeParenPosition = strpos($_option->getTitle(), ")") ?>
+			<?php $strLength = $closeParenPosition - $openParenPosition + 1;  ?>
+			<?php $wordWithParen = substr($_option->getTitle(), $openParenPosition, $strLength) ?>
+			<?php $optionNoParen = str_replace($wordWithParen, "", $_option->getTitle()) ?>
+			<?php echo $this->htmlEscape($optionNoParen) ?>
+			<span class="paren"><?php echo $this->htmlEscape($wordWithParen) ?></span>
+		<?php else: ?>
+			<?php echo $this->htmlEscape($_option->getTitle()) ?>
+		<?php endif; ?>
+	</label>
 
 <!-- customization begin - added question mark and lightbox functionality next to the "Your Word" input field -->
 <?php  
@@ -87,7 +102,7 @@
     <div class="input-box">
     <?php if ($_option->getType() == Mage_Catalog_Model_Product_Option::OPTION_TYPE_FIELD): ?>
 <!-- customization begin - only allow uppercase chars, numbers, and & -->
-		<?php if ($_option->getTitle() == 'Your Word'): ?>
+		<?php if (strpos(strtolower($_option->getTitle()), "your word" ) !== false): ?>
 			<input type="text" maxlength="12" onchange="opConfig.reloadPrice()" id="options_<?php echo $_option->getId() ?>_text" class="input-text<?php echo $_option->getIsRequire() ? ' required-entry' : '' ?> <?php echo 'validate-myintent-chars'; ?> <?php echo $_option->getMaxCharacters() ? ' validate-length maximum-length-'.$_option->getMaxCharacters() : '' ?> product-custom-option" name="options[<?php echo $_option->getId() ?>]" value="<?php echo $this->escapeHtml($this->getDefaultValue()) ?>" />
 		<?php else: ?>
 	        <input type="text" onchange="opConfig.reloadPrice()" id="options_<?php echo $_option->getId() ?>_text" class="input-text<?php echo $_option->getIsRequire() ? ' required-entry' : '' ?> <?php echo $_option->getMaxCharacters() ? ' validate-length maximum-length-'.$_option->getMaxCharacters() : '' ?> product-custom-option" name="options[<?php echo $_option->getId() ?>]" value="<?php echo $this->escapeHtml($this->getDefaultValue()) ?>" />
@@ -98,7 +113,7 @@
 -->		
     <?php elseif ($_option->getType() == Mage_Catalog_Model_Product_Option::OPTION_TYPE_AREA): ?>
 <!-- customization begin - only allow uppercase chars, numbers, and & -->
-		<?php if ($_option->getTitle() == 'Story'): ?>
+		<?php if (strpos(strtolower($_option->getTitle()), "story") !== false): ?>
 			<textarea id="options_<?php echo $_option->getId() ?>_text" placeholder='Describe why you picked "Your Word"' onchange="opConfig.reloadPrice()" class="<?php echo $_option->getIsRequire() ? ' required-entry' : '' ?> <?php echo $_option->getMaxCharacters() ? ' validate-length maximum-length-'.$_option->getMaxCharacters() : '' ?> product-custom-option" name="options[<?php echo $_option->getId() ?>]" rows="5" cols="25"><?php echo $this->escapeHtml($this->getDefaultValue()) ?></textarea>
 		<?php else: ?>
 	        <textarea id="options_<?php echo $_option->getId() ?>_text" onchange="opConfig.reloadPrice()" class="<?php echo $_option->getIsRequire() ? ' required-entry' : '' ?> <?php echo $_option->getMaxCharacters() ? ' validate-length maximum-length-'.$_option->getMaxCharacters() : '' ?> product-custom-option" name="options[<?php echo $_option->getId() ?>]" rows="5" cols="25"><?php echo $this->escapeHtml($this->getDefaultValue()) ?></textarea>

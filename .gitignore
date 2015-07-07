@@ -54,6 +54,7 @@ app/etc/modules/Bubble_Debug.xml
 /media/downloadable
 /media/sales
 /media/email
+/media/*
  
 # /media/xmlconnect/themes/
 /media/xmlconnect/themes/*.xml

@@ -363,3 +363,8 @@ button.button:hover span{
 .validate-myintent-chars{
 	text-transform:uppercase
 }
+
+/* lowercase words that are in parenthesis within field labels */
+.product-options dt label  span.paren{
+  text-transform: lowercase;
+}
