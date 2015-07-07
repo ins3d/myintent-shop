@@ -183,13 +183,14 @@
                 if(!Mage::getStoreConfig("trego_settings/category_grid/hover_button", $code)){
                 ?>
                 <?php if($_product->isSaleable()): ?>
+<!-- customization - remove "Add to Cart" button on catalog pages
                 <?php  if ( !($_product->getData('has_options') || $_product->isGrouped()) ) :  ?>
                     <button type="button" title="<?php echo $this->__('Add to Cart') ?>" class="button btn-cart" onclick="<?php if(Mage::getStoreConfig("ajaxcart/addtocart/enablecategory", $code)):?>setLocationAjax('<?php echo $this->getAddToCartUrl($_product) ?>')<?php else: ?>setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')<?php endif; ?>"><span><span><?php echo $this->__('Add to Cart') ?></span></span></button>
                 <?php else : ?>
                     <button type="button" title="<?php echo $this->__('Add to Cart') ?>" class="button btn-cart" onclick="<?php if(Mage::getStoreConfig("ajaxcart/addtocart/enablecategory", $code)):?>showOptions('<?php echo $_product->getId()?>')<?php else: ?>setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')<?php endif; ?>"><span><span><?php echo $this->__('Add to Cart') ?></span></span></button>
                     <a href='<?php echo $this->getUrl('ajaxcart/index/options',array('product_id'=>$_product->getId()));?>' class='fancybox' id='fancybox<?php echo $_product->getId()?>' style='display:none'>Options</a>
                 <?php endif;?>
-                    
+-->
                 <?php else: ?>
                     <p class="availability out-of-stock"><span><?php echo $this->__('Out of stock') ?></span></p>
                 <?php endif; ?>
