@@ -1,7 +1,7 @@
 <?php
-include("MaxMind/GeoIP/geoip.inc");
-include("MaxMind/GeoIP/geoipcity.inc");
-include("MaxMind/GeoIP/geoipregionvars.php");
+#include("MaxMind/GeoIP/geoip.inc");
+#include("MaxMind/GeoIP/geoipcity.inc");
+#include("MaxMind/GeoIP/geoipregionvars.php");
 
 class Trego_OnepageCheckout_Model_Type_Geo
 {

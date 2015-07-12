@@ -47,7 +47,7 @@ if (isset($_SERVER['MAGE_IS_DEVELOPER_MODE'])) {
     Mage::setIsDeveloperMode(true);
 }
 
-#ini_set('display_errors', 1);
+ini_set('display_errors', 1);
 
 // emulate index.php entry point for correct URLs generation in API
 Mage::register('custom_entry_point', true);

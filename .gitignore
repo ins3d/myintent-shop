@@ -65,3 +65,5 @@ app/etc/config.xml
 /var/*
 !/var/package
 var/session/*
+
+info.php
