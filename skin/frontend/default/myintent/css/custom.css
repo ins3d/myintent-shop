@@ -246,6 +246,17 @@ button.button:hover span{
    	background: #686868 none repeat scroll 0% 0% !important;
 }
 
+@media only screen and (max-width: 1099px){
+	/* keep discount and total boxes horizontally aligned */
+	.cart-extra {
+		width: 58%;	 
+	}
+
+	.cart .totals {
+		float: right;
+		width: 42%;
+	}
+}
 
 @media only screen and (max-width: 767px) {
 	/* removes the dark grey box just to the right of the three horizontal slashes to the right of the mobile menu button */
@@ -259,9 +270,52 @@ button.button:hover span{
 		right: 0;
 		width: 250px;
 	}
+	
+	/* keep discount and total boxes horizontally aligned */
+	.cart-extra {
+		width: 100%;	 
+	}
+
+	.cart .totals {
+		width: 100%;
+	}	
 }
 
+@media only screen and (max-width: 365px){
 
+	/* widen discount box and input field*/
+	.cart .discount .input-box {
+		width: 100%;
+	}
+	
+	.cart .discount input.input-text {
+		width: 90%;
+	}
+	
+	/* move discount button to the right */
+	.cart .discount .buttons-set button.button, .cart .shipping .buttons-set button.button {
+		float: right;
+	}
+}
+
+@media only screen and (max-width: 345px){
+	/* position continue shopping and checkout buttons on top of each other */
+	.cart .totals .checkout-types li {
+		float: none;
+	}
+}
+
+@media only screen and (min-width: 768px){
+	/* widen discount box and input field*/
+	.cart-extra .akordeon {
+		width: 82%;
+	}
+
+	.cart .discount input.input-text {
+		width: 282px;
+	}
+}
+	
 @media only screen and (min-width: 1025px){
 	/* Using customized arrows for menu bar */
 	#nav.menutype2 span.plus {
@@ -284,6 +338,28 @@ button.button:hover span{
 	.header .header-sidebar {
 		background: url(../images/left-side-bg.png) repeat-y;
 	}
+
+	/* widen discount box and input field*/
+	.cart-extra .akordeon {
+		width: 77%;
+	}
+
+	.cart .discount input.input-text {
+		width: 285px;
+	}	
+}
+
+@media only screen and (min-width: 1100px){
+
+	/* widen discount box and input field*/
+	.cart-extra .akordeon {
+		width: 68%;
+	}
+
+	.cart .discount input.input-text {
+		width: 275px;
+	}
+
 }
 
 .nav-container.expanded a#mobnav {
@@ -367,4 +443,23 @@ button.button:hover span{
 /* lowercase words that are in parenthesis within field labels */
 .product-options dt label  span.paren{
   text-transform: lowercase;
+}
+
+/* remove padding around the discount code box on shopping page so the top lines up with the total box */
+.akordeon-item-content {
+    padding: 0 !important;
+}
+
+/* buttons in the shopping cart page */
+button.button span {
+    background: #225E7C none repeat scroll 0% 0% !important;
+}
+
+button.button span:hover {
+    background: #2F3538 none repeat scroll 0% 0% !important;
+}
+
+/* white background for header row of product table on the shopping cart page */
+.data-table thead th {
+    background: white none repeat scroll 0% 0%;
 }
