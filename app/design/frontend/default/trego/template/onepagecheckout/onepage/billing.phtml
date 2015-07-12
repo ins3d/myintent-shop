@@ -231,26 +231,28 @@ $has_addr	= $this->customerHasAddresses();
 	                    endif;
 
 				    endif;
-				    
+
+
 				    $agc = Mage::helper('onepagecheckout')->isGuestCheckoutAllowed();
-				    if ($agc) 
+
+					if ($agc)
 				    {
-				    ?>
-					<li class="control">
-						<input type="checkbox" name="billing[register_account]" value="1" title="<?php echo $this->__('Create an account for later use') ?>" id="billing:register_account" onclick="if(window.billing) billing.setCreateAccount(this.checked);"<?php if ($this->getBillAddress()->getRegisterAccount()):?> checked="checked"<?php endif;?> class="checkbox" />
-						<label for="billing:register_account">
-							<?php echo $this->__('Create an account for later use') ?>
-						</label>
-					</li>
-				    <?php
+				    	?>
+						<li class="control">
+							<input type="checkbox" name="billing[register_account]" value="1" title="<?php echo $this->__('Create an account for later use') ?>" id="billing:register_account" onclick="if(window.billing) billing.setCreateAccount(this.checked);"<?php if ($this->getBillAddress()->getRegisterAccount()):?> checked="checked"<?php endif;?> class="checkbox" />
+							<label for="billing:register_account">
+								<?php echo $this->__('Create an account for later use') ?>
+							</label>
+						</li>
+						<?php
 				    } 
 				    else
 				    { 				
-				    ?>
-                    <li class="control">
-					    <input type="hidden" name="billing[register_account]" value="1"/>
-                    </li>
-				    <?php 
+						?>
+						<li class="control">
+							<input type="hidden" name="billing[register_account]" value="1"/>
+						</li>
+						<?php
 				    } 
 				    ?>
 				    <li class="fields" id="register-customer-password" <?php if ($agc) { echo ' style="display: none;" '; } ?>>
@@ -272,9 +274,11 @@ $has_addr	= $this->customerHasAddresses();
 						    </div>
 					    </div>
 				    </li>
-			    <?php 
-			    endif; 
-			    ?>
+					<?php
+
+					endif;
+
+					?>
 			    <?php 
 			    if ($logged && $has_addr){
 			    ?>
