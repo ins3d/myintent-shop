@@ -64,4 +64,4 @@ app/etc/config.xml
 # /var
 /var/*
 !/var/package
-/var/session/*
+var/session/*
