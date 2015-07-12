@@ -30,6 +30,8 @@ app/code/local/Zend/Db/Adapter/Pdo/Abstract.php
 app/etc/modules/Bubble_Debug.xml
  
 # /app/etc
+app/etc/local.xml
+app/etc/config.xml
 
 # /errors
 /errors/local.xml
@@ -62,3 +64,4 @@ app/etc/modules/Bubble_Debug.xml
 # /var
 /var/*
 !/var/package
+/var/session/*
