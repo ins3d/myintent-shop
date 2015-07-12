@@ -1,0 +1,5 @@
+#RewriteEngine On
+
+#RewriteBase /js/
+
+#RewriteRule ^/Users/matthewtruebe/myintent-shop/$ /$1 [R,L]
