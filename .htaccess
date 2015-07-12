@@ -2,7 +2,7 @@ RewriteEngine On
 RewriteBase /
 
 #php_value memory_limit 512M
-RewriteRule ^Users/matthewtruebe/myintent-shop(.*)$ /$1 [R,L]
+#RewriteRule ^Users/matthewtruebe/myintent-shop(.*)$ /$1 [R,L]
 
 <IfModule mod_rewrite.c>
 
