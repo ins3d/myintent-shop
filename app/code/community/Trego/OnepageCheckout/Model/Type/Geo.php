@@ -1,7 +1,7 @@
 <?php
-include("MaxMind/GeoIP/geoip.inc");
-include("MaxMind/GeoIP/geoipcity.inc");
-include("MaxMind/GeoIP/geoipregionvars.php");
+#include("MaxMind/GeoIP/geoip.inc");
+#include("MaxMind/GeoIP/geoipcity.inc");
+#include("MaxMind/GeoIP/geoipregionvars.php");
 
 class Trego_OnepageCheckout_Model_Type_Geo
 {
@@ -606,12 +606,12 @@ class Trego_OnepageCheckout_Model_Type_Geo
         if ($quote->getCheckoutMethod() == self::REGISTER) {
             // set customer password
             $customer->setPassword($customerRequest->getParam('customer_password'));
-            $customer->setConfirmation($customerRequest->getParam('confirm_password'));
+            $customer->setPasswordConfirmation($customerRequest->getParam('confirm_password'));
         } else {
             // spoof customer password for guest
             $password = $customer->generatePassword();
             $customer->setPassword($password);
-            $customer->setConfirmation($password);
+            $customer->setPasswordConfirmation($password);
             // set NOT LOGGED IN group id explicitly,
             // otherwise copyFieldset('customer_account', 'to_quote') will fill it with default group id value
             $customer->setGroupId(Mage_Customer_Model_Group::NOT_LOGGED_IN_ID);

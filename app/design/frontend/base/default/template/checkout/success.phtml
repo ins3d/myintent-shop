@@ -24,6 +24,26 @@
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
+<?php if (!Mage::getSingleton('customer/session')->isLoggedIn()) {
+    $myOrder->load($this->getOrderId());
+    ?>
+
+    <div id="newAccount" style="height: 150px; width: 150px; background-color: Gray;position:absolute; top:0; left:0;">
+        Your order has been received. Create an account for future discounts
+
+        User name:  <?php echo $myOrder->getCustomerEmail(); ?>
+
+        Password <input type="password" name="password" id="password">
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $("#newAccount").animate({
+                left: $("#newAccount").parent().width() / 2 - $("#newAccount").width() / 2
+            }, 2000);        });
+    </script>
+<?php } ?>
+
 <div class="page-title">
     <h1><?php echo $this->__('Your order has been received.') ?></h1>
 </div>
