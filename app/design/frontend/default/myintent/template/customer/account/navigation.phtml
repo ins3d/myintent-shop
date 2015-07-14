@@ -40,7 +40,7 @@
             <?php foreach ($_links as $_link): ?>
                 <?php $_last = ($_index++ >= $_count); ?>
 <!-- customization begin -->			
-					<?php if (in_array($_link->getLabel(), $hiddenLinksArray, false)): ?>
+					<?php if (!in_array($_link->getLabel(), $hiddenLinksArray)): ?>
 <!-- customization end -->								
 						<?php if ($this->isActive($_link)): ?>
 							<li class="current<?php echo ($_last ? ' last' : '') ?>"><strong><?php echo $_link->getLabel() ?></strong></li>

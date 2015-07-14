@@ -459,3 +459,473 @@
 2015-06-07T22:40:08+00:00 ERR (3): Notice: Undefined variable: code  in /srv/www/prod_myintent_shop/releases/20150603044746/app/design/frontend/default/trego/template/trego/topmenu/type2.phtml on line 105
 2015-06-07T22:40:53+00:00 ERR (3): Notice: Undefined variable: code  in /srv/www/prod_myintent_shop/releases/20150603044746/app/design/frontend/default/trego/template/trego/topmenu/type2.phtml on line 104
 2015-06-07T22:40:53+00:00 ERR (3): Notice: Undefined variable: code  in /srv/www/prod_myintent_shop/releases/20150603044746/app/design/frontend/default/trego/template/trego/topmenu/type2.phtml on line 105
+2015-07-12T20:58:26+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-12T20:58:26+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-12T20:58:51+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-12T20:58:51+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-12T20:58:58+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-12T20:58:58+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-12T21:10:26+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-12T21:10:26+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-12T21:10:51+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-12T21:10:51+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-12T21:11:15+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-12T21:11:15+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-12T21:18:53+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-12T21:18:53+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-12T21:24:09+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-12T21:24:09+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-12T21:27:46+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-12T21:27:46+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-12T21:31:18+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-12T21:31:18+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-12T21:32:25+00:00 DEBUG (7): HEADERS ALREADY SENT: <pre>[0] C:\Sites\myintent-shop\app\code\core\Mage\Core\Controller\Response\Http.php:52
+[1] C:\Sites\myintent-shop\lib\Zend\Controller\Response\Abstract.php:768
+[2] C:\Sites\myintent-shop\app\code\core\Mage\Core\Controller\Response\Http.php:84
+[3] C:\Sites\myintent-shop\app\code\core\Mage\Core\Controller\Varien\Front.php:184
+[4] C:\Sites\myintent-shop\app\code\core\Mage\Core\Model\App.php:354
+[5] C:\Sites\myintent-shop\app\Mage.php:684
+[6] C:\Sites\myintent-shop\index.php:87
+</pre>
+2015-07-12T21:32:46+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-12T21:32:46+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-12T21:33:28+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-12T21:33:28+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-12T21:35:38+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-12T21:35:38+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-12T21:40:51+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-12T21:40:51+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-12T21:41:27+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-12T21:41:27+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-12T21:41:57+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-12T21:41:57+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-12T21:44:44+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-12T21:44:44+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-12T21:45:39+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-12T21:45:39+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-12T21:47:30+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-12T21:47:30+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-12T21:58:07+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-12T21:58:07+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-12T21:58:43+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-12T21:58:43+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-12T21:59:34+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-12T21:59:34+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-12T22:21:14+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 60: parser error : Opening and ending tag mismatch: reference line 58 and referece  in C:\Sites\myintent-shop\app\code\core\Mage\Core\Model\Layout\Update.php on line 450
+2015-07-12T22:21:14+00:00 ERR (3): Warning: simplexml_load_string(): 		&lt;/referece&gt;  in C:\Sites\myintent-shop\app\code\core\Mage\Core\Model\Layout\Update.php on line 450
+2015-07-12T22:21:14+00:00 ERR (3): Warning: simplexml_load_string(): 		           ^  in C:\Sites\myintent-shop\app\code\core\Mage\Core\Model\Layout\Update.php on line 450
+2015-07-12T22:24:47+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 596: parser error : Opening and ending tag mismatch: reference line 587 and referece  in C:\Sites\myintent-shop\app\code\core\Mage\Core\Model\Layout\Update.php on line 450
+2015-07-12T22:24:47+00:00 ERR (3): Warning: simplexml_load_string(): 		&lt;/referece&gt;  in C:\Sites\myintent-shop\app\code\core\Mage\Core\Model\Layout\Update.php on line 450
+2015-07-12T22:24:47+00:00 ERR (3): Warning: simplexml_load_string(): 		           ^  in C:\Sites\myintent-shop\app\code\core\Mage\Core\Model\Layout\Update.php on line 450
+2015-07-12T22:25:41+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 593: parser error : Opening and ending tag mismatch: reference line 584 and referece  in C:\Sites\myintent-shop\app\code\core\Mage\Core\Model\Layout\Update.php on line 450
+2015-07-12T22:25:41+00:00 ERR (3): Warning: simplexml_load_string(): 		&lt;/referece&gt;  in C:\Sites\myintent-shop\app\code\core\Mage\Core\Model\Layout\Update.php on line 450
+2015-07-12T22:25:41+00:00 ERR (3): Warning: simplexml_load_string(): 		           ^  in C:\Sites\myintent-shop\app\code\core\Mage\Core\Model\Layout\Update.php on line 450
+2015-07-12T22:27:42+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-12T22:27:42+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-12T22:28:15+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 593: parser error : Opening and ending tag mismatch: reference line 584 and referece  in C:\Sites\myintent-shop\app\code\core\Mage\Core\Model\Layout\Update.php on line 450
+2015-07-12T22:28:15+00:00 ERR (3): Warning: simplexml_load_string(): 		&lt;/referece&gt;  in C:\Sites\myintent-shop\app\code\core\Mage\Core\Model\Layout\Update.php on line 450
+2015-07-12T22:28:15+00:00 ERR (3): Warning: simplexml_load_string(): 		           ^  in C:\Sites\myintent-shop\app\code\core\Mage\Core\Model\Layout\Update.php on line 450
+2015-07-12T22:29:34+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-12T22:29:34+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-12T22:30:34+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-12T22:30:34+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-12T22:31:31+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-12T22:31:31+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-12T22:50:52+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-12T22:50:52+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-12T22:52:02+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-12T22:52:02+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-12T22:58:45+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-12T22:58:45+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-12T23:01:44+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-12T23:01:44+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-12T23:03:07+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-12T23:03:07+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-12T23:03:35+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-12T23:03:35+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-12T23:04:01+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-12T23:04:01+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-12T23:10:03+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-12T23:10:03+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-12T23:14:28+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-12T23:14:28+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-12T23:20:45+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-12T23:20:45+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-12T23:24:00+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-12T23:24:00+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-12T23:26:58+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-12T23:26:58+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-12T23:29:20+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-12T23:29:20+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-12T23:32:46+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-12T23:32:46+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T01:16:45+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T01:16:45+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T01:18:58+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T01:18:58+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T01:24:53+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T01:24:53+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T01:25:36+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T01:25:36+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T01:26:10+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T01:26:10+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T01:27:38+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T01:27:38+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T01:37:21+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T01:37:21+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T01:37:25+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T01:37:25+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T01:39:18+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T01:39:18+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T01:39:49+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T01:39:49+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T01:40:22+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T01:40:22+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T01:41:45+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T01:41:45+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T01:44:38+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T01:44:38+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T01:44:52+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T01:44:52+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T01:45:30+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T01:45:30+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T02:04:48+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T02:04:48+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T02:05:55+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T02:05:55+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T02:07:11+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T02:07:11+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T02:28:28+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 63: parser error : Opening and ending tag mismatch: reference line 59 and block  in C:\Sites\myintent-shop\app\code\core\Mage\Core\Model\Layout\Update.php on line 450
+2015-07-13T02:28:28+00:00 ERR (3): Warning: simplexml_load_string(): 			&lt;/block&gt;  in C:\Sites\myintent-shop\app\code\core\Mage\Core\Model\Layout\Update.php on line 450
+2015-07-13T02:28:28+00:00 ERR (3): Warning: simplexml_load_string(): 			        ^  in C:\Sites\myintent-shop\app\code\core\Mage\Core\Model\Layout\Update.php on line 450
+2015-07-13T02:28:28+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 77: parser error : Opening and ending tag mismatch: default line 10 and reference  in C:\Sites\myintent-shop\app\code\core\Mage\Core\Model\Layout\Update.php on line 450
+2015-07-13T02:28:28+00:00 ERR (3): Warning: simplexml_load_string():         &lt;/reference&gt;  in C:\Sites\myintent-shop\app\code\core\Mage\Core\Model\Layout\Update.php on line 450
+2015-07-13T02:28:28+00:00 ERR (3): Warning: simplexml_load_string():                     ^  in C:\Sites\myintent-shop\app\code\core\Mage\Core\Model\Layout\Update.php on line 450
+2015-07-13T02:28:28+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 93: parser error : Opening and ending tag mismatch: layout line 5 and default  in C:\Sites\myintent-shop\app\code\core\Mage\Core\Model\Layout\Update.php on line 450
+2015-07-13T02:28:28+00:00 ERR (3): Warning: simplexml_load_string():     &lt;/default&gt;  in C:\Sites\myintent-shop\app\code\core\Mage\Core\Model\Layout\Update.php on line 450
+2015-07-13T02:28:28+00:00 ERR (3): Warning: simplexml_load_string():               ^  in C:\Sites\myintent-shop\app\code\core\Mage\Core\Model\Layout\Update.php on line 450
+2015-07-13T02:28:28+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 94: parser error : Extra content at the end of the document  in C:\Sites\myintent-shop\app\code\core\Mage\Core\Model\Layout\Update.php on line 450
+2015-07-13T02:28:28+00:00 ERR (3): Warning: simplexml_load_string():     &lt;catalog_category_default&gt;  in C:\Sites\myintent-shop\app\code\core\Mage\Core\Model\Layout\Update.php on line 450
+2015-07-13T02:28:28+00:00 ERR (3): Warning: simplexml_load_string():     ^  in C:\Sites\myintent-shop\app\code\core\Mage\Core\Model\Layout\Update.php on line 450
+2015-07-13T02:29:06+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T02:29:06+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T02:35:57+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T02:35:57+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T02:38:39+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T02:38:39+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T02:40:26+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T02:40:26+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T02:41:38+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T02:41:38+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T02:42:08+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T02:42:08+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T02:43:40+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T02:43:40+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T02:47:10+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T02:47:10+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T02:48:07+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T02:48:07+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T02:53:00+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T02:53:00+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T02:54:00+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T02:54:00+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T02:55:37+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T02:55:37+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T02:56:40+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T02:56:40+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T03:01:43+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T03:01:43+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T03:03:22+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T03:03:22+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T03:04:09+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T03:04:09+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T03:05:12+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T03:05:12+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T03:12:20+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T03:12:20+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T03:14:58+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T03:14:58+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T03:16:23+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T03:16:23+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T03:16:50+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T03:16:50+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T03:18:51+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T03:18:51+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T03:21:04+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T03:21:04+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T03:22:13+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T03:22:13+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T03:26:57+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T03:26:57+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T03:27:24+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T03:27:24+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T03:29:51+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T03:29:51+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T03:30:27+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T03:30:27+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T03:31:13+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T03:31:13+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T03:34:57+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T03:34:57+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T03:36:01+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T03:36:01+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T03:37:43+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T03:37:43+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T03:37:45+00:00 ERR (3): Notice: A session had already been started - ignoring session_start()  in C:\Sites\myintent-shop\lib\Facebook\facebook.php on line 37
+2015-07-13T03:37:45+00:00 ERR (3): Notice: A session had already been started - ignoring session_start()  in C:\Sites\myintent-shop\lib\Facebook\facebook.php on line 37
+2015-07-13T03:37:45+00:00 ERR (3): Notice: A session had already been started - ignoring session_start()  in C:\Sites\myintent-shop\lib\Facebook\facebook.php on line 37
+2015-07-13T03:37:45+00:00 ERR (3): Notice: A session had already been started - ignoring session_start()  in C:\Sites\myintent-shop\lib\Facebook\facebook.php on line 37
+2015-07-13T03:37:45+00:00 ERR (3): Notice: A session had already been started - ignoring session_start()  in C:\Sites\myintent-shop\lib\Facebook\facebook.php on line 37
+2015-07-13T03:37:45+00:00 ERR (3): Notice: A session had already been started - ignoring session_start()  in C:\Sites\myintent-shop\lib\Facebook\facebook.php on line 37
+2015-07-13T03:37:45+00:00 ERR (3): Notice: A session had already been started - ignoring session_start()  in C:\Sites\myintent-shop\lib\Facebook\facebook.php on line 37
+2015-07-13T03:37:45+00:00 ERR (3): Notice: A session had already been started - ignoring session_start()  in C:\Sites\myintent-shop\lib\Facebook\facebook.php on line 37
+2015-07-13T03:38:09+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T03:38:09+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T03:38:11+00:00 ERR (3): Notice: A session had already been started - ignoring session_start()  in C:\Sites\myintent-shop\lib\Facebook\facebook.php on line 37
+2015-07-13T03:38:11+00:00 ERR (3): Notice: A session had already been started - ignoring session_start()  in C:\Sites\myintent-shop\lib\Facebook\facebook.php on line 37
+2015-07-13T03:38:11+00:00 ERR (3): Notice: A session had already been started - ignoring session_start()  in C:\Sites\myintent-shop\lib\Facebook\facebook.php on line 37
+2015-07-13T03:38:11+00:00 ERR (3): Notice: A session had already been started - ignoring session_start()  in C:\Sites\myintent-shop\lib\Facebook\facebook.php on line 37
+2015-07-13T03:38:11+00:00 ERR (3): Notice: A session had already been started - ignoring session_start()  in C:\Sites\myintent-shop\lib\Facebook\facebook.php on line 37
+2015-07-13T03:38:11+00:00 ERR (3): Notice: A session had already been started - ignoring session_start()  in C:\Sites\myintent-shop\lib\Facebook\facebook.php on line 37
+2015-07-13T03:38:11+00:00 ERR (3): Notice: A session had already been started - ignoring session_start()  in C:\Sites\myintent-shop\lib\Facebook\facebook.php on line 37
+2015-07-13T03:38:11+00:00 ERR (3): Notice: A session had already been started - ignoring session_start()  in C:\Sites\myintent-shop\lib\Facebook\facebook.php on line 37
+2015-07-13T03:38:41+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T03:38:41+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T03:39:21+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T03:39:21+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T03:39:41+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T03:39:41+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T03:39:42+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T03:39:42+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T03:39:43+00:00 ERR (3): Notice: A session had already been started - ignoring session_start()  in C:\Sites\myintent-shop\lib\Facebook\facebook.php on line 37
+2015-07-13T03:39:43+00:00 ERR (3): Notice: A session had already been started - ignoring session_start()  in C:\Sites\myintent-shop\lib\Facebook\facebook.php on line 37
+2015-07-13T03:39:43+00:00 ERR (3): Notice: A session had already been started - ignoring session_start()  in C:\Sites\myintent-shop\lib\Facebook\facebook.php on line 37
+2015-07-13T03:39:43+00:00 ERR (3): Notice: A session had already been started - ignoring session_start()  in C:\Sites\myintent-shop\lib\Facebook\facebook.php on line 37
+2015-07-13T03:39:43+00:00 ERR (3): Notice: A session had already been started - ignoring session_start()  in C:\Sites\myintent-shop\lib\Facebook\facebook.php on line 37
+2015-07-13T03:39:43+00:00 ERR (3): Notice: A session had already been started - ignoring session_start()  in C:\Sites\myintent-shop\lib\Facebook\facebook.php on line 37
+2015-07-13T03:39:43+00:00 ERR (3): Notice: A session had already been started - ignoring session_start()  in C:\Sites\myintent-shop\lib\Facebook\facebook.php on line 37
+2015-07-13T03:39:43+00:00 ERR (3): Notice: A session had already been started - ignoring session_start()  in C:\Sites\myintent-shop\lib\Facebook\facebook.php on line 37
+2015-07-13T03:40:13+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T03:40:13+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T03:40:15+00:00 ERR (3): Notice: A session had already been started - ignoring session_start()  in C:\Sites\myintent-shop\lib\Facebook\facebook.php on line 37
+2015-07-13T03:40:15+00:00 ERR (3): Notice: A session had already been started - ignoring session_start()  in C:\Sites\myintent-shop\lib\Facebook\facebook.php on line 37
+2015-07-13T03:40:15+00:00 ERR (3): Notice: A session had already been started - ignoring session_start()  in C:\Sites\myintent-shop\lib\Facebook\facebook.php on line 37
+2015-07-13T03:40:15+00:00 ERR (3): Notice: A session had already been started - ignoring session_start()  in C:\Sites\myintent-shop\lib\Facebook\facebook.php on line 37
+2015-07-13T03:40:15+00:00 ERR (3): Notice: A session had already been started - ignoring session_start()  in C:\Sites\myintent-shop\lib\Facebook\facebook.php on line 37
+2015-07-13T03:40:15+00:00 ERR (3): Notice: A session had already been started - ignoring session_start()  in C:\Sites\myintent-shop\lib\Facebook\facebook.php on line 37
+2015-07-13T03:40:15+00:00 ERR (3): Notice: A session had already been started - ignoring session_start()  in C:\Sites\myintent-shop\lib\Facebook\facebook.php on line 37
+2015-07-13T03:40:15+00:00 ERR (3): Notice: A session had already been started - ignoring session_start()  in C:\Sites\myintent-shop\lib\Facebook\facebook.php on line 37
+2015-07-13T03:43:53+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T03:43:53+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T03:44:42+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T03:44:42+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T03:45:05+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T03:45:05+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T03:45:17+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T03:45:17+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T03:45:46+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T03:45:46+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T03:46:06+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T03:46:06+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T03:46:09+00:00 ERR (3): Notice: A session had already been started - ignoring session_start()  in C:\Sites\myintent-shop\lib\Facebook\facebook.php on line 37
+2015-07-13T03:46:09+00:00 ERR (3): Notice: A session had already been started - ignoring session_start()  in C:\Sites\myintent-shop\lib\Facebook\facebook.php on line 37
+2015-07-13T03:46:09+00:00 ERR (3): Notice: A session had already been started - ignoring session_start()  in C:\Sites\myintent-shop\lib\Facebook\facebook.php on line 37
+2015-07-13T03:46:09+00:00 ERR (3): Notice: A session had already been started - ignoring session_start()  in C:\Sites\myintent-shop\lib\Facebook\facebook.php on line 37
+2015-07-13T03:46:09+00:00 ERR (3): Notice: A session had already been started - ignoring session_start()  in C:\Sites\myintent-shop\lib\Facebook\facebook.php on line 37
+2015-07-13T03:46:09+00:00 ERR (3): Notice: A session had already been started - ignoring session_start()  in C:\Sites\myintent-shop\lib\Facebook\facebook.php on line 37
+2015-07-13T03:46:09+00:00 ERR (3): Notice: A session had already been started - ignoring session_start()  in C:\Sites\myintent-shop\lib\Facebook\facebook.php on line 37
+2015-07-13T03:46:09+00:00 ERR (3): Notice: A session had already been started - ignoring session_start()  in C:\Sites\myintent-shop\lib\Facebook\facebook.php on line 37
+2015-07-13T03:46:43+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T03:46:43+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T03:47:13+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T03:47:13+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T03:47:16+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T03:47:16+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T03:47:47+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T03:47:47+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T03:48:47+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T03:48:47+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T03:49:01+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T03:49:01+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T03:49:20+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T03:49:20+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T03:50:48+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T03:50:48+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T03:51:36+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T03:51:36+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T03:51:52+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T03:51:52+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T03:52:21+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T03:52:21+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T03:53:44+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T03:53:44+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T04:03:54+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T04:03:54+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T04:08:33+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T04:08:33+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T04:13:14+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T04:13:14+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T04:13:32+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T04:13:32+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T04:19:03+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T04:19:03+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T04:21:06+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T04:21:06+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T04:57:20+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T04:57:20+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T05:13:19+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T05:13:19+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T05:14:04+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T05:14:04+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T05:14:06+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T05:14:06+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T05:14:41+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T05:14:41+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T05:15:04+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T05:15:04+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T05:17:11+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T05:17:11+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T05:27:50+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T05:27:50+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T05:29:46+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T05:29:46+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T05:31:41+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T05:31:41+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T05:32:39+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T05:32:39+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T05:43:41+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T05:43:41+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T05:45:40+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T05:45:40+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T06:09:11+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T06:09:11+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T06:14:59+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T06:14:59+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T06:24:44+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T06:24:44+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-13T06:38:49+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-13T06:38:49+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T02:52:49+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T02:52:49+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T02:54:00+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T02:54:00+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T02:54:22+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T02:54:22+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T02:55:22+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T02:55:22+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T02:56:11+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T02:56:11+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T02:56:41+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T02:56:41+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T02:57:02+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T02:57:02+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T02:57:13+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T02:57:13+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T02:57:45+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T02:57:45+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T03:09:44+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T03:09:44+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T03:14:58+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T03:14:58+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T03:18:32+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T03:18:32+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T03:23:54+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T03:23:54+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T03:24:05+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T03:24:05+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T03:24:17+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T03:24:17+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T03:24:40+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T03:24:40+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T03:31:01+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T03:31:01+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T03:32:30+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T03:32:30+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T03:33:19+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T03:33:19+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T03:38:07+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T03:38:07+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T03:38:32+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T03:38:32+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T03:40:03+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T03:40:03+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T04:22:24+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T04:22:24+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T04:29:56+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T04:29:56+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T04:31:00+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T04:31:00+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T04:31:59+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T04:31:59+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T04:38:03+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T04:38:03+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T04:40:18+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T04:40:18+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T04:42:35+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T04:42:35+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T04:46:33+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T04:46:33+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T04:48:26+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T04:48:26+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T04:49:04+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T04:49:04+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T04:53:56+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T04:53:56+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T04:55:35+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T04:55:35+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T05:03:17+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T05:03:17+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T05:16:36+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T05:16:36+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T05:19:47+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T05:19:47+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T05:22:53+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T05:22:53+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T05:23:55+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T05:23:55+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T05:24:47+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T05:24:47+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T05:26:35+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T05:26:35+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T05:27:22+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T05:27:22+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T05:27:49+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T05:27:49+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T05:28:55+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T05:28:55+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T05:31:01+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T05:31:01+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T05:34:14+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T05:34:14+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T05:40:34+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T05:40:34+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T05:41:35+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T05:41:35+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T05:49:41+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T05:49:41+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T06:04:27+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T06:04:27+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T06:04:33+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T06:04:33+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T06:06:35+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T06:06:35+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T06:07:31+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T06:07:31+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T06:08:13+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T06:08:13+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T06:10:51+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T06:10:51+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T06:16:17+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T06:16:17+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T06:18:42+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T06:18:42+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T06:20:02+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T06:20:02+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T06:21:34+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T06:21:34+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T06:22:45+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T06:22:45+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T06:26:20+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T06:26:20+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
+2015-07-14T06:29:21+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 110
+2015-07-14T06:29:21+00:00 ERR (3): Notice: Undefined variable: code  in C:\Sites\myintent-shop\app\design\frontend\default\myintent\template\trego\topmenu\type2.phtml on line 111
