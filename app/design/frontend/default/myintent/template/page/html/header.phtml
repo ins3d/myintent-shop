@@ -1,0 +1,235 @@
+<div class="header-container">
+    <div class="header">
+        <div class="header-bground">
+            <div class="header-sidebar">
+                <?php if ($this->getIsHomePage()):?>
+                <h1 class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><a href="<?php echo $this->getUrl('',  array('_secure' =>  Mage::app()->getFrontController()->getRequest()->isSecure())) ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></h1>
+                <?php else:?>
+                <a href="<?php echo $this->getUrl('',  array('_secure' =>  Mage::app()->getFrontController()->getRequest()->isSecure())) ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a>
+                <?php endif?>
+                <div class="box-scroll">
+                    <?php echo $this->getChildHtml('topMenu'); ?>
+                    <?php echo $this->getChildHtml('topSearch'); ?>
+                    <div class="clear"></div>
+                    <?php echo $this->getChildHtml('topSpecialMenu'); ?>
+                    <div class="clear"></div>
+                </div>
+                <?php echo $this->getChildHtml('socialIcons'); ?>
+                <?php echo $this->getChildHtml('copyrights'); ?>
+            </div>
+            <a href="javascript:void(0)" class="filterproducts-link">&nbsp;</a>
+        </div>
+        <div class="header-topbar">
+            <div class="quick-access">
+                <?php echo $this->getChildHtml('store_language') ?>
+                <?php echo $this->getChildHtml('custom_currency_selector') ?>
+                <?php echo $this->getChildHtml('cart_cartheader') ?>
+<!-- customization begin -->				
+				<?php echo $this->getChildHtml('header.links') ?>
+<!-- customization end -->				
+            </div>
+            <h1 class="page-title"></h1>
+            <?php echo $this->getChildHtml('topContainer'); ?>
+            <div class="clearer"></div>
+        </div>
+        <div class="filterproducts-overlay" style="display: none; position: fixed; z-index: 98; width: 100%; height: 100%; left: 0; top: 0;"></div>
+        <div class="filterproducts col1-layout" style="display: none;">
+            <ul class="special_menu">
+            <?php
+                $store = Mage::app()->getStore();
+                $code  = $store->getCode();
+                $enable = Mage::getStoreConfig('filterproducts/new/active',$code);
+                if($enable == 1){
+            ?>
+                <li><a href="javascript:void(0)" class="a_latest"><span><?php echo $this->__('Latest'); ?></span><span class="expander">&nbsp;</span></a></li>
+            <?php
+                }
+                $enable = Mage::getStoreConfig('filterproducts/featured/active',$code);
+                if($enable == 1){
+            ?>
+                <li><a href="javascript:void(0)" class="a_featured"><span><?php echo $this->__('Featured'); ?></span><span class="expander">&nbsp;</span></a></li>
+            <?php
+                }
+                $enable = Mage::getStoreConfig('filterproducts/special/active',$code);
+                if($enable == 1){
+            ?>
+                <li><a href="javascript:void(0)" class="a_special"><span><?php echo $this->__('Specials'); ?></span><span class="expander">&nbsp;</span></a></li>
+            <?php
+                }
+            ?>
+            </ul>
+            <a href="javascript:void(0)" class="close">Close</a>
+            <span class="page-controls">
+                <a href="javascript:void(0)" class="page-prev">Prev</a>
+                <a href="javascript:void(0)" class="page-next">Next</a>
+            </span>
+            <?php echo $this->getChildHtml('filterproducts');?>
+        </div>
+        <script type="text/javascript">
+            jQuery(document).ready(function(){
+                jQuery('.header-topbar h1.page-title').html(jQuery('.main .page-title h1').html());
+                /*
+                if(jQuery(window).width()>1007){
+                    jQuery('.box-scroll').niceScroll({zindex : 51, objfixed: true});
+                }
+                */
+                jQuery('html').niceScroll({zindex : 9999});
+                var ajax_loaded1 = false;
+                var ajax_loaded2 = false;
+                var ajax_loaded3 = false;
+
+                jQuery('.a_latest').click(function(){
+                    if(!jQuery(this).hasClass('active')){
+                        jQuery('div.filterproducts').children('div').hide();
+                        jQuery('.filterproducts').css('left', ((jQuery(window).width()-760)/2)+"px");
+                        jQuery('div.filterproducts').children('div').removeClass('active');
+                        jQuery('div#new_products').addClass('active');
+                        jQuery('div#new_products').fadeIn();
+                        jQuery('div.filterproducts').fadeIn();
+                        jQuery('div.filterproducts-overlay').fadeIn();
+                        jQuery('.special_menu li a').removeClass('active');
+                        jQuery('.a_latest').addClass('active');
+                        if(!ajax_loaded1){
+                            jQuery.ajax({
+                                url: "<?php echo $this->getUrl('filterproducts/index/newproduct',  array('_secure' =>  Mage::app()->getFrontController()->getRequest()->isSecure())) ?>",
+                                context: document.body
+                            }).done(function(msg) {
+                                jQuery('div#new_products').html(msg);
+                                ajax_loaded1 = true;
+                                if(jQuery(window).height() < 925 ){
+                                    jQuery('.filterproducts div.category-products').css('height', '394px');
+                                    jQuery('.filterproducts').css('top', ((jQuery(window).height()-479)/2)+"px");
+                                } else {
+                                    jQuery('.filterproducts div.category-products').css('height', '788px');
+                                    jQuery('.filterproducts').css('top', ((jQuery(window).height()-873)/2)+"px");
+                                }
+                            });
+                        }
+                    }
+                });
+                jQuery('.a_featured').click(function(){
+                    if(!jQuery(this).hasClass('active')){
+                        jQuery('div.filterproducts').children('div').hide();
+                        jQuery('.filterproducts').css('left', ((jQuery(window).width()-760)/2)+"px");
+                        jQuery('div.filterproducts').children('div').removeClass('active');
+                        jQuery('div#featured_products').addClass('active');
+                        jQuery('div#featured_products').fadeIn();
+                        jQuery('div.filterproducts').fadeIn();
+                        jQuery('div.filterproducts-overlay').fadeIn();
+                        jQuery('.special_menu li a').removeClass('active');
+                        jQuery('.a_featured').addClass('active');
+                        if(!ajax_loaded2){
+                            jQuery.ajax({
+                                url: "<?php echo $this->getUrl('filterproducts/index/featured',  array('_secure' =>  Mage::app()->getFrontController()->getRequest()->isSecure())) ?>",
+                                context: document.body
+                            }).done(function(msg) {
+                                jQuery('div#featured_products').html(msg);
+                                ajax_loaded2 = true;
+                                if(jQuery(window).height() < 925 ){
+                                    jQuery('.filterproducts div.category-products').css('height', '394px');
+                                    jQuery('.filterproducts').css('top', ((jQuery(window).height()-479)/2)+"px");
+                                } else {
+                                    jQuery('.filterproducts div.category-products').css('height', '788px');
+                                    jQuery('.filterproducts').css('top', ((jQuery(window).height()-873)/2)+"px");
+                                }
+                            });
+                        }
+                    }
+                });
+                jQuery('.a_special').click(function(){
+                    if(!jQuery(this).hasClass('active')){
+                        jQuery('div.filterproducts').children('div').hide();
+                        jQuery('.filterproducts').css('left', ((jQuery(window).width()-760)/2)+"px");
+                        jQuery('div.filterproducts').children('div').removeClass('active');
+                        jQuery('div#special_product').addClass('active');
+                        jQuery('div#special_product').fadeIn();
+                        jQuery('div.filterproducts').fadeIn();
+                        jQuery('div.filterproducts-overlay').fadeIn();
+                        jQuery('.special_menu li a').removeClass('active');
+                        jQuery('.a_special').addClass('active');
+                        if(!ajax_loaded3){
+                            jQuery.ajax({
+                                url: "<?php echo $this->getUrl('filterproducts/index/special',  array('_secure' =>  Mage::app()->getFrontController()->getRequest()->isSecure())) ?>",
+                                context: document.body
+                            }).done(function(msg) {
+                                jQuery('div#special_product').html(msg);
+                                ajax_loaded3 = true;
+                                if(jQuery(window).height() < 925 ){
+                                    jQuery('.filterproducts div.category-products').css('height', '394px');
+                                    jQuery('.filterproducts').css('top', ((jQuery(window).height()-479)/2)+"px");
+                                } else {
+                                    jQuery('.filterproducts div.category-products').css('height', '788px');
+                                    jQuery('.filterproducts').css('top', ((jQuery(window).height()-873)/2)+"px");
+                                }
+                            });
+                        }
+                    }
+                });
+                jQuery('.filterproducts-link').click(function(){ jQuery('.a_latest').click(); });
+                jQuery('.filterproducts a.close').click(function(){
+                    jQuery('div.filterproducts').children('div').fadeOut();
+                    jQuery('div.filterproducts').fadeOut();
+                    jQuery('div.filterproducts-overlay').fadeOut();
+                    jQuery('.special_menu li a').removeClass('active');
+                });
+                jQuery('div.filterproducts-overlay').click(function(){
+                    jQuery('div.filterproducts').children('div').fadeOut();
+                    jQuery('div.filterproducts').fadeOut();
+                    jQuery('div.filterproducts-overlay').fadeOut();
+                    jQuery('.special_menu li a').removeClass('active');
+                });
+                var scrollHeight = 788;
+                
+                if(jQuery(window).height() < 925){
+                    jQuery('.filterproducts div.category-products').css('height', '394px');
+                    jQuery('.filterproducts').css('top', ((jQuery(window).height()-479)/2)+"px");
+                    scrollHeight = 394;
+                } else {
+                    jQuery('.filterproducts div.category-products').css('height', '788px');
+                    scrollHeight = 788
+                    jQuery('.filterproducts').css('top', ((jQuery(window).height()-873)/2)+"px");
+                }
+                jQuery(window).resize(function(){
+                    jQuery('.filterproducts').css('left', ((jQuery(window).width()-760)/2)+"px");
+                    if(jQuery(window).height() < 925 ){
+                        jQuery('.filterproducts div.category-products').css('height', '394px');
+                        scrollHeight = 394;
+                        jQuery('.filterproducts').css('top', ((jQuery(window).height()-479)/2)+"px");
+                    } else {
+                        jQuery('.filterproducts div.category-products').css('height', '788px');
+                        scrollHeight = 788
+                        jQuery('.filterproducts').css('top', ((jQuery(window).height()-873)/2)+"px");
+                    }
+                    if(jQuery(window).width() < 768){
+                        jQuery('.filterproducts a.close').click();
+                    }
+                    /** for SAMSUNG GALAXY TABLET */
+                    if(jQuery(window).width()>=768 && jQuery(window).width()<=1024){
+                        jQuery('.header-container').css('width', jQuery(window).width()+"px");
+                    } else {
+                        jQuery('.header-container').css('width', '');
+                    }
+                    /** for SAMSUNG GALAXY TABLET */
+                });
+                jQuery('.filterproducts a.page-next').click(function(){
+                    jQuery(".filterproducts div.active div.category-products").animate({scrollTop: jQuery(".filterproducts div.active div.category-products").scrollTop()+scrollHeight}, 600, "easeOutCubic");
+                    return false;
+                });
+                jQuery('.filterproducts a.page-prev').click(function(){
+                    jQuery(".filterproducts div.active div.category-products").animate({scrollTop: jQuery(".filterproducts div.active div.category-products").scrollTop()-scrollHeight}, 600, "easeOutCubic");
+                    return false;
+                });
+                jQuery("html").click(function(){
+                    if(jQuery(window).width()<=1024){
+                        jQuery("#nav li span.plus").each(function(){
+                            jQuery(this).removeClass('expanded');
+                            jQuery(this).parent().removeClass('expanded');
+                            jQuery(this).parent().children('ul').slideUp('fast');
+                        });
+                    }
+                });
+
+            });
+        </script>
+    </div>
+</div>
