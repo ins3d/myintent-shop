@@ -1,0 +1,161 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+
+<!--
+Default layout, loads most of the pages
+-->
+
+    <default>
+        <reference name="head">
+            <action method="addJs" ifconfig="onepagecheckout/default/enabled"><stylesheet>webtex/opcheckout.js</stylesheet></action>
+            <action method="addCss"><stylesheet>css/webtex/onepagecheckout.css</stylesheet></action>
+        </reference>
+    </default>
+
+<!--
+One page checkout main layout
+-->
+    <checkout_onepage_index translate="label">
+        <reference name="right">
+            <action method="unsetChildren" ifconfig="onepagecheckout/default/enabled"></action>
+            <block type="page/html_wrapper" name="onepagecheckout.progress.wrapper" translate="label" ifconfig="onepagecheckout/default/enabled">
+                <block type="onepagecheckout/cart" name="onepagecheckout.cart.right" before="-" template="onepagecheckout/cart-right.phtml">
+                    <action method="addItemRender"><type>simple</type><block>checkout/cart_item_renderer</block><template>onepagecheckout/cartsidebar/default.phtml</template></action>
+                    <action method="addItemRender"><type>virtual</type><block>checkout/cart_item_renderer</block><template>onepagecheckout/cartsidebar/default.phtml</template></action>
+                    <action method="addItemRender"><type>giftcards</type><block>checkout/cart_item_renderer</block><template>onepagecheckout/cartsidebar/default.phtml</template></action>
+                    <action method="addItemRender"><type>grouped</type><block>checkout/cart_item_renderer_grouped</block><template>onepagecheckout/cartsidebar/default.phtml</template></action>
+                    <action method="addItemRender"><type>configurable</type><block>checkout/cart_item_renderer_configurable</block><template>onepagecheckout/cartsidebar/default.phtml</template></action>
+                    <action method="addItemRender"><type>bundle</type><block>bundle/checkout_cart_item_renderer</block><template>onepagecheckout/cartsidebar/default.phtml</template></action>
+                </block>
+                <block type="onepagecheckout/totals" name="checkout.cart.totals" as="totals" template="onepagecheckout/totals-right.phtml"/>
+            </block>
+        </reference>
+        <reference name="content">
+            <action method="unsetChildren" ifconfig="onepagecheckout/default/enabled"></action>
+            <block type="onepagecheckout/onepage" name="onepagecheckout.onepage" template="onepagecheckout/onepage.phtml" ifconfig="onepagecheckout/default/enabled">
+                <block type="checkout/onepage_login" name="onepagecheckout.onepage.login" as="login" template="onepagecheckout/onepage/login.phtml">
+                    <block type="page/html_wrapper" name="onepagecheckout.onepage.login.before" as="login_before" translate="label">
+                        <label>Login/Registration Before</label>
+                        <action method="setMayBeInvisible"><value>1</value></action>
+                    </block>
+                </block>
+                <block type="onepagecheckout/shipping" name="onepagecheckout.onepage.shipping" as="shipping" template="onepagecheckout/onepage/shipping.phtml"/>
+                <block type="onepagecheckout/shippingmethod" name="onepagecheckout.onepage.shipping_method" as="shipping_method" template="onepagecheckout/onepage/shipping_method.phtml">
+                    <block type="onepagecheckout/shippingmethod_available" name="onepagecheckout.onepage.shipping_method.available" as="available" template="onepagecheckout/onepage/shipping_method/available.phtml"/>
+                    <block type="onepagecheckout/shippingmethod_additional" name="onepagecheckout.onepage.shipping_method.additional" as="additional" template="onepagecheckout/onepage/shipping_method/additional.phtml"/>
+                </block>
+                <block type="onepagecheckout/billing" name="onepagecheckout.onepage.payment" as="payment" template="onepagecheckout/onepage/payment.phtml">
+                    <block type="checkout/onepage_payment_methods" name="onepagecheckout.payment.methods" as="methods" template="onepagecheckout/onepage/payment/methods.phtml">
+                        <action method="setMethodFormTemplate"><method>purchaseorder</method><template>payment/form/purchaseorder.phtml</template></action>
+                    </block>
+                </block>
+                <block type="onepagecheckout/review" name="onepagecheckout.onepage.review" as="review" template="onepagecheckout/onepage/review.phtml"/>
+            </block>
+        </reference>
+    </checkout_onepage_index>
+
+<!--
+One page checkout progress block
+-->
+
+    <checkout_onepage_cart>
+        <!-- Mage_Checkout -->
+        <remove name="right"/>
+        <remove name="left"/>
+
+        <block type="onepagecheckout/cart" name="root" output="toHtml" template="onepagecheckout/cart-right.phtml" />
+    </checkout_onepage_cart>
+
+
+    <checkout_onepage_totals>
+        <remove name="right"/>
+        <remove name="left"/>
+
+        <block type="onepagecheckout/totals" name="root" output="toHtml" template="onepagecheckout/totals-right.phtml" />
+    </checkout_onepage_totals>
+
+<!--
+One page checkout payment methods block
+-->
+    <checkout_onepage_paymentmethod>
+        <remove name="right"/>
+        <remove name="left"/>
+
+        <block type="checkout/onepage_payment_methods" name="root" output="toHtml" template="checkout/onepage/payment/methods.phtml">
+            <action method="setMethodFormTemplate"><method>purchaseorder</method><template>payment/form/purchaseorder.phtml</template></action>
+        </block>
+    </checkout_onepage_paymentmethod>
+
+
+<!--
+One page checkout shipping methods block
+-->
+
+    <checkout_onepage_shippingmethod>
+        <!-- Mage_Checkout -->
+        <remove name="right"/>
+        <remove name="left"/>
+
+        <block type="onepagecheckout/shippingmethod_available" name="root" output="toHtml" template="onepagecheckout/onepage/shipping_method/available.phtml"/>
+    </checkout_onepage_shippingmethod>
+
+    <checkout_onepage_additional>
+        <!-- Mage_Checkout -->
+        <remove name="right"/>
+        <remove name="left"/>
+
+        <block type="checkout/onepage_shipping_method_additional" name="root" output="toHtml" template="checkout/onepage/shipping_method/additional.phtml">
+            <action method="setDontDisplayContainer"><param>1</param></action>
+        </block>
+    </checkout_onepage_additional>
+
+    <onepagecheckout_onepage_review>
+        <!-- Mage_Checkout -->
+        <remove name="right"/>
+        <remove name="left"/>
+
+        <block type="onepagecheckout/review" name="root" output="toHtml" template="onepagecheckout/onepage/review.phtml" />
+    </onepagecheckout_onepage_review>
+
+    <onepagecheckout_order_view>
+        <remove name="right"/>
+        <remove name="left"/>
+        <block type="onepagecheckout/confirm" name="root" output="toHtml" template="onepagecheckout/onepage/confirm.phtml">
+                    <block type="sales/order_info" as="info" name="sales.order.info" template="onepagecheckout/order/info.phtml" />
+                    <block type="sales/order_view" name="sales.order.view" as="view">
+                        <block type="sales/order_items" name="order_items" template="onepagecheckout/order/items.phtml">
+                            <action method="addItemRender"><type>default</type><block>sales/order_item_renderer_default</block><template>sales/order/items/renderer/default.phtml</template></action>
+                            <action method="addItemRender"><type>grouped</type><block>sales/order_item_renderer_grouped</block><template>sales/order/items/renderer/default.phtml</template></action>
+                            <action method="addItemRender"><type>bundle</type><block>bundle/sales_order_items_renderer</block><template>bundle/sales/order/items/renderer.phtml</template></action>
+                            <block type="sales/order_totals" name="order_totals" template="onepagecheckout/order/totals.phtml">
+                                <action method="setLabelProperties"><value>colspan="4" class="a-right"</value></action>
+                                <action method="setValueProperties"><value>class="last a-right"</value></action>
+                                <block type="tax/sales_order_tax" name="tax" template="tax/order/tax.phtml" />
+                            </block>
+                        </block>
+                    </block>
+                    <block type="core/text_list" name="additional.product.info" translate="label">
+                        <label>Additional Product Info</label>
+                    </block>
+        </block>
+    </onepagecheckout_order_view>
+
+    <checkout_onepage_success translate="label">
+        <reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
+        <reference name="content">
+            <remove name="checkout.success" />
+            <block type="checkout/onepage_success" name="onepagecheckout.success" template="onepagecheckout/success.phtml"/>
+        </reference>
+    </checkout_onepage_success>
+
+    <onepagecheckout_onepage_print translate="label">
+        <reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
+        <reference name="content">
+            <block type="onepagecheckout/print" name="onepagecheckout.print" template="onepagecheckout/print.phtml"/>
+        </reference>
+    </onepagecheckout_onepage_print>
+</layout>

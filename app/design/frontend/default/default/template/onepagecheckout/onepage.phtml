@@ -1,0 +1,280 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php
+  $_helper = Mage::helper('onepagecheckout');
+?>
+<link rel="stylesheet" type="text/css" media="all" href="<?php $this->getSkinUrl('css/webtex/onepagecheckout.css') ?>" >
+<script type="text/javascript" src="<?php echo $this->getJsUrl('varien/accordion.js') ?>"></script>
+
+<script type="text/javascript">
+    $$('div.col-main')[0].style.width = '580px';
+</script>
+<div class="page-title">
+    <h1><?php echo $this->__('Checkout') ?></h1>
+</div>
+<ol class="opc" id="checkoutSteps">
+<?php if(Mage::helper('customer')->isLoggedIn()): ?>
+<?php     $i=0;$j=1; ?>
+<?php else: ?>
+<?php     $i=0;$j=0; ?>
+<?php endif; ?>
+<?php foreach($_helper->getSteps() as $_stepId => $_stepInfo): ?>
+<?php $i++ ?>
+<?php $j++ ?>
+<?php if($i > 0 && $_stepId != 'login'):?>
+ <form id="opc-main-form">
+<?php endif; ?>
+    <li id="opc-<?php echo $_stepId ?>" class="section<?php echo !empty($_stepInfo['allow'])?' allow':'' ?><?php echo !empty($_stepInfo['complete'])?' saved':'' ?>">
+        <div class="step-title" onclick="$('checkout-info-step-<?php echo $_stepId ?>').hide();">
+            <span class="number"><?php echo $i ?></span>
+            <h2><?php echo $_helper->getStepTitle($j) ?></h2>
+            <a href="#"><?php echo $this->__('Edit') ?></a>
+        </div>
+        <div id="checkout-step-<?php echo $_stepId ?>" class="step a-item" style="display:none;">
+            <?php echo $this->getChildHtml($_stepId) ?>
+        </div>
+        <div id="checkout-info-step-<?php echo $_stepId ?>" class="step a-item" style="display:none;">
+        </div>
+    </li>
+<?php endforeach ?>
+ </form>
+</ol>
+<div id="loading-mask" class="loading-mask-process" style="display: none; z-index: 1001;">
+    <p class="loader" id="loading_mask_loader"><img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>adminhtml/default/default/images/ajax-loader-tr.gif" alt="Loading..." /><br />Please wait...</p>
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+    var isInAjax = false;
+    var accordion = new Accordion('checkoutSteps', '.step-title', true);
+    <?php if($this->getActiveStep()): ?>
+        accordion.openSection('opc-<?php echo $this->getActiveStep() ?>');
+    <?php endif ?>
+    var checkout = new Checkout(accordion,{
+        progress: '<?php echo $this->getUrl('checkout/onpage/progress') ?>',
+        review: '<?php echo $this->getUrl('onepagecheckout/onepage/review') ?>',
+        saveMethod: '<?php echo $this->getUrl('onepagecheckout/onepage/saveMethod') ?>',
+        failure: '<?php echo $this->getUrl('checkout/cart') ?>'}
+    );
+
+    function loadShow() {
+        isInAjax = true;
+        $$('span.please-wait').invoke('show');
+        $('loading-mask').show();
+    };
+    
+    function loadHide() {
+        $$('span.please-wait').invoke('hide');
+        $('loading-mask').hide();
+        isInAjax = false;
+    };
+
+    function updateShippingMethod() {
+        var params = $('opc-main-form').serialize(true);
+        var request = new Ajax.Request(
+            '<?php echo $this->getUrl('onepagecheckout/onepage/updateShippingMethod') ?>',
+            {method: 'post', 
+             parameters: params,
+             onSuccess: function(transport){
+                 var response = transport.responseText.evalJSON();
+                 if(response.error) {
+                     alert(response.message);
+                 } else {
+                     $('shipping-method').update(response.update_section.shipping);
+                     if($('order-summary')){
+                         $('order-summary').update(response.update_section.totals);
+                     }
+                 }
+                 loadHide();
+             },
+             onFailure : function(){
+                 loadHide();
+             }
+        });
+    };
+
+    function updateData() {
+        loadShow();
+        var params = $('opc-main-form').serialize(true);
+        var request = new Ajax.Request(
+            '<?php echo $this->getUrl('onepagecheckout/onepage/updateData')?>',
+            {method: 'post', 
+            parameters: params,
+            onSuccess: function(transport){
+                var response = transport.responseText.evalJSON();
+                if(response.error) {
+                    checkout.setStepResponse(response);
+                    if(response.goto_section){
+                        $('checkout-info-step-'+response.goto_section).hide();
+                    }
+                    loadHide();
+                    if(response.error_messages){
+                        alert(response.error_messages);
+                    } else {
+                        alert(response.message);
+                    }
+                } else {
+                    if($('section_name').value == 'review'){
+                        setLocation('<?php echo $this->getUrl('checkout/onepage/success')?>');
+                    }
+                    checkout.setStepResponse(response);
+                    if($('section_name').value == 'shipping') {
+                        $('checkout-info-step-shipping').update(response.update_section.shipping_info);
+                        $('checkout-info-step-shipping').show();
+                        $('checkout-info-step-payment').hide();
+                    } else if($('section_name').value == 'payment') {
+                        $('checkout-info-step-payment').update(response.update_section.payment_info);
+                        $('checkout-info-step-payment').show();
+                    }
+                    $('shipping-method').update(response.update_section.shipping);
+                    $('order-summary').update(response.update_section.totals);
+                    loadHide();
+                }
+            },
+            onFailure: function(){
+                loadHide();
+            }
+        })
+    };
+
+    function setBillingAddress(){
+        if($('billing:use_shipping_yes').checked){
+            $('billing:street1').value = $('shipping:street1').value;
+            $('billing:street2').value = $('shipping:street2').value;
+            $('billing:city').value    = $('shipping:city').value;
+            $('billing:region_id').value = $('shipping:region_id').value;
+            $('billing:postcode').value    = $('shipping:postcode').value;
+            $('billing:country_id').value    = $('shipping:country_id').value;
+            $('billing:telephone').value    = $('shipping:telephone').value;
+            $('billing:firstname').value    = $('shipping:firstname').value;
+            $('billing:lastname').value    = $('shipping:lastname').value;
+            if($('billing:company')) {
+               $('billing:company').value    = $('shipping:company').value;
+            }
+            if($('billing:fax')) {
+               $('billing:fax').value    = $('shipping:fax').value;
+            }
+            // disable textboxes
+            $('billing:street1').disabled = true;
+            $('billing:street2').disabled = true;
+            $('billing:city').disabled    = true;
+            $('billing:region_id').disabled = true;
+            $('billing:postcode').disabled  = true;
+            $('billing:country_id').disabled = true;
+            $('billing:telephone').disabled  = true;
+            $('billing:firstname').disabled  = true;
+            $('billing:lastname').disabled   = true;
+            if($('billing:company')) {
+               $('billing:company').disabled = true;
+            }
+            if($('billing:fax')) {
+               $('billing:fax').disabled     = true;
+            }
+            if($('billing-address-select')){
+                $('billing-address-select-container').hide();
+            }
+            if($('billing-old-address-list')){
+                $('billing-old-address-list').hide();
+            }
+        } else {
+            $('billing:street1').value = "";
+            $('billing:street2').value = "";
+            $('billing:city').value    = "";
+            $('billing:region_id').value = 0;
+            $('billing:postcode').value    = "";
+            $('billing:telephone').value    = "";
+            $('billing:firstname').value    = "";
+            $('billing:lastname').value    = "";
+            if($('billing:company')) {
+               $('billing:company').value    = "";
+            }
+            if($('billing:fax')) {
+               $('billing:fax').value    = "";
+            }
+            // enable textboxes
+            $('billing:street1').disabled = false;
+            $('billing:street2').disabled = false;
+            $('billing:city').disabled    = false;
+            $('billing:region_id').disabled = false;
+            $('billing:postcode').disabled  = false;
+            $('billing:country_id').disabled = false;
+            $('billing:telephone').disabled  = false;
+            $('billing:firstname').disabled  = false;
+            $('billing:lastname').disabled   = false;
+            if($('billing:company')) {
+               $('billing:company').disabled = false;
+            }
+            if($('billing:fax')) {
+               $('billing:fax').disabled     = false;
+            }
+            if($('billing-address-select')){
+                $('billing-address-select-container').show();
+            }
+            if($('billing-old-address-list')){
+                $('billing-old-address-list').show();
+            }
+        }
+    };
+
+    function shippingSave() {
+      if(!isInAjax) {
+        var validator = new Validation('opc-main-form');
+        if (validator.validate()) {
+            $('section_name').value = "shipping";
+            updateData();
+        }
+      }
+    };
+
+    function billingSave(){
+      if(!isInAjax){
+        var paymentvalidator = new Validation('opc-main-form');
+        if(paymentvalidator.validate()){
+            $('section_name').value = "payment";
+            updateData();
+        }
+      }
+    };
+
+    function orderSave(){
+      if(!isInAjax){
+        $('section_name').value = "review";
+        updateData();
+      }
+    };
+
+Event.observe(window, 'load',function(){
+<?php if($this->canShip()): ?>
+    updateShippingMethod();
+<?php else: ?>
+    $('opc-shipping').removeClassName('allow');
+    var response = {goto_section: 'payment'};
+    checkout.setStepResponse(response);
+<?php endif; ?>
+});
+//]]>
+</script>

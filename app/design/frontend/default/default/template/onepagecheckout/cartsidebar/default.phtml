@@ -1,0 +1,29 @@
+<?php
+$_item = $this->getItem();
+?>
+<tr>
+   <td>
+       <img src="<?php echo $this->getProductThumbnail()->resize(60, 60)->setWatermarkSize('30x10'); ?>" width="50" height="50" alt="<?php echo $this->htmlEscape($this->getProductName()) ?>" />
+   </td>
+   <td style="font-size:1em;border-left:0px;border-right:0px;padding:5px;">
+        <p class="product-name"><?php echo $this->htmlEscape($this->getProductName()) ?></p>
+        <?php if ($_options = $this->getOptionList()):?>
+            <dl class="item-options" style="font-weight:normal;">
+                <?php foreach ($_options as $_option) : ?>
+                <dt style="font-weight:normal;"><?php echo $this->htmlEscape($_option['label']) ?>: 
+                    <?php if (is_array($_option['value'])): ?>
+                    <?php echo nl2br(implode("\n", $_option['value'])) ?>
+                    <?php else: ?>
+                    <?php echo $_option['value'] ?>
+                    <?php endif; ?>
+                </dt>
+                <?php endforeach; ?>
+            </dl>
+        <?php endif; ?>
+        <p>Qty: <?php echo $this->getQty() ?></p>
+    </td>
+    <td style="font-size:12px;border-left:0px;padding:5px;">
+        <?php echo $this->helper('checkout')->formatPrice($_item->getCalculationPrice()) ?>
+    </td>
+</td>
+

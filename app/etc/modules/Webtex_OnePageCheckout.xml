@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Webtex_OnePageCheckout>
+            <active>true</active>
+            <codePool>local</codePool>
+            <name>Webtex One Page Step-By-Step Checkout</name>
+        </Webtex_OnePageCheckout>
+    </modules>
+</config>
