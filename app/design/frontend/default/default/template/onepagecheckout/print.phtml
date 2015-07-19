@@ -1,0 +1,15 @@
+<?php
+
+?>
+<?php
+  $_helper = Mage::helper('onepagecheckout');
+?>
+<div class="page-title title-buttons">
+   <h1><?php echo $this->__('Order #%s', $this->escapeHtml($this->getOrderId())) ?></h1>
+</div>
+<div>
+  <?php echo Mage::getSingleton('customer/session')->getData('order_html'); ?>
+</div>
+
+<script type="text/javascript">window.print();</script>
+
