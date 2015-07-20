@@ -51,9 +51,14 @@ Default layout, loads most of the pages
             <action method="addCss" ifconfig="trego_settings/custom_settings/custom_css"><stylesheet>css/custom.css</stylesheet></action>
             <action method="addItem"><type>skin_css</type><name>css/styles-ie.css</name><params/><if>lt IE 9</if></action>
         </reference>
+<!-- customization begin -->
+		<reference name="top.links">
+			<action method="removeLinkBlock"><blockName>wishlist_link</blockName></action>
+		</reference>
+<!-- customization end -->		
         <reference name="header">
             <block type="directory/currency" name="custom_currency_selector" template="page/switch/currency.phtml"/>
-            <block type="checkout/cart_sidebar" name="cart_cartheader" template="checkout/cart/cartheader.phtml" before="-">
+            <block type="checkout/cart_sidebar" name="cart_cartheader" template="checkout/cart/cartheader.phtml" before="-">			
                 <action method="addItemRender"><type>simple</type><block>checkout/cart_item_renderer</block><template>checkout/cart/cartheader/default.phtml</template></action>
                 <action method="addItemRender"><type>grouped</type><block>checkout/cart_item_renderer_grouped</block><template>checkout/cart/cartheader/default.phtml</template></action>
                 <action method="addItemRender"><type>configurable</type><block>checkout/cart_item_renderer_configurable</block><template>checkout/cart/cartheader/default.phtml</template></action>
@@ -62,6 +67,9 @@ Default layout, loads most of the pages
                     <label>Shopping Cart Cartheader Extra Actions</label>
                 </block>
             </block>
+<!-- customization begin -->			
+			<block type="page/template_links" name="header.links"/>
+<!-- customization end -->					
             <block type="core/template" name="topSpecialMenu" template="page/html/topspecialmenu.phtml"/>
             <block type="core/template" name="socialIcons" template="trego/socialicons/socialicons.phtml"/>
             <block type="core/template" name="copyrights" template="trego/copyrights.phtml"/>
@@ -574,9 +582,36 @@ Default layout, loads most of the pages
             <block type="checkout/onepage_failure" name="checkout.failure" template="checkout/onepage/failure.phtml"/>
         </reference>
     </onepagecheckout_index_failure>
-<!-- customization begin -->	
-	<checkout_cart_index>
-		<remove name="checkout.cart.shipping" />
-	</checkout_cart_index>
+<!-- customization begin -->
+	<customer_logged_out>
+		<reference name="top.links">
+			<action method="removeLinkByUrl"><url helper="customer/getLoginUrl"/></action>
+		</reference>
+		<reference name="header.links">
+			<action method="addLink" translate="label title" module="customer">
+				<label>Log In</label>
+				<url helper="customer/getLoginUrl"/>
+				<title>Log In</title>
+				<prepare/>
+				<urlParams/>
+				<position>100</position>
+			</action>
+		</reference>
+	</customer_logged_out>
+	<customer_logged_in>
+		<reference name="top.links">
+			<action method="removeLinkByUrl"><url helper="customer/getLogoutUrl"/></action>
+		</reference>
+		<reference name="header.links">
+			<action method="addLink" translate="label title" module="customer">
+				<label>Log Out</label>
+				<url helper="customer/getLogoutUrl"/>
+				<title>Log Out</title>
+				<prepare/>
+				<urlParams/>
+				<position>100</position>
+			</action>
+		</reference>
+	</customer_logged_in>
 <!-- customization end -->	
 </layout>

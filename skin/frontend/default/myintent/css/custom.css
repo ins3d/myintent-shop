@@ -246,6 +246,25 @@ button.button:hover span{
    	background: #686868 none repeat scroll 0% 0% !important;
 }
 
+/* expand the size of the main image on the product page */
+div.image-aspect-control {
+    padding-top: 100%; /* 1:1 aspect ratio */
+}
+div.product-view .product-img-box .product-image-zoom{
+	width: auto;
+	height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+div.more-views {
+	position: relative;
+	z-index: 5;
+	margin-top: 10px;
+}
+	
 @media only screen and (max-width: 1099px){
 	/* keep discount and total boxes horizontally aligned */
 	.cart-extra {
@@ -346,7 +365,11 @@ button.button:hover span{
 
 	.cart .discount input.input-text {
 		width: 285px;
-	}	
+	}
+	
+	.product-view .product-img-box .more-views li {
+		margin: 0 0 8px 10px;
+	}
 }
 
 @media only screen and (min-width: 1100px){
@@ -359,7 +382,6 @@ button.button:hover span{
 	.cart .discount input.input-text {
 		width: 275px;
 	}
-
 }
 
 .nav-container.expanded a#mobnav {
@@ -430,11 +452,6 @@ button.button:hover span{
 	color: #D64C35 !important;
 }
 
-/* Remove "My Wishlist from footer */
-.footer-menu  a[title="My Wishlist"]{
-	display: none;
-}
-
 /* Capitalize every letter in "Your Word" fields */
 .validate-myintent-chars{
 	text-transform:uppercase
@@ -462,4 +479,34 @@ button.button span:hover {
 /* white background for header row of product table on the shopping cart page */
 .data-table thead th {
     background: white none repeat scroll 0% 0%;
+}
+
+/* adjust padding in product box in list view on category page since "Add to Cart" button as removed */
+ol.products-list li.item {
+	padding: 12px 10px;
+}
+
+/* remove border in product box in list view on category page */
+ol.products-list li.item div.links-set {
+    border-top: 0;
+}
+
+/* Log in button in header */
+div.quick-access .links {
+	display: block;
+	float: left;
+	margin: 0;
+	margin-left: 20px;
+}
+  
+div.quick-access .links li {
+	background: none;
+}
+
+div.quick-access .links li a{
+	color: #6d6c67;
+	font-size: 12px;
+	font-weight: 400;
+	font-family: Verdana;
+	line-height: 24px;
 }
