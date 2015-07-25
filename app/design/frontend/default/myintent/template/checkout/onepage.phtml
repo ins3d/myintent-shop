@@ -1,0 +1,54 @@
+<div class="page-title">
+    <h1><?php echo $this->__('Checkout') ?></h1>
+</div>
+<script type="text/javascript" src="<?php echo $this->getJsUrl('varien/accordion.js') ?>"></script>
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/opcheckout.js') ?>"></script>
+
+
+
+
+
+<div class="row onepagecheckout_datafields">
+    <div class="col-sm-4 iwd-1 active">
+		<div class="section-header">
+			<h3> 1. Shipping </h3>
+		</div>
+
+		<?php if (!$this->isCustomerLoggedIn()): ?>
+			<?php echo $this->getChildHtml('login') ?>
+		<?php endif ?>
+        <?php echo $this->getChildHtml('shipping') ?>
+        <?php echo $this->getChildHtml('shipping_method') ?>
+    </div>
+
+    <div class="col-sm-4 iwd-2">
+		<div class="section-header">
+			<h3> 2. Payment </h3>
+		</div>		
+        <?php echo $this->getChildHtml('billing') ?>
+    </div>
+
+    <div class="col-sm-4 iwd-3">
+		<div class="section-header">
+			<h3> 3. Review </h3>
+		</div>	
+        <?php echo $this->getChildHtml('review') ?>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+//<![CDATA[
+    var accordion = new Accordion('checkoutSteps', '.step-title', true);
+    <?php if($this->getActiveStep()): ?>
+    accordion.openSection('opc-<?php echo $this->getActiveStep() ?>');
+    <?php endif ?>
+	
+    var checkout = new Checkout(accordion,{
+        progress: '<?php echo $this->getUrl('checkout/onepage/progress') ?>',
+        review: '<?php echo $this->getUrl('checkout/onepage/review') ?>',
+        saveMethod: '<?php echo $this->getUrl('checkout/onepage/saveMethod') ?>',
+        failure: '<?php echo $this->getUrl('checkout/cart') ?>'}
+    );
+//]]>
+</script>

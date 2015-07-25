@@ -299,6 +299,46 @@ Default layout, loads most of the pages
                 <crumbInfo><label>Checkout</label><title>Checkout</title></crumbInfo>
             </action>
         </reference>
+		<reference name="content">
+			<remove name="checkout.onepage" />
+			<block type="checkout/onepage" name="new.checkout.onepage" template="checkout/onepage.phtml">			
+<!--
+				<block type="checkout/onepage_login" name="checkout.onepage.login" as="login" template="checkout/onepage/login.phtml">
+-->
+<!-- NOTE: 2 column layout is being used instead of 1 column layout.  Thus, right column contains progress.phtml 
+	which contains the summary info for shipping and billing -->
+				<block type="checkout/onepage_login" name="checkout.onepage.login" as="login" template="rememberme/onepage/login.phtml">
+					<block type="page/html_wrapper" name="checkout.onepage.login.before" as="login_before" translate="label">
+						<label>Login/Registration Before</label>
+						<action method="setMayBeInvisible"><value>1</value></action>
+					</block>
+				</block>
+				
+				<block type="checkout/onepage_shipping" name="checkout.onepage.shipping" as="shipping" template="checkout/onepage/shipping.phtml">
+					<block type="checkout/onepage_progress" name="shipping.progress" template="checkout/onepage/progress/shipping.phtml"/>
+				</block>	
+<!--				
+				<block type="checkout/onepage_billing" name="checkout.onepage.billing" as="billing" template="checkout/onepage/billing.phtml">
+-->
+				<block type="checkout/onepage_billing" name="checkout.onepage.billing" as="billing" template="persistent/checkout/onepage/billing.phtml">
+					<block type="checkout/onepage_payment" name="checkout.onepage.payment" as="payment" template="checkout/onepage/payment.phtml">
+						<block type="checkout/onepage_payment_methods" name="checkout.payment.methods" as="methods" template="checkout/onepage/payment/methods.phtml">
+							<action method="setMethodFormTemplate"><method>purchaseorder</method><template>payment/form/purchaseorder.phtml</template></action>
+						</block>
+					</block>
+					<block type="checkout/onepage_progress" name="billing.progress" template="checkout/onepage/progress/billing.phtml"/>
+					<block type="checkout/onepage_progress" name="payment.progress" template="checkout/onepage/progress/payment.phtml"/>
+				</block>
+
+				<block type="checkout/onepage_shipping_method" name="checkout.onepage.shipping_method" as="shipping_method" template="checkout/onepage/shipping_method.phtml">
+					<block type="checkout/onepage_shipping_method_available" name="checkout.onepage.shipping_method.available" as="available" template="checkout/onepage/shipping_method/available.phtml"/>
+					<block type="checkout/onepage_shipping_method_additional" name="checkout.onepage.shipping_method.additional" as="additional" template="checkout/onepage/shipping_method/additional.phtml"/>
+					<block type="checkout/onepage_progress" name="shippingmethod.progress" template="checkout/onepage/progress/shipping_method.phtml"/>
+				</block>
+
+				<block type="checkout/onepage_review" name="checkout.onepage.review" as="review" template="checkout/onepage/review.phtml"/>
+			</block>
+		</reference>
     </checkout_onepage_index>
     <customer_account_login translate="label">
         <reference name="breadcrumbs">
