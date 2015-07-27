@@ -80,26 +80,19 @@ if(!window.toogleRequired) {
     }
 }
 if(window.shipping) {
-/* Inserts shipping method content via AJAX */
-shipping.onSave = function(evt){
-	
-console.log("inline.phtml - shipping.onSave end");
-for(var name in evt) {
-    console.log(name + " : " + evt[name]);
-}
-console.log("inline.phtml - shipping.onSave end");
 
+shipping.onSave = function(evt){
     new Ajax.Updater('onepage-checkout-shipping-method-additional-load', '<?php echo $this->getAdditionalUrl(); ?>', {onSuccess: function() {
           this.nextStep(evt);
     }.bind(this), evalScripts:true});
 }.bindAsEventListener(shipping);
-/*
+
 billing.onSave = function(evt){
     new Ajax.Updater('onepage-checkout-shipping-method-additional-load', '<?php echo $this->getAdditionalUrl(); ?>', {onSuccess: function() {
           this.nextStep(evt);
     }.bind(this), evalScripts:true});
 }.bindAsEventListener(billing);
-*/
+
 }
 //]]>
 </script>
