@@ -356,7 +356,6 @@ Billing.prototype = {
     },
 
     setAddress: function(addressId){
-		alert("setting address");
         if (addressId) {
             request = new Ajax.Request(
                 this.addressUrl+addressId,
@@ -450,7 +449,7 @@ console.log("billing.save: " + this.saveUrl); //billing.save: http://localhost/i
     nextStep: function(transport){
 /* customization begin */
 		jQuery(".col-sm-4").removeClass("active");
-		jQuery(".col-sm-4 .iwd-3").addClass("active");
+		jQuery(".col-sm-4.iwd-3").addClass("active");
 		$("co-billing-form").hide();
 		$("checkout-review-load").show();
 		$("payment-progress-opcheckout").setStyle({visibility:"visible", position: "static"});
@@ -496,17 +495,19 @@ console.log("billing.nextStep (error) ");
 	
 /* customization start */
     setSameAsShipping: function(flag) {
-        $('billing:same_as_shipping').checked = flag;
-        if (flag) {
-//			$("billing_fields_visible").setStyle({visibility:"hidden", position: "absolute"});
+//        $('billing:same_as_shipping').checked = flag;
+//        if (flag) {
+		var sameAsShippingchecked = $('billing:same_as_shipping').checked;
+		if (sameAsShippingchecked) {
             this.syncWithShipping();
+//			$("billing_fields_visible").setStyle({visibility:"hidden", position: "absolute"});
         }
 		else{
-//			jQuery("#billing:firstname").val("wtf"); // not working - need to look at widget
-//			jQuery("#billing:lastname").val("wtf"); // not working - need to look at widget
-//			jQuery("#co-billing-form .resettable").val("");
-//			jQuery("#billing:region_id").hide(); // need to bind element to after "var billingRegionUpdater" on billing.phtml page is finished
-//			jQuery("billing:country_id").hide(); // something is wrong with country drop down page - always stuck on US.  This was happening in dev (using default onepage checkout) already prior to checkout changes.
+			jQuery(document.getElementById("billing:firstname")).val();
+			jQuery(document.getElementById("billing:lastname")).val();
+			jQuery("#co-billing-form .resettable").val("");
+			jQuery(document.getElementById("billing:region_id")).val();
+			jQuery(document.getElementById("billing:country_id")).val("US");			
 //			$("billing_fields_visible").setStyle({visibility:"visible", position: "static"});
 		}
     },
@@ -765,7 +766,7 @@ console.log("Shippingmethod.save() - onSave: " + this.onSave);
     nextStep: function(transport){
 /* customization begin */
 		jQuery(".col-sm-4").removeClass("active");
-		jQuery(".col-sm-4 .iwd-2").addClass("active");
+		jQuery(".col-sm-4.iwd-2").addClass("active");
 		$("co-shipping-method-form").hide();		
 		$("co-billing-form").show();
 		$("shipping_method-progress-opcheckout").setStyle({visibility:"visible", position: "static"});
@@ -1024,7 +1025,6 @@ Payment.prototype = {
     },
 
     initWhatIsCvvListeners: function(){		
-alert("here");	
         $$('.cvv-what-is-this').each(function(element){
             Event.observe(element, 'click', toggleToolTip);
         });

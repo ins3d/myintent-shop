@@ -1,4 +1,4 @@
-<form id="co-billing-form" action="" style="display:none">
+<form id="co-billing-form" action="">
 <fieldset>
 <!-- customization - begin -->
 	<?php echo $this->getChildHtml('payment'); ?>
@@ -9,7 +9,7 @@
 <!-- customization - begin -->	
     <?php if ($this->canShip()): ?>
         <li class="control">
-            <input type="checkbox" name="billing[same_as_shipping]" id="billing:same_as_shipping" value="0" title="Same as shipping address" class="checkbox" onclick="billing.setSameAsShipping(this.checked)"/><label for="billing:same_as_shipping">Same as shipping address</label></li>
+            <input type="checkbox" name="billing[same_as_shipping]" id="billing:same_as_shipping" value="0" title="Same as shipping address" class="checkbox" checked="checked" onclick="billing.setSameAsShipping(this.checked)"/><label for="billing:same_as_shipping">Same as shipping address</label></li>
         </li>
     <?php endif; ?>
 <!-- customization - end -->
@@ -26,7 +26,7 @@
         <fieldset>
             <input type="hidden" name="billing[address_id]" value="<?php echo $this->getAddress()->getId() ?>" id="billing:address_id" />
 <!-- customization begin -->
-<!--
+<!-- customization
 			<div id="billing_fields_visible" style="visibility: hidden; position: absolute">
 -->	
 			<div id="billing_fields_visible" style="">
@@ -39,7 +39,7 @@
                             <input type="text" id="billing:company" name="billing[company]" value="<?php echo $this->escapeHtml($this->getAddress()->getCompany()) ?>" title="<?php echo $this->__('Company') ?>" class="input-text resettable <?php echo $this->helper('customer/address')->getAttributeValidationClass('company') ?>" placeholder="<?php echo $this->__('Company') ?>" />
                         </div>
                   
-<!--					
+<!-- customization
         <?php if(!$this->isCustomerLoggedIn()): ?>
                     <div class="field">
                         <div class="input-box">
@@ -136,7 +136,7 @@
             <?php if ($this->isTaxvatEnabled()):?>
                 <li><?php echo $this->getTaxvatHtml() ?></li>
             <?php endif; ?>
-<!--
+<!-- customization
                 <li class="fields" id="register-customer-password">
                     <div class="field">
                         <div class="input-box">
@@ -193,7 +193,7 @@
 		</li>
 	<?php endif; ?>					
 <!-- customization end -->	
-<!--
+<!-- customization
     <?php if ($this->canShip()): ?>
         <li class="control">
             <input type="radio" name="billing[use_for_shipping]" id="billing:use_for_shipping_yes" value="1"<?php if ($this->isUseBillingAddressForShipping()) {?> checked="checked"<?php }?> title="<?php echo  $this->__('Ship to this address') ?>" onclick="$('shipping:same_as_billing').checked = true;" class="radio" /><label for="billing:use_for_shipping_yes"><?php echo  $this->__('Ship to this address') ?></label></li>
@@ -203,7 +203,7 @@
     <?php endif; ?>
 -->
     </ul>
-<!--	
+<!-- customization
     <?php if (!$this->canShip()): ?>
         <input type="hidden" name="billing[use_for_shipping]" value="1" />
     <?php endif; ?>
@@ -256,38 +256,5 @@
             }
         });
     }
-/* what is the purpose of the code below? hiding the select box for state causes validation to fail */	
-    jQuery(document).ready(function(){
-        var region_id = document.getElementById('billing:region_id');
-        var country_id = document.getElementById("billing:country_id");
-// where is the dynamic id, sbHolder*, used?  Didn't see if anywhere		
-        if (!billingRegionUpdater.regions[billingRegionUpdater.countryEl.value]) {
-            jQuery('#sbHolder_'+jQuery(region_id).attr("sb")).hide();
-        }else{
-            jQuery('#sbHolder_'+jQuery(region_id).attr("sb")).show();
-        }
-        billingRegionUpdater.update();
-// why hide select box for state?		
-//        jQuery(region_id).hide();
-        jQuery(country_id).change(function(){
-            var region_id = document.getElementById('billing:region_id');
-            var country_val = '';
-            jQuery(this).children('option').each(function(){
-                if(jQuery(this).attr('selected')){
-                    country_val = jQuery(this).attr('value');
-                }
-            });
-            billingRegionUpdater.countryEl.value = country_val;
-// where is the dynamic id, sbHolder*, used?  Didn't see if anywhere			
-            if (!billingRegionUpdater.regions[billingRegionUpdater.countryEl.value]) {
-                jQuery('#sbHolder_'+jQuery(region_id).attr("sb")).hide();
-            }else{
-                jQuery('#sbHolder_'+jQuery(region_id).attr("sb")).show();
-            }
-            billingRegionUpdater.update();
-// why hide select box for state?			
-//            jQuery(region_id).hide();
-        });
-    });
 //]]>
 </script>
