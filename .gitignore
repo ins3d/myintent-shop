@@ -65,6 +65,13 @@ app/etc/config.xml
 /var/*
 !/var/package
 var/session/*
+var/package/MagnetoDebug-1.0.0.xml
+var/package/tmp/package.xml
+
+downloader/cache.cfg
+downloader/connect.cfg
+
+var/log/system.log
 
 info.php
 .idea/encodings.xml

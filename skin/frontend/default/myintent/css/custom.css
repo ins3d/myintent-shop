@@ -1,10 +1,85 @@
-.myintent_header {
+#myintent_homepage_container{
+	position: relative;
+	z-index: 100;
+	width: 80%;
+}
+
+#myintent_homepage_container.centered {
 	position: fixed;
-	left: 0;
-	right: 0;
-	z-index: 1030;
-	background-color: #f1f1f1;
-	text-align: center;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#myintent_homepage_container img{
+    display: block;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+#enter_button_container{
+	width: 35%;
+}
+
+#myintent_logo_container{ 
+	width: 100%;
+}
+
+#social_icons_container{
+	width: 80%;
+}
+
+#enter_button_container, #myintent_logo_container, #social_icons_container{
+    margin-left: auto;
+    margin-right: auto;
+	margin-top: 60px;
+	margin-bottom: 60px;
+}
+
+#social_icons_container{
+    text-align: justify;
+    -ms-text-justify: distribute-all-lines;
+    text-justify: distribute-all-lines;
+}
+
+#social_icons_container .stretch {
+    width: 100%;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+}
+
+.social_icon{
+    display: inline-block;
+	width: 23%;
+}
+
+.social_icon img{
+    display: block;
+    width: 70%;
+}
+
+@media (min-width: 768px) {
+
+	#myintent_homepage_container{
+		width: auto;
+	}
+
+	#enter_button_container, #myintent_logo_container, #social_icons_container{
+		width: 60%;
+	}
+
+	#social_icons_container .stretch {
+		width: 100%;
+	}
+
+	.social_icon{
+		width: 23%;
+	}
+
+	.social_icon img{
+		width: 70%;
+	}
 }
 
 div.book {
@@ -31,26 +106,10 @@ div.book a.title {
 }
 
 @media (max-width: 319px) {
-	.myintent_header a {
-		font-size: 1.5em;
-	}
 
-	.tile-container {
-		position: relative;
-		top: 2.5em;
-	}
 }
 
 @media (min-width: 320px) {
-	.myintent_header a {
-		font-size: 2.0em;
-	}
-
-	.tile-container {
-		position: relative;
-		top: 3.5em;
-	}
-
 	div.book {
 		padding: 1em 1em;
 	}
@@ -64,15 +123,6 @@ div.book a.title {
 }
 
 @media (min-width: 480px) {
-	.myintent_header a {
-		font-size: 3.0em;
-	}
-
-	.tile-container {
-		position: relative;
-		top: 5.0em;
-	}
-
 	div.book .img-container{
 		width: 50%;
 		margin-left: auto;
@@ -90,15 +140,6 @@ div.book a.title {
 }
 
 @media (min-width: 768px) {
-	.myintent_header a {
-		font-size: 4.0em;
-	}
-
-	.tile-container {
-		position: relative;
-		top: 6.5em;
-	}
-
 	div.book {
 		float: left;
 		padding: 1em 1em;
@@ -134,15 +175,6 @@ div.book a.title {
 }
 
 @media (min-width: 1100px) {
-	.myintent_header a {
-		font-size: 5.0em;
-	}
-
-	.tile-container {
-		position: relative;
-		top: 8.0em;
-	}
-
 	div.book {
 		width: calc((100% - (4*2*1em))/4); /* to account for 1em padding on each side of a 4 book container */
 		height: 34em;
@@ -162,9 +194,13 @@ div.book a.title {
 	padding: 0;
 }
 
-.rtg-images .overlay { 
-	position: absolute; 
-	background: none; 
+.rtg-images {
+    left: 0; /* make thumbnails on home page to start on left side */
+}
+
+.rtg-images .overlay {
+	position: absolute;
+	background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ); 
 	z-index: 10; 
 	box-sizing:border-box; 
 	-moz-box-sizing:border-box; 
