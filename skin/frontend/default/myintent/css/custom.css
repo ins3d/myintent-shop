@@ -60,15 +60,28 @@
 }
 
 @media (min-width: 768px) {
-
+	/* desktop version of homepage*/
 	#myintent_homepage_container{
 		width: auto;
 	}
 
-	#enter_button_container, #myintent_logo_container, #social_icons_container{
-		width: 60%;
+	#enter_button_container{
+		width: 15%;
 	}
 
+	#myintent_logo_container{
+		width: 80%;
+	}
+	
+	#social_icons_container{
+		width: 40%;
+	}
+
+	#enter_button_container, #myintent_logo_container, #social_icons_container{
+		margin-top: 80px;
+		margin-bottom: 80px;
+	}
+	
 	#social_icons_container .stretch {
 		width: 100%;
 	}
