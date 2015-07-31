@@ -562,3 +562,16 @@ div.quick-access .links li a{
 	font-family: Verdana;
 	line-height: 24px;
 }
+
+/* Checkout UI customization */
+.cart .cart-collaterals {
+    padding: 0;
+}
+
+.opc-bottom{
+	float: left;
+}
+
+#payment_form_ccsave input{
+	height: auto;
+}
