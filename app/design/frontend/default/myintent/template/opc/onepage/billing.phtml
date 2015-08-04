@@ -1,5 +1,8 @@
 <div id="co-billing-form">
+<!-- customization
     <h3><?php echo $this->__('Name & Address')?></h3>
+-->	
+	<h3><?php echo $this->__('Billing Address')?></h3>
     <ul class="form-list">
     <?php if ($this->customerHasAddresses()): ?>
         <li class="wide">
@@ -15,6 +18,7 @@
             <ul>
                 <li class="fields"><?php echo $this->getLayout()->createBlock('customer/widget_name')->setObject($this->getAddress()->getFirstname() ? $this->getAddress() : $this->getQuote()->getCustomer())->setForceUseCustomerRequiredAttributes(!$this->isCustomerLoggedIn())->setFieldIdFormat('billing:%s')->setFieldNameFormat('billing[%s]')->toHtml() ?></li>
                 <div class="clear"></div>
+<!-- customization: Company and Email
                 <li class="fields">
                     <div class="field">
                         <div class="input-box">
@@ -29,14 +33,16 @@
                     </div>
         <?php endif; ?>
                 </li>
+-->				
                 <div class="clear"></div>
         <?php $_streetValidationClass = $this->helper('opc')->getAttributeValidationClass('street'); ?>
                 <li class="wide">
                     <div class="input-box">
-                        <input placeholder="Address*" type="text" title="<?php echo $this->__('Street Address') ?>" name="billing[street][]" id="billing:street1" value="<?php echo $this->escapeHtml($this->getAddress()->getStreet(1)) ?>" class="input-text <?php echo $_streetValidationClass ?>" />
+                        <input placeholder="Address *" type="text" title="<?php echo $this->__('Street Address') ?>" name="billing[street][]" id="billing:street1" value="<?php echo $this->escapeHtml($this->getAddress()->getStreet(1)) ?>" class="input-text <?php echo $_streetValidationClass ?>" />
                     </div>
                 </li>
         <?php $_streetValidationClass = trim(str_replace('required-entry', '', $_streetValidationClass)); ?>
+<!-- customization: Address 2		
         <?php for ($_i = 2, $_n = $this->helper('customer/address')->getStreetLines(); $_i <= $_n; $_i++): ?>
                 <li class="wide">
                     <div class="input-box">
@@ -44,6 +50,21 @@
                     </div>
                 </li>
         <?php endfor; ?>
+-->
+<!-- customization begin: Suite/Apt and City -->
+            <li class="fields">
+				<div class="field">
+					<div class="input-box">
+						<input placeholder="Apt/Suite" type="text" title="<?php echo $this->__('Street Address %s', $_i) ?>" name="billing[street][]" id="billing:street<?php echo $_i ?>" value="<?php echo $this->escapeHtml($this->getAddress()->getStreet($_i)) ?>" class="input-text <?php echo $_streetValidationClass ?>" />
+					</div>
+				</div>	
+				<div class="field">
+                    <div class="input-box">
+                        <input placeholder="Zip Code*" type="text" title="<?php echo $this->__('Zip/Postal Code') ?>" name="billing[postcode]" id="billing:postcode" value="<?php echo $this->escapeHtml($this->getAddress()->getPostcode()) ?>" class="input-text validate-zip-international <?php echo $this->helper('opc')->getAttributeValidationClass('postcode') ?>" />
+                    </div>
+                </div>
+            </li>
+<!-- customization end -->
                 <?php if ($this->helper('opc')->isVatAttributeVisible()) : ?>
                 <li class="wide">
                     <div class="input-box">
@@ -54,7 +75,7 @@
                 <li class="fields">
                     <div class="field">
                         <div class="input-box">
-                            <input placeholder="City*" type="text" title="<?php echo $this->__('City') ?>" name="billing[city]" value="<?php echo $this->escapeHtml($this->getAddress()->getCity()) ?>" class="input-text <?php echo $this->helper('opc')->getAttributeValidationClass('city') ?>" id="billing:city" />
+                            <input placeholder="City *" type="text" title="<?php echo $this->__('City') ?>" name="billing[city]" value="<?php echo $this->escapeHtml($this->getAddress()->getCity()) ?>" class="input-text <?php echo $this->helper('opc')->getAttributeValidationClass('city') ?>" id="billing:city" />
                         </div>
                     </div>
                     <div class="field">
@@ -71,6 +92,7 @@
                         </div>
                     </div>
                 </li>
+<!-- customization 				
                 <li class="fields">
                     <div class="field">
                         <div class="input-box">
@@ -83,6 +105,15 @@
                         </div>
                     </div>
                 </li>
+-->
+<!-- customization begin -->
+                <li class="wide">
+                    <div class="input-box">
+                        <?php echo $this->getCountryHtmlSelect('billing') ?>
+                    </div>
+                </li>
+<!-- customization end -->
+<!-- customization
                 <li class="fields">
                     <div class="field">
                         <div class="input-box">
@@ -95,6 +126,16 @@
                         </div>
                     </div>
                 </li>
+-->
+<!-- customization begin -->
+                <?php if(!$this->isCustomerLoggedIn()): ?>
+					<li class="wide">
+                        <div class="input-box">
+                            <input placeholder="Email*" type="text" name="billing[email]" id="billing:email" value="<?php echo $this->escapeHtml($this->getAddress()->getEmail()) ?>" title="<?php echo $this->__('Email Address') ?>" class="input-text validate-email required-entry" />
+                        </div>
+					</li>
+				<?php endif; ?>					
+<!-- customization end -->				
                 <?php if(!$this->isCustomerLoggedIn()): ?>
 
                     <?php $_dob = $this->getLayout()->createBlock('customer/widget_dob') ?>

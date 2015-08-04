@@ -6,9 +6,22 @@ $theme = Mage::getDesign()->getTheme('frontend');
 $is_persistent = Mage::helper('opc')->isPersistentMember();
 ?>
 <div class="opc-wrapper-opc design_package_<?php echo $package;?> design_theme_<?php echo $theme;?>">
-    <div class="page-title title-buttons">
+	<div class="page-title title-buttons">
         <h1><?php echo $this->__('Checkout') ?></h1>
     </div>
+	<div class="opc-menu">
+<?php if(!$is_persistent):?>	
+	    <?php echo $this->getChildHtml('paypal.button')?>
+
+        <?php if (!Mage::getSingleton('customer/session')->isLoggedIn()):?>
+    		<?php echo $this->getChildHtml('login');?>	
+    	<?php endif;?>    	
+		  
+	   <div class="clear move-columns"></div>
+<?php else:?>
+	<?php echo $this->getChildHtml('login');?>
+<?php endif;?>
+	</div>
 	
 	<div class="clear"></div>
 
@@ -35,9 +48,17 @@ $is_persistent = Mage::helper('opc')->isPersistentMember();
 		</div>
 		<?php endif;?>
 		
+		<div class="payment-block <?php if ($this->getOnepage()->getQuote()->isVirtual()):?>clear-margin<?php endif;?>">
+			<h3><?php echo $this->__('Payment Method')?></h3>
+			<?php echo $this->getChildHtml('payment')//$this->_getPaymentMethodsHtml();?>
+		</div>
+		
 		<?php if(Mage::helper('opc')->isShowDiscount()):?>
 		<div class="discount-block">
+<!-- customization		
 			<h3><?php echo $this->__('Discount Code')?></h3>
+-->
+			<h3><?php echo $this->__('Coupon Code')?></h3>			
 			<div  class="collapse-block">
 			     <?php echo $this->getChildhtml('coupon');?>
 			</div>
@@ -50,11 +71,11 @@ $is_persistent = Mage::helper('opc')->isPersistentMember();
     </div>
 
     <div class="opc-col-right">
-		<div class="payment-block <?php if ($this->getOnepage()->getQuote()->isVirtual()):?>clear-margin<?php endif;?>">
-			<h3><?php echo $this->__('Payment Method')?></h3>
-			<?php echo $this->getChildHtml('payment')//$this->_getPaymentMethodsHtml();?>
+<!-- customization begin -->
+		<div id="opc-review-block">
+			<?php echo $this->_getReviewHtml()?>
 		</div>
-    
+<!-- customization end -->	
         <?php if (Mage::getConfig()->getModuleConfig('IWD_OnepageCheckoutSignature')->is('active', 'true')): ?>
             <div class="signature-block">
                 <h3><?php echo $this->__('Signature')?><span class='fa expand_plus'></span></h3>
@@ -63,18 +84,15 @@ $is_persistent = Mage::helper('opc')->isPersistentMember();
                 </div>
             </div>
         <?php endif;?>
-    </div>
-	
-	<div class="clear"></div>
-	
-    <div class="opc-bottom">
-		<?php echo $this->getChildHtml('checkout.cart')?>
 		<div class="opc-review-actions" id="checkout-review-submit">
 		      <?php echo $this->getChildHtml('agreements')?>
 		      <?php echo $this->getChildHtml('opc.newsletters');?>
 		      <button type="button" title="<?php echo $this->__('Place Order Now') ?>" class="button btn-checkout opc-btn-checkout"><span><span><?php echo $this->__('Place Order Now') ?></span></span></button>
 		</div>
-	</div>
+    </div>
+	
+	<div class="clear"></div>
+		
 </div>
 
 </div>
