@@ -90,6 +90,11 @@ Default layout, loads most of the pages
             <block type="page/html_topmenu" name="catalog.topnav2" template="trego/topmenu/type2.phtml"/>
             <block type="page/html_topmenu" name="catalog.topnav3" template="trego/topmenu/type3.phtml"/>
         </reference>
+<!-- customization begin -->
+	<reference name="root">
+		<action method="unsetChild"><name>breadcrumbs</name></action>
+	</reference>
+<!-- customization end -->
     </default>
     <catalog_category_default>
         <reference name="root">
@@ -311,6 +316,11 @@ Default layout, loads most of the pages
                 <crumbInfo><label>Login</label><title>Login</title></crumbInfo>
             </action>
         </reference>
+<!--  customization begin -->		
+		<reference name="customer_form_login">            
+			<block type="customer/form_register" name="customer_form_register" template="customer/form/register.phtml" />            
+		</reference>
+<!--  customization end -->		
     </customer_account_login>
     <customer_account_create translate="label">
         <reference name="breadcrumbs">
@@ -390,6 +400,11 @@ Default layout, loads most of the pages
             <remove name="left.permanent.callout"/>
             <remove name="sale.reorder.sidebar"/>
         </reference>
+<!-- customization begin -->
+		<reference name="subheader">
+			<block type="customer/account_dashboard_hello" name="customer_account_hello" template="customer/account/dashboard/hello.phtml"/>
+        </reference>
+<!-- customization end -->
     </customer_account>
     <cms_index_index translate="label">
         <reference name="head">

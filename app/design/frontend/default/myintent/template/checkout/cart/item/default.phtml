@@ -95,11 +95,13 @@ foreach($childProducts as $childProduct){
             <?php echo $addInfoBlock->setItem($_item)->toHtml() ?>
         <?php endif;?>
     </td>
+<!-- customization	
     <td class="a-right product-sku">
         <?php
             echo "<p class='mobile-show'>".$this->__('Pr. code:')."</p>".$_item->getProduct()->getSku();
         ?>
     </td>
+-->	
     <?php if ($this->helper('wishlist')->isAllowInCart()) : ?>
     <td class="a-right">
         <?php if ($isVisibleProduct): ?>

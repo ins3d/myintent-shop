@@ -1,3 +1,6 @@
+.row{
+	display: block;
+}
 .text-center{
 	text-align: center !important;
 }
@@ -10,6 +13,132 @@
 	text-align: right !important;
 }
 
+/* Header */
+.header {
+    margin-left: 220px;
+    padding: 0;
+}
+
+.header .header-topbar {
+    width: 100%;
+	border-bottom: 0 solid #d5d5d5;
+	background-color: #ffffff;
+	padding-left: 10px;
+}
+
+.header .quick-access {
+    float: right;
+    padding: 28px 10px 1px 0;
+}
+
+.header h1.page-title {
+	background-color: transparent;
+	text-transform: uppercase;
+}
+
+/* Log in button in header */
+div.quick-access .links {
+	display: block;
+	float: left;
+	margin: 0;
+	margin-left: 20px;
+}
+  
+div.quick-access .links li {
+	background: none;
+}
+
+div.quick-access .links li a{
+	color: #6d6c67;
+	font-size: 12px;
+	font-weight: 400;
+	font-family: Verdana;
+	line-height: 24px;
+}
+
+/* My account page - Login/Register, Forgot your password */
+#account-container, #forgotpassword-container{
+	width: 50%;
+}
+
+#fblogin_container a.f-right{
+	display: block;
+	float: none !important;
+	margin-bottom: 15px;
+}
+
+#existingUsers_container .row{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+#existingUsers_container h2, #newUsers_container h2{
+	background-color: black;
+	color: white;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+#existingUsers_container, #newUsers_container{
+	display: block;
+	margin-bottom: 15px;
+}
+
+#newUsers_container .fieldset {
+    margin: 0;
+	padding: 0;
+	background-color: transparent;
+    border: 0px solid #bbafa0;
+}
+
+.account-login .content {
+    min-height: 0;
+}
+
+.account-create h2 {
+    background: #d5d5d5 none repeat scroll 0 0;
+    font-family: "Raleway_Medium";
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 20px;
+    padding: 15px 10px;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+#forgotpassword-container .form-list li{
+	margin-bottom: 5px;
+}
+
+#captcha-input-box-user_forgotpassword{
+	margin-top: 5px;
+}
+
+/* My account page - Summary */
+.block-account .block-content li.current, .block-account .block-content li a {
+    border-bottom: 0 solid #d5d5d5;
+}
+
+#my-orders-table{
+	border: 0 solid #d5d5d5;
+}
+
+#my-orders-table thead th {
+    background: transparent none repeat scroll 0 0;
+	font-size: 12px;
+    font-weight: bold;
+    text-align: left;
+	border: 0 solid #d5d5d5;
+	border-bottom: 1px solid #d5d5d5;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+#my-orders-table tbody td {
+    border-right: 0 solid #d5d5d5;
+}
+
+/* home page */
 #myintent_homepage_container{
 	position: relative;
 	z-index: 100;
@@ -70,6 +199,329 @@
     display: block;
     width: 70%;
 }
+
+/* contact page block headers - background color and text alignment */
+.block .block-title {
+	background-color: #2f3538;
+	padding: 8px 10px;
+}
+
+.block .block-title strong {
+    text-align: left;
+	color: white;
+}
+
+/* Shopping cart */
+#shopping-cart-table {
+    border: 0 solid #d5d5d5;
+}
+
+#shopping-cart-table thead th {
+    background: #2f3538 none repeat scroll 0 0;
+	color: white;
+	padding: 8px 10px;
+}
+
+#shopping-cart-table tfoot tr.first td {
+   background: #f1f1f1 none repeat scroll 0 0;
+}
+
+#shopping-cart-table tr.last th, #shopping-cart-table tr.last td {
+	border: 0 none !important;
+	border-bottom: 1px solid #d5d5d5 !important;
+}
+
+#shopping-cart-table tr.last th, #shopping-cart-table tr.last td {
+    text-align: center;
+}
+
+#shopping-cart-table tr.last th:first-child, #shopping-cart-table tr.last td:first-child {
+    text-align: left;
+}
+
+#shopping-cart-table .pr-img-td {
+    padding-left: 0;
+}
+
+#shopping-cart-table tbody tr td span span{
+    display: block;
+    text-align: center;
+}
+
+#shopping-cart-table h2.product-name {
+	text-align:left;
+}
+
+#shopping-cart-table .item-options{
+	float: left;
+	text-align:left;
+}
+
+/* turn buttons into links */
+#shopping-cart-table tfoot button.link {
+     background:none!important;
+     border:none; 
+     padding:0!important;
+     font: inherit;
+	 font-weight: bold;
+	 font-size: 14px;
+	 color: #225e7c;
+     cursor: pointer;
+	 text-transform: uppercase;
+	 
+}
+
+#shopping-cart-table tfoot button.link:hover {
+	 color: #797872;
+}
+
+#shopping-cart-table tbody .btn-remove{
+	float: right;
+}
+
+/* combining subtotal and grand total to shopping cart summary table */
+#shopping-cart-table {
+    margin-bottom: 0;
+}
+
+.cart .cart-collaterals {
+    padding: 0;
+}
+
+.cart .totals {
+    width: 100%;
+}
+
+#shopping-cart-totals-table, #shopping-cart-totals-table .price{
+	border: 0;
+	font-size: 14px !important;
+}
+
+#shopping-cart-totals-table .totals tfoot th strong, #shopping-cart-totals-table .totals tfoot td strong {
+    font-size: 14px;
+}
+
+#shopping-cart-totals-table td{
+	border: 0;
+	border-bottom: 2px solid #d5d5d5;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+#shopping-cart-totals-table tfoot td{
+	border-bottom: 0 solid #d5d5d5;
+}
+
+/* Checkout UI customization */
+
+.opc-wrapper-opc h3 {
+	background-color: #2f3538;
+	color: white !important;
+	padding: 8px;
+}
+
+.opc-wrapper-opc form{
+	display: block;
+}
+
+.opc-wrapper-opc .opc-col-left {
+	padding-right: 5px;
+    width: 33% !important;
+}
+
+.opc-wrapper-opc .opc-col-middle {
+	padding-right: 5px;
+	padding-left: 10px;
+    width: 33% !important;
+}
+
+.opc-wrapper-opc .opc-col-right{
+	padding-left: 5px;
+    width: 34% !important;
+}
+
+#opc-address-form-billing .form-list li {
+    margin: 5px 0;
+}
+
+#opc-address-form-shipping {
+    margin-top: 15px;
+}
+
+#billing-new-address-form, #shipping-new-address-form {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+#billing-new-address-form li, #shipping-new-address-form  li{
+    margin: 5px 0;
+}
+
+#billing-new-address-form li.no-display {
+	position: absolute;
+}
+
+#billing-new-address-form li:first-child, #shipping-new-address-form li:first-child, #co-payment-form li:first-child{
+    margin-top: 0;
+}
+
+.opc-wrapper-opc .shipping-block , .opc-wrapper-opc .payment-block  {
+    margin-bottom: 15px !important;
+}
+
+/* payment block */
+#co-payment-form  li {
+    margin: 10px 0;
+}
+
+#ccsave_cc_owner, #ccsave_cc_number, #ccsave_cc_cid {
+    padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
+
+#ccv_container{
+	width: 28.5%;
+}
+
+/* discount block */
+.opc-wrapper-opc .discount-block .discount {
+    margin-top: 0 !important;
+}
+
+.opc-wrapper-opc .discount-block h3 {
+    margin-bottom: 26px !important;
+	border-bottom: 1px solid #b6b6b6 !important;
+	padding: 8px !important;
+	width: 100%;
+}
+
+.opc-wrapper-opc .discount-block .discount {
+    margin-top: 0;
+}
+
+.opc-wrapper-opc .payment-block dt:first-child {
+    margin: 0 !important;
+}
+
+/* order review table */
+.opc-wrapper-opc  #opc-review-block{
+	position: static !important;
+	top: auto !important;
+	right: auto !important;
+	z-index: auto !important;
+	width: 100% !important;
+	background-color: transparent !important;
+	border-radius: 0 !important;
+	border: 0 solid #dadada !important;
+	box-shadow: 0 0 0 0 #dadada !important;
+	padding: 0 !important;
+}
+
+.opc-wrapper-opc #opc-review-block h3.review-title {
+    padding: 8px !important;
+}
+
+.opc-wrapper-opc #checkout-review-table-wrapper {
+    max-height: none !important;
+    overflow-y: visible !important;
+    padding-right: 0 !important;
+}
+
+.opc-wrapper-opc #checkout-review-table thead th {
+	padding: 0 10px !important;
+}
+
+.opc-wrapper-opc #checkout-review-table  thead th:first-child, .opc-wrapper-opc #checkout-review-table thead th:last-child {
+	padding: 0 !important;
+}
+
+.opc-wrapper-opc .opc-data-table tbody td {
+    padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+/* product image */
+.opc-wrapper-opc #checkout-review-table .product-image {
+    display: inline-block;
+    max-width: 80px;
+	float: left;
+}
+
+/* "Grand Total" */
+.opc-wrapper-opc .opc-data-table tfoot tr.last {
+    display: table-row !important;
+}
+
+/* Checkout buttons */
+.opc-wrapper-opc .opc-login-trigger, .opc-wrapper-opc .opc-login-trigger:hover{
+	height: auto !important;
+	width: auto !important;
+}
+
+.opc-wrapper-opc .discount-block .apply-coupon {
+    float: right !important;
+}	
+
+.opc-wrapper-opc .discount-block .button {
+    height: auto !important;
+}
+
+.opc-wrapper-opc .discount-block .button span {
+    height: 36px !important;
+}
+
+.opc-wrapper-opc .discount-block .button span span{	
+	font-size: 12px !important;
+    font-weight: normal !important;
+    border-radius: 0;
+    height: 36px;
+    line-height: 36px;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: auto;
+}
+
+.opc-wrapper-opc .btn-checkout span span {
+    font-size: 12px !important;
+    font-weight: normal !important;
+	border-radius: 0;
+}
+
+#checkout-review-table .product-name{
+	text-align: left;
+}
+
+/* Checkout Login modal*/
+
+.md-show.md-effect-7 .md-content {
+    background-color: #f1f1f1;
+}
+
+.md-modal-header {
+	background-color: #2f3538;
+}
+
+.md-modal-header h4{
+	color: white !important;
+}
+
+.fa-remove::before, #modal-login .fa-close::before, #modal-login .fa-times::before {
+    color: white;
+}
+
+#login-form .form-list{
+	margin-top: 15px;
+}
+
+#login-form li {
+    margin: 5px 0;
+}
+
+#login-form .form-list .input-text{
+    padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
+
 
 @media (min-width: 768px) {
 	/* desktop version of homepage*/
@@ -162,6 +614,12 @@ div.book a.title {
 		margin-left: auto;
 		margin-right: auto;
 	}
+	
+	#account-container, #forgotpassword-container{
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
 @media (min-width: 768px) {
@@ -184,6 +642,11 @@ div.book a.title {
 
 	div.book .book-info{
 		width: 100%;
+	}
+	
+	#account-container, #forgotpassword-container{
+		width: 50%;
+		margin-left: 0;
 	}
 }
 
@@ -437,7 +900,6 @@ div.more-views {
 }
 
 @media only screen and (min-width: 1100px){
-
 	/* widen discount box and input field*/
 	.cart-extra .akordeon {
 		width: 68%;
@@ -540,11 +1002,6 @@ button.button span:hover {
     background: #2F3538 none repeat scroll 0% 0% !important;
 }
 
-/* white background for header row of product table on the shopping cart page */
-.data-table thead th {
-    background: white none repeat scroll 0% 0%;
-}
-
 /* adjust padding in product box in list view on category page since "Add to Cart" button as removed */
 ol.products-list li.item {
 	padding: 12px 10px;
@@ -553,234 +1010,4 @@ ol.products-list li.item {
 /* remove border in product box in list view on category page */
 ol.products-list li.item div.links-set {
     border-top: 0;
-}
-
-/* Log in button in header */
-div.quick-access .links {
-	display: block;
-	float: left;
-	margin: 0;
-	margin-left: 20px;
-}
-  
-div.quick-access .links li {
-	background: none;
-}
-
-div.quick-access .links li a{
-	color: #6d6c67;
-	font-size: 12px;
-	font-weight: 400;
-	font-family: Verdana;
-	line-height: 24px;
-}
-
-/* Checkout UI customization */
-
-.opc-wrapper-opc h3 {
-	background-color: #2f3538;
-	color: white !important;
-	padding: 8px;
-}
-
-.opc-wrapper-opc form{
-	display: block;
-}
-
-.opc-wrapper-opc .opc-col-left {
-	padding-right: 5px;
-    width: 33% !important;
-}
-
-.opc-wrapper-opc .opc-col-middle {
-	padding-right: 5px;
-	padding-left: 10px;
-    width: 33% !important;
-}
-
-.opc-wrapper-opc .opc-col-right{
-	padding-left: 5px;
-    width: 34% !important;
-}
-
-#opc-address-form-billing .form-list li {
-    margin: 5px 0;
-}
-
-#opc-address-form-shipping {
-    margin-top: 15px;
-}
-
-#billing-new-address-form, #shipping-new-address-form {
-	margin-top: 0;
-	margin-bottom: 0;
-}
-
-#billing-new-address-form li, #shipping-new-address-form  li{
-    margin: 5px 0;
-}
-
-#billing-new-address-form li.no-display {
-	position: absolute;
-}
-
-#billing-new-address-form li:first-child, #shipping-new-address-form li:first-child, #co-payment-form li:first-child{
-    margin-top: 0;
-}
-
-.opc-wrapper-opc .shipping-block , .opc-wrapper-opc .payment-block  {
-    margin-bottom: 15px !important;
-}
-
-/* payment block */
-#co-payment-form  li {
-    margin: 10px 0;
-}
-
-#ccsave_cc_owner, #ccsave_cc_number, #ccsave_cc_cid {
-    padding-top: 0 !important;
-	padding-bottom: 0 !important;
-}
-
-#ccv_container{
-	width: 28.5%;
-}
-
-/* discount block */
-.opc-wrapper-opc .discount-block .discount {
-    margin-top: 0 !important;
-}
-
-.opc-wrapper-opc .discount-block h3 {
-    margin-bottom: 26px !important;
-	border-bottom: 1px solid #b6b6b6 !important;
-	padding: 8px !important;
-	width: 100%;
-}
-
-.opc-wrapper-opc .discount-block .discount {
-    margin-top: 0;
-}
-
-.opc-wrapper-opc .payment-block dt:first-child {
-    margin: 0 !important;
-}
-
-/* order review table */
-.opc-wrapper-opc  #opc-review-block{
-	position: static !important;
-	top: auto !important;
-	right: auto !important;
-	z-index: auto !important;
-	width: 100% !important;
-	background-color: transparent !important;
-	border-radius: 0 !important;
-	border: 0 solid #dadada !important;
-	box-shadow: 0 0 0 0 #dadada !important;
-	padding: 0 !important;
-}
-
-.opc-wrapper-opc #opc-review-block h3.review-title {
-    padding: 8px !important;
-}
-
-.opc-wrapper-opc #checkout-review-table-wrapper {
-    max-height: none !important;
-    overflow-y: visible !important;
-    padding-right: 0 !important;
-}
-
-.opc-wrapper-opc #checkout-review-table thead th {
-	padding: 0 10px !important;
-}
-
-.opc-wrapper-opc #checkout-review-table  thead th:first-child, .opc-wrapper-opc #checkout-review-table thead th:last-child {
-	padding: 0 !important;
-}
-
-.opc-wrapper-opc .opc-data-table tbody td {
-    padding-left: 0 !important;
-	padding-right: 0 !important;
-}
-
-/* product image */
-.opc-wrapper-opc #checkout-review-table .product-image {
-    display: inline-block;
-    max-width: 80px;
-	float: left;
-}
-
-/* "Grand Total" */
-.opc-wrapper-opc .opc-data-table tfoot tr.last {
-    display: table-row !important;
-}
-
-/* Checkout buttons */
-.opc-wrapper-opc .opc-login-trigger, .opc-wrapper-opc .opc-login-trigger:hover{
-	height: auto !important;
-	width: auto !important;
-}
-
-.opc-wrapper-opc .discount-block .apply-coupon {
-    float: right !important;
-}	
-
-.opc-wrapper-opc .discount-block .button {
-    height: auto !important;
-}
-
-.opc-wrapper-opc .discount-block .button span {
-    height: 36px !important;
-}
-
-.opc-wrapper-opc .discount-block .button span span{	
-	font-size: 12px !important;
-    font-weight: normal !important;
-    border-radius: 0;
-    height: 36px;
-    line-height: 36px;
-    text-decoration: none;
-    text-transform: uppercase;
-    width: auto;
-}
-
-.opc-wrapper-opc .btn-checkout span span {
-    font-size: 12px !important;
-    font-weight: normal !important;
-	border-radius: 0;
-}
-
-#checkout-review-table .product-name{
-	text-align: left;
-}
-
-/* Checkout Login modal*/
-
-.md-show.md-effect-7 .md-content {
-    background-color: #f1f1f1;
-}
-
-.md-modal-header {
-	background-color: #2f3538;
-}
-
-.md-modal-header h4{
-	color: white !important;
-}
-
-.fa-remove::before, #modal-login .fa-close::before, #modal-login .fa-times::before {
-    color: white;
-}
-
-#login-form .form-list{
-	margin-top: 15px;
-}
-
-#login-form li {
-    margin: 5px 0;
-}
-
-#login-form .form-list .input-text{
-    padding-top: 0 !important;
-	padding-bottom: 0 !important;
 }
