@@ -274,6 +274,21 @@
     <?php $_colspan = $this->helper('tax')->displayCartBothPrices() ? 7 : 5; ?>
     <td class="a-right" colspan="<?php echo $_colspan ?>">
     <div class="a-right"><h3 class="product-name"><?php echo $this->htmlEscape($this->getProductName()) ?></h3>
+<!-- product image -->	
+<!-- customization begin: insert product image -->
+		<div class="product-image">
+			<a href="<?php echo $this->getDeleteUrl()?>" title="<?php echo $this->__('Remove item')?>" class="btn-remove btn-remove2 for-mobile">
+				<?php echo $this->__('Remove item')?>
+			</a>
+			<?php if ($this->hasProductUrl()):?>
+				<a href="<?php echo $this->getProductUrl() ?>" title="<?php echo $this->htmlEscape($this->getProductName()) ?>" class="product-image">
+			<?php endif;?>
+			<img src="<?php echo $product_image; ?>" alt="<?php echo $this->htmlEscape($this->getProductName()) ?>" />
+			<?php if ($this->hasProductUrl()):?>
+				</a>
+			<?php endif;?>
+		</div>
+<!-- customization end -->	
         <?php if ($_options = $this->getOptionList()):?>
         <dl class="item-options">
             <?php foreach ($_options as $_option) : ?>
@@ -296,7 +311,9 @@
             <?php echo $addtInfoBlock->setItem($_item)->toHtml() ?>
         <?php endif;?>
     </div>
+<!-- customization	
     <div class="a-right"><span class="label"><?php echo $this->__('Product code') ?>: </span><?php echo $_item->getSku(); ?></div>
+-->	
     <?php if ($this->helper('tax')->displayCartPriceExclTax() || $this->helper('tax')->displayCartBothPrices()): ?>
     <div class="a-right unit-price">
     <span class="label"><?php echo $this->__('Unit price') ?>: </span>

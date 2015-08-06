@@ -94,6 +94,7 @@ Default layout, loads most of the pages
 	<reference name="root">
 		<action method="unsetChild"><name>breadcrumbs</name></action>
 	</reference>
+	<remove name="footer" />
 <!-- customization end -->
     </default>
     <catalog_category_default>

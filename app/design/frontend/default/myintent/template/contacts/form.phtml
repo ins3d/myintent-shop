@@ -36,26 +36,45 @@
                     </div>
                 </li>
                 <?php echo $this->getChildHtml('form.additional.info'); ?>
+<!-- customization				
                 <li class="wide required for-mobile">
                     <p class="required"><?php echo Mage::helper('contacts')->__('Your email address will not be published. Required 
 fields are marked ') ?><em>*</em></p>
                 </li>
+-->				
                 <li class="wide form-button">
+<!-- customization begin -->				
+					<div class="h-align">
+						<p class="required">
+							<?php echo Mage::helper('contacts')->__('Your email address will not be published. Required 
+fields are marked ') ?>
+							<em>*</em>
+						</p>
+						<input type="text" name="hideit" id="hideit" value="" style="display:none !important;" />
+						<button type="submit" title="<?php echo Mage::helper('contacts')->__('Submit') ?>" class="button"><span><span><?php echo Mage::helper('contacts')->__('Submit') ?></span></span></button>
+					</div>
+<!-- customization end -->
+<!-- customization
                     <input type="text" name="hideit" id="hideit" value="" style="display:none !important;" />
                     <button type="submit" title="<?php echo Mage::helper('contacts')->__('Submit') ?>" class="button"><span><span><?php echo Mage::helper('contacts')->__('Submit') ?></span></span></button>
+-->					
                 </li>
+<!-- customization				
                 <li class="wide required for-desktop">
                     <p class="required"><?php echo Mage::helper('contacts')->__('Your email address will not be published. Required 
 fields are marked ') ?><em>*</em></p>
                 </li>
+-->				
             </ul>
 <!-- myintent customization: Contact info -->
+<!--
             <h2 class="footer-title margintop"><?php echo $this->__('Contact') ?></h2>
             <div class="footer-contacts">
                 <div class="contact-info">
                     <?php echo $this->getChildHtml('cms_footer_contact') ?>
                 </div>
             </div>
+-->			
 <!-- -->            
         </div>
     </div>
