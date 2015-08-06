@@ -14,7 +14,7 @@ $is_persistent = Mage::helper('opc')->isPersistentMember();
 	    <?php echo $this->getChildHtml('paypal.button')?>
 
         <?php if (!Mage::getSingleton('customer/session')->isLoggedIn()):?>
-    		<?php echo $this->getChildHtml('login');?>	
+    		<?php echo $this->getChildHtml('login');?>
     	<?php endif;?>    	
 		  
 	   <div class="clear move-columns"></div>
@@ -24,8 +24,12 @@ $is_persistent = Mage::helper('opc')->isPersistentMember();
 	</div>
 	
 	<div class="clear"></div>
-
+<!-- customization
 <div <?php if($is_persistent):?>style="display:none !important;"<?php endif;?>>
+-->
+<!-- customization begin -->
+<div id="checkout_container">
+<!-- customization end -->
 
     <div class="opc-col-left">
 		<form id="opc-address-form-billing" method="post">
