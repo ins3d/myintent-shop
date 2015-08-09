@@ -17,9 +17,13 @@
 	padding-top: 40px;
 }
 
+.block.block-account .no-display {
+    display: block;
+}
+
 /* Header */
 .header .header-topbar {
-    width: 100%;
+    width: auto;
 	border-bottom: 0 solid #d5d5d5;
 	background-color: #ffffff;
 	padding-left: 10px;
@@ -33,6 +37,8 @@
 .header h1.page-title {
 	background-color: transparent;
 	text-transform: uppercase;
+	width: auto;
+	padding-top: 25px;
 }
 
 /* Log in button in header */
@@ -57,7 +63,7 @@ div.quick-access .links li a{
 
 /* My account page - Login/Register, Forgot your password */
 #account-container, #forgotpassword-container{
-	width: 50%;
+	width: 100%;
 }
 
 #fblogin_container a.f-right{
@@ -201,7 +207,7 @@ div.quick-access .links li a{
     width: 70%;
 }
 
-/* contact page block headers - background color and text alignment */
+/* section headers - black background and white text */
 .block .block-title {
 	background-color: rgba(0,0,0,0.7);
 	padding: 8px 10px;
@@ -212,6 +218,16 @@ div.quick-access .links li a{
 	color: white;
 }
 
+/* My Account - address book */
+.addresses-list h2{
+	background-color: rgba(0,0,0,0.7);
+	padding: 8px 10px;
+    text-align: left;
+	color: white;
+	line-height: 1.0;
+}
+
+/* contact page block headers - background color and text alignment */
 .block.block-contactform p.required {
 	margin-top: 0;
     display: inline-block;
@@ -225,8 +241,19 @@ div.quick-access .links li a{
     float: right;
 }
 
+.block.block-contactform .fields .field {
+    margin-left: 0;
+}
+
 .block.block-contactform .fields .field input[type="text"] {
-    width: 91%;
+    width: 100%;
+	box-sizing: border-box;
+    margin-left: 0;
+}
+
+
+.block.block-contactform .form-list li.wide textarea {
+    width: 95.7%;
 }
 
 .contacts-area {
@@ -250,7 +277,7 @@ div.quick-access .links li a{
 
 #shopping-cart-table tr th, #shopping-cart-table tr td {
 	border: 0 none !important;
-	border-bottom: 1px solid #d5d5d5 !important;
+	border-bottom: 0 solid #d5d5d5 !important;
 }
 
 #shopping-cart-table tr.last th, #shopping-cart-table tr.last td {
@@ -261,24 +288,25 @@ div.quick-access .links li a{
     text-align: left;
 }
 
-#shopping-cart-table .pr-img-td {
-    padding-left: 0;
+#shopping-cart-table tbody td.pr-img-td {
+	width: 43%;
 }
-
+	
 #shopping-cart-table tbody tr td span span{
-    display: block;
+    display: inline;
     text-align: center;
 }
 
 #shopping-cart-table h2.product-name {
-	text-align:left;
+	text-align: right;
 }
 
 #shopping-cart-table .item-options{
-	float: left;
-	text-align:left;
+	float: right;
+	text-align: right;
 }
 
+	
 /* turn buttons into links */
 #shopping-cart-table tfoot button.link {
      background:none!important;
@@ -538,8 +566,6 @@ div.quick-access .links li a{
 
 #checkout-review-table .product-name{
 	text-align: left;
-	background-color: transparent;
-	color: #404040 !important;
 }
 
 /* Checkout Login modal*/
@@ -633,9 +659,6 @@ div.book a.title {
 	font-style: italic;
 }
 
-@media (max-width: 319px) {
-
-}
 
 @media (min-width: 320px) {
 	div.book {
@@ -671,6 +694,12 @@ div.book a.title {
 		margin-left: auto;
 		margin-right: auto;
 	}
+
+	/* shopping cart */
+	#shopping-cart-table tbody td.pr-img-td {
+		width: 180px;
+	}
+
 }
 
 @media (min-width: 768px) {
@@ -724,6 +753,28 @@ div.book a.title {
 	#account-container, #forgotpassword-container{
 		width: 50%;
 		margin-left: 0;
+	}	
+	
+	/* shopping cart */
+	#shopping-cart-table tr th, #shopping-cart-table tr td {
+		border-bottom: 1px solid #d5d5d5 !important;
+	}
+	
+	#shopping-cart-table tbody tr td span span{
+		display: block;
+		text-align: center;
+	}
+	#shopping-cart-table tbody td.pr-img-td {
+		width: auto;
+	}
+
+	#shopping-cart-table h2.product-name {
+		text-align:left;
+	}
+
+	#shopping-cart-table .item-options{
+		float: left;
+		text-align:left;
 	}
 }
 
@@ -931,7 +982,26 @@ div.more-views {
 		padding-left: 10px;
 		width: 728px;
 	}
+	
+	/* Contact us*/
+	.block.block-contactform .fields .field {
+		margin-left: 2%;
+	}
 
+	.block.block-contactform .fields .field input[type="text"] {
+		width: 91%;
+		box-sizing: content-box;
+	}
+	
+	.block.block-contactform .fields .field:first-child input[type="text"] {
+		margin-left: 0;
+	}
+
+	.block.block-contactform .form-list li.wide textarea {
+		max-width: 405px;
+		width: 405px;
+	}
+	
 	/* checkout columns*/
 	.opc-wrapper-opc .opc-col-left {
 		padding-right: 5px;
@@ -997,6 +1067,12 @@ div.more-views {
 		margin: 0 0 8px 10px;
 	}
 	
+	/* contact us */
+	.block.block-contactform .form-list li.wide textarea {
+		max-width: 478px;
+		width: 478px;
+	}
+	
 	/* checkout - product image */	
 	#checkout-review-table .for-desktop .product-image {
 		display: inline-block;
@@ -1013,6 +1089,12 @@ div.more-views {
 
 	.cart .discount input.input-text {
 		width: 275px;
+	}
+	
+	/* contact us */
+	.block.block-contactform .form-list li.wide textarea {
+		width: 94.5%;
+		max-width: 100%;
 	}
 	
 	/* checkout */

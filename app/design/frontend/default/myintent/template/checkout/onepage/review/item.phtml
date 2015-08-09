@@ -273,7 +273,12 @@
 <tr class="for-mobile">
     <?php $_colspan = $this->helper('tax')->displayCartBothPrices() ? 7 : 5; ?>
     <td class="a-right" colspan="<?php echo $_colspan ?>">
+<!-- customization	
     <div class="a-right"><h3 class="product-name"><?php echo $this->htmlEscape($this->getProductName()) ?></h3>
+-->	
+<!-- customization begin -->
+	<div class="a-right"><h4 class="product-name"><?php echo $this->htmlEscape($this->getProductName()) ?></h4>
+<!-- customization end -->
 <!-- product image -->	
 <!-- customization begin: insert product image -->
 		<div class="product-image">
