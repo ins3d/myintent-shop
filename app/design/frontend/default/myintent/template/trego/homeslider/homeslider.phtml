@@ -201,6 +201,12 @@ $code  = $store->getCode();
                         var item_width = (container_width-item_columns)/item_columns;
 // customization end
 
+/* customization begin - set initial height and position of #myintent_homepage_container */
+						var homepage_container_height = item_width * 2;
+						$("#myintent_homepage_container").css("height", homepage_container_height).css("top", item_width);
+/* customization end */
+
+
 // debug:
 // $("#windowwidth").text($(window).width());
 // $("#containerwidth").text(container_width);
