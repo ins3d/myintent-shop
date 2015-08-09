@@ -147,64 +147,34 @@ div.quick-access .links li a{
 
 /* home page */
 #myintent_homepage_container{
-	position: relative;
+	position: fixed;
+	left: 50%;
+	transform: translate(-50.3%, 0);
 	z-index: 100;
+	background-color: white;
+	width: 100%;
+	border: 1px solid white;
+}
+
+#myintent_logo_container{
 	width: 80%;
 }
-
-#myintent_homepage_container.centered {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
-
+	
 #myintent_homepage_container img{
     display: block;
 	margin-left: auto;
     margin-right: auto;
+	margin-top: 10%;
+	margin-bottom: 10%;
 }
 
 #enter_button_container{
-	width: 35%;
+	width: 15%;
 }
 
-#myintent_logo_container{ 
-	width: 100%;
-}
-
-#social_icons_container{
-	width: 80%;
-}
-
-#enter_button_container, #myintent_logo_container, #social_icons_container{
+#enter_button_container, #myintent_logo_container{
     margin-left: auto;
     margin-right: auto;
-	margin-top: 60px;
-	margin-bottom: 60px;
-}
-
-#social_icons_container{
-    text-align: justify;
-    -ms-text-justify: distribute-all-lines;
-    text-justify: distribute-all-lines;
-}
-
-#social_icons_container .stretch {
-    width: 100%;
-    display: inline-block;
-    font-size: 0;
-    line-height: 0;
-}
-
-.social_icon{
-    display: inline-block;
-	width: 23%;
-}
-
-.social_icon img{
-    display: block;
-    width: 70%;
 }
 
 /* section headers - black background and white text */
@@ -602,37 +572,9 @@ div.quick-access .links li a{
 
 @media (min-width: 768px) {
 	/* desktop version of homepage*/
+	/* home page */
 	#myintent_homepage_container{
-		width: auto;
-	}
-
-	#enter_button_container{
-		width: 15%;
-	}
-
-	#myintent_logo_container{
-		width: 80%;
-	}
-	
-	#social_icons_container{
-		width: 40%;
-	}
-
-	#enter_button_container, #myintent_logo_container, #social_icons_container{
-		margin-top: 80px;
-		margin-bottom: 80px;
-	}
-	
-	#social_icons_container .stretch {
-		width: 100%;
-	}
-
-	.social_icon{
-		width: 25%;
-	}
-
-	.social_icon img{
-		width: 70%;
+		width: calc(3*(100% / 7));
 	}
 }
 
