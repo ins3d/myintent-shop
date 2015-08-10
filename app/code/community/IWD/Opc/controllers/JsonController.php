@@ -190,6 +190,16 @@ class IWD_Opc_JsonController extends Mage_Core_Controller_Front_Action{
 	
 	public function saveBillingAction(){
 		
+/* customization: removing telephone as a required field */
+//		DEBUGGING - Check if telephone field is required:
+//		$telephone = Mage::getModel('eav/entity_attribute')->loadByCode('customer_address', 'telephone')->getIsRequired();
+//		$this->getResponse()->setBody(Mage::helper('core')->jsonEncode("WTF:".$telephone)); // check response of AJAX request in Firebug Console
+
+		// Removing required attribute of telephone field:
+		$telephone = Mage::getModel('eav/entity_attribute')->loadByCode('customer_address', 'telephone')->setIsRequired(false)->save();
+/* customization end */
+
+
 		if ($this->_expireAjax()) {
 			return;
 		}
