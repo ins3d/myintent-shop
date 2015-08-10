@@ -67,7 +67,7 @@ div.quick-access .links li a{
 }
 
 #fblogin_container a.f-right{
-	display: block;
+	display: inline-block;
 	float: none !important;
 	margin-bottom: 15px;
 }
@@ -164,8 +164,9 @@ div.quick-access .links li a{
     display: block;
 	margin-left: auto;
     margin-right: auto;
-	margin-top: 10%;
-	margin-bottom: 10%;
+	margin-top: 20%;
+	margin-bottom: 8%;
+	max-width: 90%;
 }
 
 #enter_button_container{
@@ -377,6 +378,8 @@ div.quick-access .links li a{
 
 #billing-new-address-form li.no-display {
 	position: absolute;
+	width: 50px; /* needed to prevent auto width (causes horizontal scrolling in Chrome) */
+//	border: 1px solid red;
 }
 
 #billing-new-address-form li:first-child, #shipping-new-address-form li:first-child, #co-payment-form li:first-child{
@@ -569,6 +572,25 @@ div.quick-access .links li a{
 	padding-bottom: 0 !important;
 }
 
+@media (max-width: 767px) {
+	/* shrink header for mobile */
+	.header .logo img {
+		height: 80px;
+	}
+
+	.header .header-sidebar {
+		padding: 35px 0 0;
+		height: 65px;
+	}
+	
+	.header .quick-access {
+		padding-top: 0;
+	}
+	
+	.header h1.page-title {
+		font-size: 20px;
+	}
+}
 
 @media (min-width: 768px) {
 	/* desktop version of homepage*/
@@ -922,7 +944,7 @@ div.more-views {
 		margin-left: auto;
 		margin-right: auto;
 		padding-left: 10px;
-		width: 728px;
+//		width: 728px;
 	}
 	
 	/* Contact us*/
