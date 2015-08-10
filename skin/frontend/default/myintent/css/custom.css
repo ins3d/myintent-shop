@@ -564,7 +564,7 @@ div.quick-access .links li a{
     margin: 5px 0;
 }
 
-#login-form .form-list .input-text{
+#login-form .form-list .input-text, #form-validate-email .form-list .input-text{
     padding-top: 0 !important;
 	padding-bottom: 0 !important;
 }
@@ -1136,8 +1136,15 @@ div.more-views {
 }
 
 /* buttons in the shopping cart page */
-button.button span {
+button.button span{
     background: #225E7C none repeat scroll 0% 0% !important;
+}
+
+/* checkout login button */
+.opc-wrapper-opc .btn span span {
+	background: #225E7C none repeat scroll 0% 0% !important;
+	border-radius: 0;
+	font-weight: normal !important;
 }
 
 button.button span:hover {

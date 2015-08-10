@@ -54,7 +54,12 @@ echo $this->getMessagesBlock()->getGroupedHtml() ?>
 				<div id="login-button-set">
 					<a href="<?php echo $this->getForgotPasswordUrl() ?>" class="f-left restore-account"><?php echo $this->__('Forgot Your Password?') ?></a>	        
 					<button type="button" class="btn btn-primary"><span><span><?php echo $this->__('Login') ?></span></span></button>
-				</div>	
+<!-- customization begin - adding Facebook login button -->	
+						<div id="fblogin_container">
+							<?php echo $this->getLayout()->createBlock('fblogin/fblogin')->setTemplate('fblogin/bt_fblogin.phtml')->toHtml(); ?>
+						</div>
+<!-- customization end -->
+				</div>
 				<div id="forgotpassword-button-set" style="display:none">		        	
 		        	<p class="back-link"><a href="<?php echo $this->helper('customer')->getLoginUrl() ?>"><small>&laquo; </small><?php echo $this->__('Back to Login') ?></a></p>
 		        	<button type="button" title="<?php echo $this->__('Submit') ?>" class="btn"><span><span><?php echo $this->__('Submit') ?></span></span></button>
