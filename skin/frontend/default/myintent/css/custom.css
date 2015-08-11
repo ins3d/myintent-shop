@@ -72,6 +72,12 @@ div.quick-access .links li a{
 	margin-bottom: 15px;
 }
 
+#fblogin_container div.h-align{
+	position: relative;
+    right: 10px;
+    top: 8px;
+}
+
 #existingUsers_container .row{
 	margin-top: 5px;
 	margin-bottom: 5px;
