@@ -19,14 +19,25 @@
             <?php $mergedCells = ($this->helper('tax')->displayCartBothPrices() ? 2 : 1); ?>
                 <thead>
                     <tr>
+<!-- customization																	
                         <th rowspan="<?php echo $mergedCells; ?>" class="no-border-right">&nbsp;</th>
                         <th rowspan="<?php echo $mergedCells; ?>"><span class="nobr"><?php echo $this->__('Product') ?></span></th>
                         <th rowspan="<?php echo $mergedCells; ?>"><span class="nobr"><?php echo $this->__('Product Code') ?></span></th>
+-->
+<!-- customization begin -->
+						<th colspan="2" rowspan="<?php echo $mergedCells; ?>"><span class="nobr"><?php echo $this->__('Product') ?></span></th>
+<!-- customization end -->
                         <?php if ($this->helper('wishlist')->isAllowInCart()) : ?>
                         <th rowspan="<?php echo $mergedCells; ?>"><span class="nobr"><?php echo $this->__('Wishlist') ?></span></th>
                         <?php endif ?>
+<!-- customization
                         <th colspan="<?php echo $mergedCells; ?>"><span class="nobr"><?php echo $this->__('Unit Price') ?></span></th>
                         <th rowspan="<?php echo $mergedCells; ?>"><?php echo $this->__('Quantity') ?></th>
+-->
+<!-- customization begin -->
+                        <th colspan="<?php echo $mergedCells; ?>"><span class="nobr"><?php echo $this->__('Price') ?></span></th>
+                        <th rowspan="<?php echo $mergedCells; ?>"><?php echo $this->__('Qty') ?></th>
+<!-- customization end -->
                         <th colspan="<?php echo $mergedCells; ?>"><?php echo $this->__('Subtotal') ?></th>
                         <th rowspan="<?php echo $mergedCells; ?>" class="last">&nbsp;</th>
                     </tr>
@@ -48,8 +59,11 @@
                     <tr>
                         <td colspan="50" class="a-right">
 <!-- customization begin -->							
-                            <button type="submit" name="update_cart_action" value="update_qty" title="<?php echo $this->__('Update Shopping Cart'); ?>" class="button btn-update"><span><span><?php echo $this->__('Update Cart'); ?></span></span></button>
-                            <button type="submit" name="update_cart_action" value="empty_cart" title="<?php echo $this->__('Clear Shopping Cart'); ?>" class="button btn-empty" id="empty_cart_button"><span><span><?php echo $this->__('Clear Cart'); ?></span></span></button>
+				            <?php if($this->getContinueShoppingUrl()): ?>
+							<?php $i = 1; ?>
+								<button type="button" title="<?php echo $this->__('Continue Shopping') ?>" class="link btn-continue" onclick="setLocation('<?php echo $this->getContinueShoppingUrl() ?>')"><span><span><?php echo $this->__('Continue Shopping') ?></span></span></button>
+							<?php endif; ?>
+                            <button type="submit" name="update_cart_action" value="update_qty" title="<?php echo $this->__('Update Shopping Cart'); ?>" class="link btn-update"><span><span><?php echo $this->__('Update Cart'); ?></span></span></button>
 <!-- customization end -->							
 <!--						
                             <button type="submit" name="update_cart_action" value="update_qty" title="<?php echo $this->__('Update Shopping Cart'); ?>" class="button btn-update"><span><span><?php echo $this->__('Update Shopping Cart'); ?></span></span></button>
@@ -90,8 +104,7 @@
             <ul class="cart-extra-tab">
             <?php if (!$this->getIsVirtual()):?>
                 <li class="tax-tab expanded"><?php echo $this->__('Estimate shipping & taxes') ?></li>
-            <?php endif; ?>    
-                <li class="coupon-tab"><?php echo $this->__('Discount code') ?></li>
+            <?php endif; ?>
             </ul>
 -->
             <div class="akordeon">
@@ -113,6 +126,7 @@
                 </div>
 -->				
                 <?php endif; ?>
+<!-- customization				
                 <div class="item-coupon akordeon-item">
                     <div class="akordeon-item-head">
                         <div class="akordeon-item-head-container">
@@ -127,6 +141,7 @@
                         </div>
                     </div>
                 </div>
+-->				
             </div>
         </div>
         <script type="text/javascript">
@@ -153,6 +168,7 @@
             <?php
                 $i = 0;
             ?>
+<!-- customization			
             <?php if($this->getContinueShoppingUrl()): ?>
                 <?php
                     $i = 1;
@@ -161,6 +177,7 @@
                     <button type="button" title="<?php echo $this->__('Continue Shopping') ?>" class="button btn-continue" onclick="setLocation('<?php echo $this->getContinueShoppingUrl() ?>')"><span><span><?php echo $this->__('Continue Shopping') ?></span></span></button>
                 </li>
             <?php endif; ?>
+-->			
             <?php foreach ($this->getMethods('methods') as $method): ?>
                 <?php if ($methodHtml = $this->getMethodHtml($method)): ?>
                 <li class="<?php echo ($i==0)?'first':''; ?>"><?php echo $methodHtml; ?></li>

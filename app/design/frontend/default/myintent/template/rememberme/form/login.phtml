@@ -1,0 +1,107 @@
+<?php
+/**
+ * Customer login form template
+ *
+ * @see Mage_Customer_Block_Form_Login
+ */
+
+
+?>
+<!-- customization begin -->
+<div id="account-container">
+<!-- customization end -->
+
+<div class="account-login">
+    <div class="page-title">
+        <h1><?php echo $this->__('Login or Create an Account') ?></h1>
+    </div>
+    <?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
+	
+<!-- customization begin - adding Facebook login button -->	
+	<div id="fblogin_container">
+		<?php echo $this->getLayout()->createBlock('fblogin/fblogin')->setTemplate('fblogin/bt_fblogin.phtml')->toHtml(); ?>
+	</div>
+<!-- customization end -->
+
+<!-- customization begin - existing users -->
+	<div id="existingUsers_container">
+		<br>
+		<p><strong>OR</strong><p>
+		<form action="<?php echo $this->getPostActionUrl() ?>" method="post" id="login-form-myaccount">
+			<input type="hidden" name="form_key" value="<?php echo Mage::getSingleton('core/session')->getFormKey(); ?>" />
+
+				<div class="col-2 registered-users">
+					<div class="content">
+<!-- customization
+						<h2><?php echo $this->__('Registered Customers') ?></h2>
+-->
+						<h2><?php echo $this->__('Login to your account') ?></h2>
+<!-- customization
+						<p><?php echo $this->__('If you have an account with us, please log in.') ?></p>
+-->						
+						<ul class="form-list">
+							<li>
+<!--							
+								<label for="email" class="required"><em>*</em><?php echo $this->__('Email Address') ?></label>
+-->								
+								<div class="input-box">
+									<input placeholder="Email Address *" type="text" name="login[username]" value="<?php echo $this->htmlEscape($this->getUsername()) ?>" id="email" class="input-text required-entry validate-email" title="<?php echo $this->__('Email Address') ?>" />
+								</div>
+							</li>
+							<li>
+<!-- customization							
+								<label for="pass" class="required"><em>*</em><?php echo $this->__('Password') ?></label>
+-->								
+								<div class="input-box">
+									<input placeholder="Password *" type="password" name="login[password]" class="input-text required-entry validate-password" id="pass" title="<?php echo $this->__('Password') ?>" />
+								</div>
+							</li>
+<?php /* Begin rememberme customisation */ ?>
+							<li>
+								<div class="input-box">
+									<div class="h-align">
+										<label for="rememberme" class="input-box remember row "><input type="checkbox" name="login[rememberme]" class="checkbox left" id="rememberme" title="<?php echo $this->__('Remember me') ?>" style="margin-top: 2px" />
+											<?php echo $this->__('Remember password') ?>
+										</label>
+										
+										<a class="row" style="margin-top: 2px" href="<?php echo $this->getForgotPasswordUrl() ?>"><?php echo $this->__('Forgot Your Password?') ?></a>
+									</div>
+<!-- customization									
+									<div class="h-align">
+										<a class="" style="margin-top: 2px" href="<?php echo $this->getForgotPasswordUrl() ?>"><?php echo $this->__('Forgot Your Password?') ?></a>
+									</div>
+-->
+<!-- customization begin -->
+									<div class="h-align f-right">
+										<button type="submit" class="button" title="<?php echo $this->__('Login') ?>" name="send" id="send2"><span><span><?php echo $this->__('Login') ?></span></span></button>
+									</div>	
+<!-- customization end -->									
+								</div>
+							</li>
+<?php /* End rememberme customisation */ ?>
+						</ul>
+					</div>
+<!-- customization					
+					<div class="buttons-set">
+						<button type="submit" class="button" title="<?php echo $this->__('Login') ?>" name="send" id="send2"><span><span><?php echo $this->__('Login') ?></span></span></button>
+					</div>
+-->					
+				</div>
+		</form>
+		<script type="text/javascript">
+		//<![CDATA[
+/* customization		
+			var dataForm = new VarienForm('login-form', true);
+*/			
+			var dataForm = new VarienForm('login-form-myaccount', true);
+		//]]>
+		</script>
+	</div>
+<!-- customization end -->
+
+<!-- customization begin - new users -->
+<div id="newUsers_container">
+	<br>
+	<p><strong>OR</strong><p>
+	<?php echo $this->getChildHtml('customer_form_register') ?>
+</div>
