@@ -15,10 +15,15 @@
                 <button type="button" title="<?php echo $this->__('Apply') ?>" class="button apply-coupon"  value="<?php echo $this->__('Apply') ?>">
 					<span><span><?php echo $this->__('Apply') ?></span></span>
 				</button>
+                <?php if(strlen($this->getCouponCode())): ?>
+                    &nbsp; <button type="button" title="<?php echo $this->__('Cancel') ?>" class="button remove-coupon left"  value="<?php echo $this->__('Cancel') ?>"><span><span><?php echo $this->__('Cancel') ?></span></span></button>
+				<?php endif;?>
 <!-- customization end -->
+<!-- customization							
                 <?php if(strlen($this->getCouponCode())): ?>
                     &nbsp; <button type="button" title="<?php echo $this->__('Cancel') ?>" class="button remove-coupon right"  value="<?php echo $this->__('Cancel') ?>"><span><span><?php echo $this->__('Cancel') ?></span></span></button>
                 <?php endif;?>
+-->				
             </div>
         </div>
     </div>
