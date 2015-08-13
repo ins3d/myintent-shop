@@ -155,7 +155,11 @@ div.quick-access .links li a{
 #myintent_homepage_container{
 	position: fixed;
 	left: 50%;
-	transform: translate(-50.3%, 0);
+	-ms-transform:translate(-50.3%, 0);
+	-webkit-transform:translate(-50.3%, 0);
+	-moz-transform:translate(-50.3%, 0);
+	-o-transform:translate(-50.3%, 0);
+	transform:translate(-50.3%, 0);
 	z-index: 100;
 	background-color: white;
 	width: 100%;
@@ -606,7 +610,10 @@ div.quick-access .links li a{
 	/* desktop version of homepage*/
 	/* home page */
 	#myintent_homepage_container{
-		width: calc(3*(100% / 7));
+		width: 42.8%; /* fallback for older browsers 42.8% = 3*(100% / 7) */
+		width:-webkit-calc(3*(100% / 7));
+		width:-moz-calc(3*(100% / 7));
+		width:calc(3*(100% / 7));
 	}
 }
 
