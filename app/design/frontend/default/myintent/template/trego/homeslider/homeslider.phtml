@@ -173,7 +173,7 @@ $code  = $store->getCode();
 
 
 
-            <script>
+            <script type="text/javascript">
                 jQuery(function($) {
 
                     $(document).ready(function(){
@@ -190,14 +190,26 @@ $code  = $store->getCode();
                         }
 */
 // myintent customization:
-                        var item_columns = 7;
-
-                        if($(window).width()<=767){
-                            item_columns = 3;
-                        }
-
-                        var container_width = $(window).width()-17; // use when scrolling is enabled; -17 accounts for width of y-scrollbar
-//                        var container_width = $(window).width(); // use when scrolling is disabled
+						var item_columns = 7;
+						
+						// checks if screen is in "portrait" or "landscape" mode
+						if ($(window).width() < $(window).height())
+						{
+							var item_columns = 3;
+							$("#myintent_homepage_container").addClass("full-width");
+						}
+						
+						// check for touch screen device
+						// assumes touch screens don't have vertical scrollbars and non-touch devices have vertical scrollbars
+						if ('ontouchstart' in window || 'onmsgesturechange' in window) // touch screen devices
+						{
+							var container_width = $(window).width(); // use when scrolling is disabled
+						}
+						else // non-touch screen devices
+						{
+							var container_width = $(window).width()-17; // use when scrolling is enabled; -17 accounts for width of y-scrollbar
+						}
+						
                         var item_width = (container_width-item_columns)/item_columns;
 // customization end
 

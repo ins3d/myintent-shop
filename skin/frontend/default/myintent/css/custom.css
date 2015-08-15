@@ -162,9 +162,17 @@ div.quick-access .links li a{
 	transform:translate(-50.3%, 0);
 	z-index: 100;
 	background-color: white;
-	width: 100%;
 	border: 1px solid white;
+	width: 42.7%; /* fallback for older browsers 42.7% = 3*(100% / 7) */
+	width:-webkit-calc(3*(100% / 7));
+	width:-moz-calc(3*(100% / 7));
+	width:calc(3*(100% / 7));
 }
+
+#myintent_homepage_container.full-width{
+	width: 100%;
+}
+
 
 #myintent_logo_container{
 	width: 80%;
@@ -609,12 +617,12 @@ div.quick-access .links li a{
 @media (min-width: 768px) {
 	/* desktop version of homepage*/
 	/* home page */
-	#myintent_homepage_container{
-		width: 42.8%; /* fallback for older browsers 42.8% = 3*(100% / 7) */
-		width:-webkit-calc(3*(100% / 7));
-		width:-moz-calc(3*(100% / 7));
-		width:calc(3*(100% / 7));
-	}
+//	#myintent_homepage_container{
+//		width: 42.8%; /* fallback for older browsers 42.8% = 3*(100% / 7) */
+//		width:-webkit-calc(3*(100% / 7));
+//		width:-moz-calc(3*(100% / 7));
+//		width:calc(3*(100% / 7));
+//	}
 }
 
 div.book {
