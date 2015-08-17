@@ -201,7 +201,7 @@ $code  = $store->getCode();
 
 						// check for touch screen device
 						// assumes touch screens don't have vertical scrollbars and non-touch devices have vertical scrollbars
-						if ('ontouchstart' in window || navigator.msMaxTouchPoints) // touch screen devices
+						if (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0)) // touch screen devices
 						{
 							var container_width = $(window).width(); // use when scrolling is disabled
 						}
