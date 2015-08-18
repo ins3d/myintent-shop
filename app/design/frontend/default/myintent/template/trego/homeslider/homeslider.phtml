@@ -198,26 +198,21 @@ $code  = $store->getCode();
 							var item_columns = 3;
 							$("#myintent_homepage_container").addClass("full-width");
 						}
-						
-						// Check to see if vertical scrollbar is present:
-						// Get the computed style of the body element
-						var cStyle = document.body.currentStyle||window.getComputedStyle(document.body, "");
 
-						// Check the overflow and overflowY properties for "auto" and "visible" values
-						var hasVScroll = cStyle.overflow == "visible" 
-									 || cStyle.overflowY == "visible"
-									 || (hasVScroll && cStyle.overflow == "auto")
-									 || (hasVScroll && cStyle.overflowY == "auto");
+						// Get width of vertical scrollbar: http://davidwalsh.name/detect-scrollbar-width
+						// 1. Create the measurement node
+						var scrollDiv = document.createElement("div");
+						scrollDiv.className = "scrollbar-measure";
+						document.body.appendChild(scrollDiv);
 
-						if (!hasVScroll) // vertical scrollbar not present
-						{	
-							var container_width = $(window).width();
-						}
-						else // vertical scrollbar present
-						{
-							var container_width = $(window).width()-17; // -17 accounts for width of y-scrollbar
-						}
+						// 2. Get the scrollbar width
+						var scrollbarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth;
+
+						// 3. Delete the DIV 
+						document.body.removeChild(scrollDiv);
 						
+						
+						var container_width = $(window).width() - scrollbarWidth;
                         var item_width = (container_width-item_columns)/item_columns;
 // customization end
 
