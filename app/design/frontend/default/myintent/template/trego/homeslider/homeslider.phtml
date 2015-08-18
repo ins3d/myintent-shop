@@ -198,16 +198,24 @@ $code  = $store->getCode();
 							var item_columns = 3;
 							$("#myintent_homepage_container").addClass("full-width");
 						}
+						
+						// Check to see if vertical scrollbar is present:
+						// Get the computed style of the body element
+						var cStyle = document.body.currentStyle||window.getComputedStyle(document.body, "");
 
-						// check for touch screen device
-						// assumes touch screens don't have vertical scrollbars and non-touch devices have vertical scrollbars
-						if (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0)) // touch screen devices
-						{
-							var container_width = $(window).width(); // use when scrolling is disabled
+						// Check the overflow and overflowY properties for "auto" and "visible" values
+						var hasVScroll = cStyle.overflow == "visible" 
+									 || cStyle.overflowY == "visible"
+									 || (hasVScroll && cStyle.overflow == "auto")
+									 || (hasVScroll && cStyle.overflowY == "auto");
+
+						if (!hasVScroll) // vertical scrollbar not present
+						{	
+							var container_width = $(window).width();
 						}
-						else // non-touch screen devices
+						else // vertical scrollbar present
 						{
-							var container_width = $(window).width()-17; // use when scrolling is enabled; -17 accounts for width of y-scrollbar
+							var container_width = $(window).width()-17; // -17 accounts for width of y-scrollbar
 						}
 						
                         var item_width = (container_width-item_columns)/item_columns;
