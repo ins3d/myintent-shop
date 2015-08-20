@@ -1180,7 +1180,7 @@ div.more-views {
 
 /* Capitalize every letter in "Your Word" fields */
 .validate-myintent-chars{
-	text-transform:uppercase
+//	text-transform:uppercase
 }
 
 /* lowercase words that are in parenthesis within field labels */
