@@ -56,6 +56,46 @@
             </default_setup>
         </resources>
         <session_save><![CDATA[db]]></session_save>
+        <cache>
+            <backend>memcached</backend><!-- apc / memcached / empty=file -->
+            <memcached><!-- memcached cache backend related config -->
+                <servers><!-- any number of server nodes can be included -->
+                    <server>
+                        <host><![CDATA[dev-cache-myintent.3vcrot.cfg.use1.cache.amazonaws.com]]></host>
+                        <port><![CDATA[11211]]></port>
+                        <persistent><![CDATA[1]]></persistent>
+                    </server>
+                    <!--
+                    /**
+                    <server>
+                        <host><![CDATA[dev-cache-myintent.3vcrot.cfg.use1.cache.amazonaws.com]]></host>
+                        <port><![CDATA[11211]]></port>
+                        <persistent><![CDATA[1]]></persistent>
+                    </server>
+                    <server>
+                        <host><![CDATA[yourserver1.n3vrvk.0003.use1.cache.amazonaws.com]]></host>
+                        <port><![CDATA[11211]]></port>
+                        <persistent><![CDATA[1]]></persistent>
+                    </server>
+                    <server>
+                        <host><![CDATA[yourserver1.n3vrvk.0004.use1.cache.amazonaws.com]]></host>
+                        <port><![CDATA[11211]]></port>
+                        <persistent><![CDATA[1]]></persistent>
+                    </server>
+                    <server>
+                        <host><![CDATA[yourserver1.n3vrvk.0005.use1.cache.amazonaws.com]]></host>
+                        <port><![CDATA[11211]]></port>
+                        <persistent><![CDATA[1]]></persistent>
+                    </server>
+                    */ -->
+                </servers>
+                <compression><![CDATA[0]]></compression>
+                <cache_dir><![CDATA[]]></cache_dir>
+                <hashed_directory_level><![CDATA[]]></hashed_directory_level>
+                <hashed_directory_umask><![CDATA[]]></hashed_directory_umask>
+                <file_name_prefix><![CDATA[myintent]]></file_name_prefix>
+            </memcached>
+        </cache>
     </global>
     <admin>
         <routers>
