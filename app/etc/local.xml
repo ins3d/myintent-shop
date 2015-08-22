@@ -24,6 +24,9 @@
  * @copyright  Copyright (c) 2008 Irubin Consulting Inc. DBA Varien (http://www.varien.com)
  * @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
+
+ prod-db-magento-1.cofbt5wphl7p.us-east-1.rds.amazonaws.com:3306
+ dev-db-magento-1.cofbt5wphl7p.us-east-1.rds.amazonaws.com:3306
 -->
 <config>
     <global>
@@ -40,7 +43,7 @@
             </db>
             <default_setup>
                 <connection>
-                    <host><![CDATA[dev-db-magento-1.cofbt5wphl7p.us-east-1.rds.amazonaws.com:3306]]></host>
+                    <host><![CDATA[prod-db-magento-1.cofbt5wphl7p.us-east-1.rds.amazonaws.com:3306]]></host>
                     <username><![CDATA[admin]]></username>
                     <password><![CDATA[a4b5eeca-33f8]]></password>
                     <dbname><![CDATA[magento]]></dbname>
