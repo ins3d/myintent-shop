@@ -1268,7 +1268,6 @@ abstract class Mage_Sales_Model_Order_Pdf_Abstract extends Varien_Object
 						if ($part != "Your Word:" && $part != "Circle Color:" && $part != "String Color:")
 						{							
 							$top += $lineSpacing; // advance text content to the next line
-							$yDistance += $lineSpacing;
 						}						
                     }					
                     $maxHeight = $top > $maxHeight ? $top : $maxHeight;
