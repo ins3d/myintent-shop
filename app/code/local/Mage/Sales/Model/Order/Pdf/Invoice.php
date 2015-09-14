@@ -43,46 +43,91 @@ class Mage_Sales_Model_Order_Pdf_Invoice extends Mage_Sales_Model_Order_Pdf_Abst
     {
         /* Add table head */
         $this->_setFontRegular($page, 10);
+/*		
         $page->setFillColor(new Zend_Pdf_Color_RGB(0.93, 0.92, 0.92));
-        $page->setLineColor(new Zend_Pdf_Color_GrayScale(0.5));
+		$page->setLineColor(new Zend_Pdf_Color_GrayScale(0.5));
+*/
+/* customization begin - Products header */
+        $page->setFillColor(new Zend_Pdf_Color_RGB(1, 1, 1));
+		$page->setLineColor(new Zend_Pdf_Color_GrayScale(0.25));
+
+/* customization end */		
         $page->setLineWidth(0.5);
-        $page->drawRectangle(25, $this->y, 570, $this->y -15);
+//        $page->drawRectangle(25, $this->y, 570, $this->y -15);
         $this->y -= 10;
         $page->setFillColor(new Zend_Pdf_Color_RGB(0, 0, 0));
 
         //columns headers
         $lines[0][] = array(
+/* customization 		
             'text' => Mage::helper('sales')->__('Products'),
+*/
+/* customization begin */
+            'text' => Mage::helper('sales')->__('PRODUCT'),
+			'font' => 'bold',
+/* customization end */
             'feed' => 35
         );
 
         $lines[0][] = array(
             'text'  => Mage::helper('sales')->__('SKU'),
-            'feed'  => 290,
+/* customization
             'align' => 'right'
+            'feed'  => 290,
+*/			
+/* customization begin */	
+            'feed'  => 345,		
+			'font' => 'bold'
+/* customization end */
         );
 
         $lines[0][] = array(
+/* customization		
             'text'  => Mage::helper('sales')->__('Qty'),
             'feed'  => 435,
             'align' => 'right'
+*/			
+/* customization begin */
+            'text'  => Mage::helper('sales')->__('QTY'),
+            'feed'  => 480,		
+			'font' => 'bold'
+/* customization end */	
         );
 
         $lines[0][] = array(
+/* customization			
             'text'  => Mage::helper('sales')->__('Price'),
             'feed'  => 360,
+*/			
+/* customization begin */	
+            'text'  => Mage::helper('sales')->__('PRICE'),
+			'feed'  => 435,		
+			'font' => 'bold'
+/* customization end */
+/* customization
             'align' => 'right'
+*/			
         );
 
+/* customization
         $lines[0][] = array(
             'text'  => Mage::helper('sales')->__('Tax'),
             'feed'  => 495,
             'align' => 'right'
         );
+*/
 
         $lines[0][] = array(
+/* customization
             'text'  => Mage::helper('sales')->__('Subtotal'),
+*/			
+/* customization begin */
+            'text'  => Mage::helper('sales')->__('SUBTOTAL'),
+/* customization end */			
             'feed'  => 565,
+/* customization begin */
+			'font' => 'bold',
+/* customization end */
             'align' => 'right'
         );
 
@@ -129,11 +174,21 @@ class Mage_Sales_Model_Order_Pdf_Invoice extends Mage_Sales_Model_Order_Pdf_Abst
                 $order,
                 Mage::getStoreConfigFlag(self::XML_PATH_SALES_PDF_INVOICE_PUT_ORDER_ID, $order->getStoreId())
             );
-            /* Add document text and number */
+            /* Add document text and number */			
+/* customization			
             $this->insertDocumentNumber(
                 $page,
                 Mage::helper('sales')->__('Invoice # ') . $invoice->getIncrementId()
             );
+*/
+/* customization begin */
+            $this->insertDocumentNumber(
+                $page,
+				"INVOICE: ",
+				$invoice->getIncrementId()
+            );
+/* customization end */
+
             /* Add table */
             $this->_drawHeader($page);
             /* Add body */
@@ -147,6 +202,8 @@ class Mage_Sales_Model_Order_Pdf_Invoice extends Mage_Sales_Model_Order_Pdf_Abst
             }
             /* Add totals */
             $this->insertTotals($page, $invoice);
+//			$this->insertFooter($page, $invoice);
+			
             if ($invoice->getStoreId()) {
                 Mage::app()->getLocale()->revert();
             }
