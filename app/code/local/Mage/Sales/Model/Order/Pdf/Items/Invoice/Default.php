@@ -158,7 +158,7 @@ class Mage_Sales_Model_Order_Pdf_Items_Invoice_Default extends Mage_Sales_Model_
 
 						// draw options label
 						$lines[][] = array(
-/* customization				
+/* customization
 							'text' => Mage::helper('core/string')->str_split(strip_tags($option['label']), 40, true, true),
 							'font' => 'italic',
 							'feed' => 35
