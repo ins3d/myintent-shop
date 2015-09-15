@@ -201,7 +201,8 @@ class Mage_Sales_Model_Order_Pdf_Items_Invoice_Default extends Mage_Sales_Model_
 								);
 							}
 						}
-				}			
+
+				}
 				
 				
         }
@@ -221,8 +222,12 @@ $lines[10][0] = array('text' => " ", 'feed' => 35);
 /* customization end */										
         );
 
-
+/* customization
         $page = $pdf->drawLineBlocks($page, array($lineBlock), array('table_header' => true));
+*/
+/* customization begin - keeps option label and value on same line in product details section of invoice */
+        $page = $pdf->drawProductDetails($page, array($lineBlock), array('table_header' => true));
+/* customization end */
         $this->setPage($page);
     }
 }
