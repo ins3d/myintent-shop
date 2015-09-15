@@ -153,8 +153,6 @@ class Mage_Sales_Model_Order_Pdf_Items_Invoice_Default extends Mage_Sales_Model_
 				foreach ($options as $option) {
 /* customization begin */				
 					$option['label'] = str_replace(" (optional)", "", $option['label']);
-					if ($option['label'] == $forcedOption)
-					{	
 /* customization end */
 
 						// draw options label
@@ -214,7 +212,7 @@ class Mage_Sales_Model_Order_Pdf_Items_Invoice_Default extends Mage_Sales_Model_
 							}
 						}
 /* customization begin */									
-					}					
+
 /* customization end */														
 				}
 /* customization begin */				
