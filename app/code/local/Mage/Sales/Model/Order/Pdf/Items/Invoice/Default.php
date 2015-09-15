@@ -235,7 +235,7 @@ $lines[10][0] = array('text' => " ", 'feed' => 35);
 */
 /* customization begin */
             'height' => 15
-/* customization end */										
+/* customization end */
         );
 
 /* customization
