@@ -202,7 +202,7 @@ class Mage_Sales_Model_Order_Pdf_Invoice extends Mage_Sales_Model_Order_Pdf_Abst
             }
             /* Add totals */
             $this->insertTotals($page, $invoice);
-			$this->insertFooter($page, $invoice);
+//			$this->insertFooter($page, $invoice);
 			
             if ($invoice->getStoreId()) {
                 Mage::app()->getLocale()->revert();
