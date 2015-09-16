@@ -147,14 +147,14 @@ class Mage_Sales_Model_Order_Pdf_Items_Invoice_Default extends Mage_Sales_Model_
 */							
 			$optionsArray = array('String Color', 'Circle Color', 'Your Word', 'Story');
 			
-			foreach ($optionsArray as $forcedOption)
-			{
+//			foreach ($optionsArray as $forcedOption)
+//			{
 /* customization end */
 			
 				foreach ($options as $option) {
 /* customization begin */				
 					$option['label'] = str_replace(" (optional)", "", $option['label']);
-					if ($option['label'] == $forcedOption)
+					if ($option['label'] == 'String Color')
 					{	
 /* customization end */
 
@@ -219,7 +219,7 @@ class Mage_Sales_Model_Order_Pdf_Items_Invoice_Default extends Mage_Sales_Model_
 /* customization end */														
 				}
 /* customization begin */				
-			}	
+//			}	
 /* customization end */														
         }
 
