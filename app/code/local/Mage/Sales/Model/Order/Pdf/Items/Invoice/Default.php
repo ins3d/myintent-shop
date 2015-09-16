@@ -145,17 +145,16 @@ class Mage_Sales_Model_Order_Pdf_Items_Invoice_Default extends Mage_Sales_Model_
 /* customization begin - forcing invoice to print out options in the following order: "String Color", "Circle Color", "Your Word", "Story" 
 	Magento 1.9 error - prints options based on primary ID instead of sort ID - http://magento.stackexchange.com/questions/45396/magento-1-9-1-configurable-product-attribute-sorting
 */							
-//			$optionsArray = ['String Color', 'Circle Color', 'Your Word', 'Story'];
 			$optionsArray = array('String Color', 'Circle Color', 'Your Word', 'Story');
 			
-//			foreach ($optionsArray as $forcedOption)
-//			{
+			foreach ($optionsArray as $forcedOption)
+			{
 /* customization end */
 			
 				foreach ($options as $option) {
 /* customization begin */				
 					$option['label'] = str_replace(" (optional)", "", $option['label']);
-					if ($option['label'] == 'String Color')
+					if ($option['label'] == $forcedOption)
 					{	
 /* customization end */
 
@@ -220,7 +219,7 @@ class Mage_Sales_Model_Order_Pdf_Items_Invoice_Default extends Mage_Sales_Model_
 /* customization end */														
 				}
 /* customization begin */				
-//			}	
+			}	
 /* customization end */														
         }
 
