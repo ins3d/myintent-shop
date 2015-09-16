@@ -147,8 +147,8 @@ class Mage_Sales_Model_Order_Pdf_Items_Invoice_Default extends Mage_Sales_Model_
 */							
 			$optionsArray = array('String Color', 'Circle Color', 'Your Word', 'Story');
 			
-//			foreach ($optionsArray as $forcedOption)
-//			{
+			foreach ($optionsArray as $forcedOption)
+			{
 /* customization end */
 			
 				foreach ($options as $option) {
@@ -215,11 +215,12 @@ class Mage_Sales_Model_Order_Pdf_Items_Invoice_Default extends Mage_Sales_Model_
 							}
 						}
 /* customization begin */									
-					}					
+					}
 /* customization end */														
 				}
-/* customization begin */				
-//			}	
+/* customization begin */
+				unset($option); // break the reference with the last element
+			}	
 /* customization end */														
         }
 
