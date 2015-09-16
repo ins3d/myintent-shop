@@ -803,12 +803,7 @@ Payment.prototype = {
         if (result) {
             return true;
         }
-        if (document.getElementById('checkout-review-table').getElementsByTagName('tfoot')[0].getElementsByClassName('a-right last')[3]. getElementsByClassName('price')[0].innerHTML == '$0.00'){
-            return true;
-        }
-        if (document.getElementById('checkout-review-table').getElementsByTagName('tfoot')[0].getElementsByClassName('a-right last')[2]. getElementsByClassName('price')[0].innerHTML == '$0.00'){
-            return true;
-        }
+        
         alert(Translator.translate('Please specify payment method.').stripTags());
         return false;
     },
