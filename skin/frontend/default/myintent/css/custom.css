@@ -1218,3 +1218,15 @@ ol.products-list li.item {
 ol.products-list li.item div.links-set {
     border-top: 0;
 }
+
+/* using z-index to make sure close button in word help light box is "clickable" */
+#imageDataContainer{
+	position: relative;
+	z-index: 50;
+}
+
+/* changed the blue outline around swatch images when hovering*/
+dd.swatch-attr .configurable-swatch-list li:hover a{
+	border: 2px #225e7c solid;
+	margin:0;
+}
