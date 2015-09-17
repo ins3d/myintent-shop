@@ -47,15 +47,6 @@
                 <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
             <?php endif;?>
 
-<!-- customization begin -->
-			<br>
-			<?php if ($_product->isAvailable()): ?>
-                <p class="availability in-stock"><?php echo $this->__('Availability:') ?> <span><?php echo $this->__('In Stock') ?></span></p>
-            <?php else: ?>
-                <p class="availability out-of-stock"><?php echo $this->__('Availability:') ?> <span><?php echo $this->__('Out of Stock') ?></span></p>
-            <?php endif; ?>
-<!-- customization end -->
-
             <?php if (!$_product->isSaleable()): ?>
                 <div class="add-to-box">
                     <?php echo $this->getChildHtml('addto') ?>
