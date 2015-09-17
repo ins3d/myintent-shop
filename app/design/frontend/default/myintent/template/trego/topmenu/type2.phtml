@@ -106,7 +106,7 @@ function showChildrenCategories($_category, $level, $level_limit, $custom_html='
     }
     return $html;
 }
-/* customization - below code doesn't seem to be used (i.e. $code is not defined anywhere) so commenting out in order to not create errors in system log
+
 if (Mage::getStoreConfig("slidermenu/menu/show_custom_menu", $code) == 1) {
     $custom_html = $this->getLayout()->createBlock('cms/block')->setBlockId(Mage::getStoreConfig("slidermenu/menu/custom_block_id", $code))->toHtml();
     if(substr($custom_html, 0,4)=="<ul>"){
@@ -116,7 +116,7 @@ if (Mage::getStoreConfig("slidermenu/menu/show_custom_menu", $code) == 1) {
         $custom_html = substr($custom_html, 0, -5);
     }
 }
-*/
+
 echo showChildrenCategories($_cat, 0, $show_levels, $custom_html);
 ?>
 </div><?php //content ?>

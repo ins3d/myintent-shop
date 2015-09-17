@@ -1225,8 +1225,8 @@ ol.products-list li.item div.links-set {
 	z-index: 50;
 }
 
-/* changed the blue outline around swatch images when hovering*/
-dd.swatch-attr .configurable-swatch-list li:hover a{
+/* changed the outline around swatch images when selected */
+dd.swatch-attr .configurable-swatch-list li.selected a{
 	border: 2px #225e7c solid;
 	margin:0;
 }
