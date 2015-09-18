@@ -144,7 +144,7 @@ class Mage_Sales_Model_Order_Pdf_Items_Invoice_Default extends Mage_Sales_Model_
 	Magento 1.9 error - prints options based on primary ID instead of sort ID - http://magento.stackexchange.com/questions/45396/magento-1-9-1-configurable-product-attribute-sorting
 */							
 			$optionsArray = array('Your Word', 'YOUR WORD', 'Story', 'STORY');
-			$index = 0;
+			$index = 1;
 			
 			foreach ($options as $option) {
 /* customization begin */				
