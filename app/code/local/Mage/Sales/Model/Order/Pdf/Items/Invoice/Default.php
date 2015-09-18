@@ -144,6 +144,7 @@ class Mage_Sales_Model_Order_Pdf_Items_Invoice_Default extends Mage_Sales_Model_
 	Magento 1.9 error - prints options based on primary ID instead of sort ID - http://magento.stackexchange.com/questions/45396/magento-1-9-1-configurable-product-attribute-sorting
 */							
 			$optionsArray = array('Your Word', 'YOUR WORD', 'Story', 'STORY');
+			$index = 0;
 			
 			foreach ($options as $option) {
 /* customization begin */				
@@ -170,6 +171,8 @@ class Mage_Sales_Model_Order_Pdf_Items_Invoice_Default extends Mage_Sales_Model_
 					);
 
 /* customization begin */
+					$index++;
+					
 					switch ($option['label']) {
 						case 'Your Word':
 							$xAlign = 60;
@@ -197,7 +200,9 @@ class Mage_Sales_Model_Order_Pdf_Items_Invoice_Default extends Mage_Sales_Model_
 						}
 						$values = explode(', ', $_printValue);
 						foreach ($values as $value) {
-							
+/* customization start */							
+						$index++;	
+/* customization end */						
 							$lines[][] = array(
 /* customization							
 								'text' => Mage::helper('core/string')->str_split($value, 30, true, true),
@@ -227,7 +232,9 @@ class Mage_Sales_Model_Order_Pdf_Items_Invoice_Default extends Mage_Sales_Model_
 				foreach ($options as $option) {
 					$option['label'] = str_replace(" (optional)", "", $option['label']);
 					if ($option['label'] == $forcedOption)
-					{	
+					{
+						$index++;	
+
 						// draw options label
 						$lines[][] = array(
 							'text' => Mage::helper('core/string')->str_split(strip_tags($option['label']).":", 55, true, true),
@@ -261,6 +268,7 @@ class Mage_Sales_Model_Order_Pdf_Items_Invoice_Default extends Mage_Sales_Model_
 							}
 							$values = explode(', ', $_printValue);
 							foreach ($values as $value) {
+								$index++;
 								
 								$lines[][] = array(
 									'text' => Mage::helper('core/string')->str_split($value, 60, true, true),
@@ -277,7 +285,7 @@ class Mage_Sales_Model_Order_Pdf_Items_Invoice_Default extends Mage_Sales_Model_
 
 
 /* customization begin - add line break between product items */
-$lines[10][0] = array('text' => " ", 'feed' => 35);
+$lines[$index][0] = array('text' => " ", 'feed' => 35);
 /* customization end */
 		
         $lineBlock = array(
