@@ -143,11 +143,13 @@ class Mage_Sales_Model_Order_Pdf_Items_Invoice_Default extends Mage_Sales_Model_
 /* customization begin - forcing invoice to print out all options except: "Your Word", "Story" 
 	Magento 1.9 error - prints options based on primary ID instead of sort ID - http://magento.stackexchange.com/questions/45396/magento-1-9-1-configurable-product-attribute-sorting
 */							
-			$optionsArray = array('Your Word', 'Story');
+			$optionsArray = array('Your Word', 'YOUR WORD', 'Story', 'STORY', 'STORY');
 			
 			foreach ($options as $option) {
 /* customization begin */				
 				$option['label'] = str_replace(" (optional)", "", $option['label']);
+				$option['label'] = str_replace(" (Optional)", "", $option['label']);
+				$option['label'] = str_replace(" (OPTIONAL)", "", $option['label']);
 				if (!in_array($option['label'], $optionsArray))
 					{	
 /* customization end */
