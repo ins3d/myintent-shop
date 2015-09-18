@@ -69,17 +69,13 @@ class Mage_Sales_Model_Order_Pdf_Invoice extends Mage_Sales_Model_Order_Pdf_Abst
             'feed' => 35
         );
 
+/* customization
         $lines[0][] = array(
             'text'  => Mage::helper('sales')->__('SKU'),
-/* customization
-            'align' => 'right'
-            'feed'  => 290,
-*/			
-/* customization begin */	
-            'feed'  => 345,		
-			'font' => 'bold'
-/* customization end */
+            'align' => 'right',
+            'feed'  => 290
         );
+*/
 
         $lines[0][] = array(
 /* customization		
