@@ -280,7 +280,7 @@ class Mage_Sales_Model_Order_Pdf_Items_Invoice_Default extends Mage_Sales_Model_
 
 
 /* customization begin - add line break between product items */
-$lines[10][0] = array('text' => " ", 'feed' => 35);
+$lines[][] = array('text' => " ", 'feed' => 35);
 /* customization end */
 		
         $lineBlock = array(
