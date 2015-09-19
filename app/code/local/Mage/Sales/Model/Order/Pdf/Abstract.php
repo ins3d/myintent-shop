@@ -1211,6 +1211,9 @@ abstract class Mage_Sales_Model_Order_Pdf_Abstract extends Varien_Object
                 $page = $this->newPage($pageSettings);
             }
 			
+			$advanceLine = false;
+			$foundStory = false;
+
             foreach ($lines as $line) {
                 $maxHeight = 0;
                 foreach ($line as $column) {
@@ -1239,8 +1242,9 @@ abstract class Mage_Sales_Model_Order_Pdf_Abstract extends Varien_Object
 
                     $lineSpacing = !empty($column['height']) ? $column['height'] : $height;
                     $top = 0;
-
+					
                     foreach ($column['text'] as $part) {
+						
                         if ($this->y - $lineSpacing < 15) {
                             $page = $this->newPage($pageSettings);
                         }
@@ -1265,10 +1269,24 @@ abstract class Mage_Sales_Model_Order_Pdf_Abstract extends Varien_Object
                         }
                         $page->drawText($part, $feed, $this->y-$top, 'UTF-8');
 						
-						if ($part != "Your Word:" && $part != "Circle Color:" && $part != "String Color:")
-						{							
+						if ($part == "Story:" || $part == "STORY:")
+						{
+							$foundStory = true;
+						}
+						
+						if ($foundStory)
+						{
 							$top += $lineSpacing; // advance text content to the next line
-						}						
+						}
+						else if ($advanceLine)
+						{
+							$top += $lineSpacing; // advance text content to the next line
+							$advanceLine = false;
+						}
+						else
+						{
+							$advanceLine = true;
+						}
                     }					
                     $maxHeight = $top > $maxHeight ? $top : $maxHeight;
 					
