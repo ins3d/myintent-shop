@@ -263,10 +263,10 @@ class Mage_Sales_Model_Order_Pdf_Items_Invoice_Default extends Mage_Sales_Model_
 							} else {
 								$_printValue = strip_tags($option['value']);
 							}
-							$values = explode(', ', $_printValue);
+							$values = array($_printValue);							
 							foreach ($values as $value) {
 								$lines[][] = array(
-									'text' => Mage::helper('core/string')->str_split($value, 80, true, true),
+									'text' => Mage::helper('core/string')->str_split($value, 60, true, true),
 									'feed' => 45 + $xAlign
 								);
 							}
