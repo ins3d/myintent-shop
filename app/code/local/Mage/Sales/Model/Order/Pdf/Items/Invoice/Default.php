@@ -33,6 +33,21 @@
  */
 class Mage_Sales_Model_Order_Pdf_Items_Invoice_Default extends Mage_Sales_Model_Order_Pdf_Items_Abstract
 {
+/* customization begin */
+	public function widthForStringUsingFontSize($string, $font, $fontSize)
+	{
+		 $drawingString = iconv('UTF-8', 'UTF-16BE//IGNORE', $string);
+		 $characters = array();
+		 for ($i = 0; $i < strlen($drawingString); $i++) {
+			 $characters[] = (ord($drawingString[$i++]) << 8 ) | ord($drawingString[$i]);
+		 }
+		 $glyphs = $font->glyphNumbersForCharacters($characters);
+		 $widths = $font->widthsForGlyphs($glyphs);
+		 $stringWidth = (array_sum($widths) / $font->getUnitsPerEm()) * $fontSize + 3;
+		 return $stringWidth;
+	}
+/* customization end */	
+ 
     /**
      * Draw item line
      */
@@ -144,7 +159,6 @@ class Mage_Sales_Model_Order_Pdf_Items_Invoice_Default extends Mage_Sales_Model_
 	Magento 1.9 error - prints options based on primary ID instead of sort ID - http://magento.stackexchange.com/questions/45396/magento-1-9-1-configurable-product-attribute-sorting
 */							
 			$optionsArray = array('Your Word', 'YOUR WORD', 'Story', 'STORY');
-			$index = 1;
 			
 			foreach ($options as $option) {
 /* customization begin */				
@@ -152,7 +166,7 @@ class Mage_Sales_Model_Order_Pdf_Items_Invoice_Default extends Mage_Sales_Model_
 				$option['label'] = str_replace(" (Optional)", "", $option['label']);
 				$option['label'] = str_replace(" (OPTIONAL)", "", $option['label']);
 				if (!in_array($option['label'], $optionsArray))
-					{	
+				{	
 /* customization end */
 
 					// draw options label
@@ -171,25 +185,18 @@ class Mage_Sales_Model_Order_Pdf_Items_Invoice_Default extends Mage_Sales_Model_
 					);
 
 /* customization begin */
-					$index++;
-					
-					switch ($option['label']) {
-						case 'Your Word':
-							$xAlign = 60;
-							break;
-						case 'String Color':
-							$xAlign = 65;
-							break;						
-						case 'Circle Color':
-							$xAlign = 65;
-							break;
-						case 'Story':
-							$xAlign = 10;
-							break;
-						default:	
-							$xAlign = 5;
-							break;
-					}
+						$font = Zend_Pdf_Font::fontWithName(Zend_Pdf_Font::FONT_HELVETICA);
+						$fontSize = 12;
+						$spacing = $this->widthForStringUsingFontSize($option['label'], $font, $fontSize);
+
+						switch ($option['label']) {
+							case 'Story':
+								$xAlign = 10;
+								break;
+							default:
+								$xAlign = $spacing;
+								break;
+						}
 /* customization end */
 					
 					if ($option['value']) {
@@ -200,9 +207,6 @@ class Mage_Sales_Model_Order_Pdf_Items_Invoice_Default extends Mage_Sales_Model_
 						}
 						$values = explode(', ', $_printValue);
 						foreach ($values as $value) {
-/* customization start */							
-						$index++;	
-/* customization end */						
 							$lines[][] = array(
 /* customization							
 								'text' => Mage::helper('core/string')->str_split($value, 30, true, true),
@@ -233,8 +237,6 @@ class Mage_Sales_Model_Order_Pdf_Items_Invoice_Default extends Mage_Sales_Model_
 					$option['label'] = str_replace(" (optional)", "", $option['label']);
 					if ($option['label'] == $forcedOption)
 					{
-						$index++;	
-
 						// draw options label
 						$lines[][] = array(
 							'text' => Mage::helper('core/string')->str_split(strip_tags($option['label']).":", 55, true, true),
@@ -242,21 +244,16 @@ class Mage_Sales_Model_Order_Pdf_Items_Invoice_Default extends Mage_Sales_Model_
 							'font' => 'bold'
 						);
 
+						$font = Zend_Pdf_Font::fontWithName(Zend_Pdf_Font::FONT_HELVETICA);
+						$fontSize = 12;
+						$spacing = $this->widthForStringUsingFontSize($option['label'], $font, $fontSize);
+
 						switch ($option['label']) {
-							case 'Your Word':
-								$xAlign = 60;
-								break;
-							case 'String Color':
-								$xAlign = 65;
-								break;						
-							case 'Circle Color':
-								$xAlign = 65;
-								break;
 							case 'Story':
 								$xAlign = 10;
 								break;
-							default:	
-								$xAlign = 5;
+							default:
+								$xAlign = $spacing;
 								break;
 						}
 					
@@ -268,10 +265,8 @@ class Mage_Sales_Model_Order_Pdf_Items_Invoice_Default extends Mage_Sales_Model_
 							}
 							$values = explode(', ', $_printValue);
 							foreach ($values as $value) {
-								$index++;
-								
 								$lines[][] = array(
-									'text' => Mage::helper('core/string')->str_split($value, 60, true, true),
+									'text' => Mage::helper('core/string')->str_split($value, 80, true, true),
 									'feed' => 45 + $xAlign
 								);
 							}
@@ -285,7 +280,7 @@ class Mage_Sales_Model_Order_Pdf_Items_Invoice_Default extends Mage_Sales_Model_
 
 
 /* customization begin - add line break between product items */
-$lines[$index][0] = array('text' => " ", 'feed' => 35);
+$lines[10][0] = array('text' => " ", 'feed' => 35);
 /* customization end */
 		
         $lineBlock = array(
