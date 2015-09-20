@@ -69,17 +69,13 @@ class Mage_Sales_Model_Order_Pdf_Invoice extends Mage_Sales_Model_Order_Pdf_Abst
             'feed' => 35
         );
 
+/* customization
         $lines[0][] = array(
             'text'  => Mage::helper('sales')->__('SKU'),
-/* customization
-            'align' => 'right'
-            'feed'  => 290,
-*/			
-/* customization begin */	
-            'feed'  => 345,		
-			'font' => 'bold'
-/* customization end */
+            'align' => 'right',
+            'feed'  => 290
         );
+*/
 
         $lines[0][] = array(
 /* customization		
@@ -181,14 +177,6 @@ class Mage_Sales_Model_Order_Pdf_Invoice extends Mage_Sales_Model_Order_Pdf_Abst
                 Mage::helper('sales')->__('Invoice # ') . $invoice->getIncrementId()
             );
 */
-/* customization begin */
-            $this->insertDocumentNumber(
-                $page,
-				"INVOICE: ",
-				$invoice->getIncrementId()
-            );
-/* customization end */
-
             /* Add table */
             $this->_drawHeader($page);
             /* Add body */
@@ -202,7 +190,6 @@ class Mage_Sales_Model_Order_Pdf_Invoice extends Mage_Sales_Model_Order_Pdf_Abst
             }
             /* Add totals */
             $this->insertTotals($page, $invoice);
-			$this->insertFooter($page, $invoice);
 			
             if ($invoice->getStoreId()) {
                 Mage::app()->getLocale()->revert();
