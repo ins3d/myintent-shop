@@ -43,7 +43,7 @@
             </db>
             <default_setup>
                 <connection>
-                    <host><![CDATA[dev-db-magento-1.cofbt5wphl7p.us-east-1.rds.amazonaws.com:3306]]></host>
+                    <host><![CDATA[prod-db-magento-1.cofbt5wphl7p.us-east-1.rds.amazonaws.com:3306]]></host>
                     <username><![CDATA[admin]]></username>
                     <password><![CDATA[a4b5eeca-33f8]]></password>
                     <dbname><![CDATA[magento]]></dbname>
@@ -61,7 +61,7 @@
             <memcached><!-- memcached cache backend related config -->
                 <servers><!-- any number of server nodes can be included -->
                     <server>
-                        <host><![CDATA[dev-cache-myintent.3vcrot.0001.use1.cache.amazonaws.com]]></host>
+                        <host><![CDATA[prod-cache-myintent.3vcrot.0001.use1.cache.amazonaws.com]]></host>
                         <port><![CDATA[11211]]></port>
                         <persistent><![CDATA[1]]></persistent>
                     </server>
