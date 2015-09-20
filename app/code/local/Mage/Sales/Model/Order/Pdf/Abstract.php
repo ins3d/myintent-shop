@@ -285,11 +285,12 @@ abstract class Mage_Sales_Model_Order_Pdf_Abstract extends Varien_Object
         $page->setFillColor(new Zend_Pdf_Color_GrayScale(1));
 /* customization end */
         $page->setLineColor(new Zend_Pdf_Color_GrayScale(0.45));
-        $page->drawRectangle(25, $top, 570, $top - 55);
-/* customization		
+/* customization				
+        $page->drawRectangle(25, $top, 570, $top - 55);		
         $page->setFillColor(new Zend_Pdf_Color_GrayScale(1));
 */
 /* customization begin - top header text-color*/
+		$page->drawRectangle(25, $top, 570, $top - 30);		
 		$page->setFillColor(new Zend_Pdf_Color_GrayScale(0));
 /* customization end */
         $this->setDocHeaderCoordinates(array(25, $top, 570, $top - 55));
@@ -314,7 +315,7 @@ abstract class Mage_Sales_Model_Order_Pdf_Abstract extends Varien_Object
         if ($putOrderId) {
 			$this->_setFontBold($page, 10);
             $page->drawText(
-                Mage::helper('sales')->__('ORDER: ') , 35, ($top -= 30), 'UTF-8'
+                Mage::helper('sales')->__('ORDER: ') , 35, ($top -= 18), 'UTF-8'
             );
 			$this->_setFontRegular($page, 10);
             $page->drawText(
@@ -323,13 +324,13 @@ abstract class Mage_Sales_Model_Order_Pdf_Abstract extends Varien_Object
         }
 		$this->_setFontBold($page, 10);
         $page->drawText(
-            Mage::helper('sales')->__('ORDER DATE: ') , 35, ($top -= 15), 'UTF-8'
+            Mage::helper('sales')->__('ORDER DATE: ') , 425, $top, 'UTF-8'
         );
 		$this->_setFontRegular($page, 10);
         $page->drawText(
             Mage::helper('core')->formatDate(
                 $order->getCreatedAtStoreDate(), 'medium', false
-            ), 110, ($top), 'UTF-8'
+            ), 500, ($top), 'UTF-8'
         );
 			
 /* customization end */
@@ -741,52 +742,6 @@ abstract class Mage_Sales_Model_Order_Pdf_Abstract extends Varien_Object
         $page = $this->drawLineBlocks($page, array($lineBlock));
         return $page;
     }
-
-/* customization begin */	
-	protected function insertFooter($page, $source){
-        $order = $source->getOrder();
-
-        $lineBlock = array(
-            'lines'  => array(),
-            'height' => 15
-        );
-
-		$lines[0] = array(array(
-            'text' => "Thank you,",
-			'font_size' => 10,     
-            'feed' => 35
-        ));
-
-		$lines[1][0] = array(
-            'text' => "MyIntent",
-			'font' => 'bold',
-			'font_size' => 10,
-            'feed' => 35
-        );
-		
-		$lines[2][0] = array(
-            'text' => "Connect with us at:",
-			'font_size' => 10,
-            'feed' => 35
-        );
-		
-		$lines[2][1] = array(
-            'text' => " instagram.com/myintent - facebook.com/myintent - twitter.com/myintent",
-			'font' => 'bold',
-			'font_size' => 10,
-            'feed' => 120
-        );
-		
-        $lineBlock = array(
-            'lines'  => $lines,
-            'height' => 15
-        );
-					
-        $this->y -= 20;
-        $page = $this->drawLineBlocks($page, array($lineBlock));
-        return $page;
-    }
-/* customization end */
 	
     /**
      * Parse item description
