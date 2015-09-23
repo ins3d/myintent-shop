@@ -25,9 +25,9 @@
  */
 ?>
 <?php if (!Mage::getSingleton('customer/session')->isLoggedIn()) {
-    try{
+    if ($this->getOrderId()){
         $myOrder->load($this->getOrderId());
-    }catch(Exception $e){
+    }else{
         error_log("sucess.phtml -> Order not found");
     }
     ?>
