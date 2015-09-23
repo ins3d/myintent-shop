@@ -25,6 +25,7 @@
  */
 ?>
 <?php if (!Mage::getSingleton('customer/session')->isLoggedIn()) {
+    /*
     if ($this->getOrderId()){
         $myOrder->load($this->getOrderId());
     }else{
@@ -46,7 +47,9 @@
                 left: $("#newAccount").parent().width() / 2 - $("#newAccount").width() / 2
             }, 2000);        });
     </script>
-<?php } ?>
+<?php */
+    }
+    ?>
 
 <div class="page-title">
     <h1><?php echo $this->__('Your order has been received.') ?></h1>
