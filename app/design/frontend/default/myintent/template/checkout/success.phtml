@@ -25,7 +25,11 @@
  */
 ?>
 <?php if (!Mage::getSingleton('customer/session')->isLoggedIn()) {
-    $myOrder->load($this->getOrderId());
+    try{
+        $myOrder->load($this->getOrderId());
+    }catch(Exception $e){
+        error_log("sucess.phtml -> Order not found");
+    }
     ?>
 
     <div id="newAccount" style="height: 150px; width: 150px; background-color: Gray;position:absolute; top:0; left:0;">
