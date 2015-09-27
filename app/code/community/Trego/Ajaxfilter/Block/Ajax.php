@@ -15,9 +15,9 @@ class Trego_Ajaxfilter_Block_Ajax extends Mage_Core_Block_Template{
 		$this->loadingTextColor = $this->config['ajax_conf']['loading_text_color'];
 		$this->loadingImage = $this->config['ajax_conf']['loading_image'];
 		if($this->loadingImage == '' || $this->loadingImage == null){
-			$this->loadingImage = $this->url.'media/wysiwyg/trego/ajaxfilter/default/ajax-loader.gif';
+			$this->loadingImage = 'https://d2wvl99qs6f2ce.cloudfront.net/wysiwyg/trego/ajaxfilter/default/ajax-loader.gif';
 		}else{
-			$this->loadingImage = $this->url.'media/wysiwyg/trego/ajaxfilter/default/'.$loadingImage;
+			$this->loadingImage = 'https://d2wvl99qs6f2ce.cloudfront.net/wysiwyg/trego/ajaxfilter/default/'.$loadingImage;
 		}	
 	}
 	
