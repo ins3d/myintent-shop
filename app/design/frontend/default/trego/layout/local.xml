@@ -39,7 +39,6 @@ Default layout, loads most of the pages
             <action method="addItem"><type>skin_js</type><name>js/lib/imagesloaded.js</name></action>
             <action method="addItem"><type>skin_js</type><name>js/minicart.js</name></action>
 
-            <action method="addItem"><type>skin_js</type><name>js/configurableswatches/swatches-product.js</name></action>
             <action method="addItem"><type>skin_js</type><name>js/configurableswatches/product-media.js</name></action>
 
             <action method="addCss"><stylesheet>css/styles-menu.css</stylesheet></action>
