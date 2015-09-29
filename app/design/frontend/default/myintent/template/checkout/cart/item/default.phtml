@@ -56,35 +56,28 @@ foreach($childProducts as $childProduct){
             <?php echo $this->htmlEscape($this->getProductName()) ?>
         <?php endif; ?>
         </h2>
-        <?php if ($_options = $this->getOptionList()):?>
-        <div class="item-options">
+
+<!-- customization begin -->
+		<?php if ($_options = $this->getOptionList()):?>
+        <dl class="item-options">
             <?php foreach ($_options as $_option) : ?>
-				<?php $_formatedOptionValue = $this->getFormatedOptionValue($_option) ?>
-				
-<!-- customization: capitalize all letters in the "Your Word" field -->
-				<?php $optionName = $this->htmlEscape($_option['label']); ?>
-				<div><?php echo $this->htmlEscape($_option['label']) ?>:&nbsp;<b>
-					<?php if ($optionName == "Your Word"): ?>
-						<?php echo strtoupper($_formatedOptionValue['value']) ?></b>
-					<?php else: ?>
-						<?php echo $_formatedOptionValue['value'] ?></b>
-					<?php endif; ?>
-					
-<!-- customization end -->				
-<!-- customization				
-					<div><?php echo $this->htmlEscape($_option['label']) ?>:&nbsp;<b><?php echo $_formatedOptionValue['value'] ?></b>
--->				
-					<?php if (isset($_formatedOptionValue['full_view'])): ?>
-					<div class="truncated_full_value">
-						<div class="item-options">
-							<div><?php echo $this->htmlEscape($_option['label']) ?>:&nbsp;<b><?php echo $_formatedOptionValue['full_view'] ?></b></div>
-						</div>
-					</div>
-					<?php endif; ?>
-				</div>
+            <?php $_formatedOptionValue = $this->getFormatedOptionValue($_option) ?>
+            <dt><?php echo $this->htmlEscape($_option['label']) ?>: </dt>
+            <dd<?php if (isset($_formatedOptionValue['full_view'])): ?> class="truncated"<?php endif; ?>><?php echo $_formatedOptionValue['value'] ?>
+                <?php if (isset($_formatedOptionValue['full_view'])): ?>
+                <div class="truncated_full_value">
+                    <dl class="item-options">
+                        <dt><?php echo $this->htmlEscape($_option['label']) ?>: </dt>
+                        <dd><?php echo $_formatedOptionValue['full_view'] ?></dd>
+                    </dl>
+                </div>
+                <?php endif; ?>
+            </dd>
             <?php endforeach; ?>
-        </div>
+        </dl>
         <?php endif;?>
+<!-- customization end -->
+
         <?php if ($messages = $this->getMessages()): ?>
         <?php foreach ($messages as $message): ?>
             <p class="item-msg <?php echo $message['type'] ?>">* <?php echo $this->escapeHtml($message['text']) ?></p>

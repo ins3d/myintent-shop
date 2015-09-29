@@ -1230,3 +1230,8 @@ dd.swatch-attr .configurable-swatch-list li.selected a{
 	border: 2px #225e7c solid;
 	margin:0;
 }
+
+/* prevents qty scrollbar to move below the quantity input field */
+#shopping-cart-table td.qty-td{
+	min-width: 65px;
+}
