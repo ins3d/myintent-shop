@@ -55,6 +55,7 @@
                     <div class="inner-wrapper"><?php /*extra div to smooth slideUp and slideDown*/ ?>
                         <?php $_items = $this->getRecentItems() ?>
                         <?php if(count($_items)): ?>
+<!-- customization 						
                             <p class="block-subtitle">
                                 <?php echo $this->__('Recently added item(s)') ?>
                             </p>
@@ -63,11 +64,14 @@
                                     <?php echo $this->getItemHtml($_item) ?>
                                 <?php endforeach; ?>
                             </ol>
+-->
                             <script type="text/javascript">decorateList('mini-cart', 'none-recursive')</script>
                         <?php else: ?>
+<!-- customization 						
                             <p class="block-subtitle">
                                     <?php echo $this->__('Recently added item(s)') ?>
                             </p>
+-->							
                             <p class="cart-empty">
                                 <?php echo $this->__('You have no items in your shopping cart.') ?>
                             </p>
