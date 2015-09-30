@@ -1230,3 +1230,22 @@ dd.swatch-attr .configurable-swatch-list li.selected a{
 	border: 2px #225e7c solid;
 	margin:0;
 }
+
+/* prevents qty scrollbar to move below the quantity input field */
+#shopping-cart-table td.qty-td{
+	min-width: 65px;
+}
+
+/* reduce space above and below "Add to cart" button on product details page */
+.product-view .add-to-box {
+    margin: 15px 0 15px;
+}
+
+.akordeon-item.akordeon-item-last.expanded .akordeon-item-head {
+    border-bottom: 0px solid #d9d9d9 !important;
+}
+
+/* remove space between product thumbnails and first attribute */
+.product-view .product-img-box {
+    margin-bottom: 0;
+}

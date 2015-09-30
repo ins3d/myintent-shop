@@ -6,7 +6,16 @@
 <div id="messages_product_view"><?php echo $this->getMessagesBlock()->getGroupedHtml() ?></div>
 <div class="product-view">
     <div class="product-essential">
-
+<!-- customization begin -->
+		<div class="product-shop">
+			<div class="product-name">
+				<h1><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
+			</div>		
+			
+			<?php echo $this->getChildHtml('product_type_data') ?>
+		</div>
+<!-- customization end -->
+		
         <div class="product-img-box">
             <?php echo $this->getChildHtml('media') ?>
         </div>
@@ -17,12 +26,15 @@
 				<input type="hidden" name="product" value="<?php echo $_product->getId() ?>" />
 				<input type="hidden" name="related_product" id="related-products-field" value="" />
 			</div>
+<!-- customization 			
             <div class="product-name">
                 <h1><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
             </div>
-            
+-->			            
             <?php echo $this->getChildHtml('alert_urls') ?>
+<!-- customization 						
             <?php echo $this->getChildHtml('product_type_data') ?>
+-->			
             <?php if ($this->canEmailToFriend()): ?>
                 <p class="email-friend"><a href="<?php echo $this->helper('catalog/product')->getEmailToFriendUrl($_product) ?>"><?php echo $this->__('Email to a Friend') ?></a></p>
             <?php endif; ?>
@@ -258,7 +270,9 @@
     <?php echo $this->getChildHtml('catalog.product.related') ?>
     <script type="text/javascript">
         jQuery(document).ready(function(){
+/* customization begin - prevent akordeon expansion icons from being inserted
             jQuery('.akordeon.product-collateral').akordeon({ buttons: true, toggle: true });
+*/			
         });
     </script>
 </div>
