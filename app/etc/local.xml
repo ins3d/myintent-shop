@@ -65,6 +65,7 @@
                         <port><![CDATA[11211]]></port>
                         <persistent><![CDATA[1]]></persistent>
                     </server>
+<<<<<<< HEAD
 <!-- /**
 <server>
     <host><![CDATA[prod-cache-myintent.3vcrot.0001.use1.cache.amazonaws.com]]></host>
@@ -93,6 +94,31 @@
     <persistent><![CDATA[1]]></persistent>
 </server>
 */ -->
+=======
+                    <!--
+                    /**
+                    <server>
+                        <host><![CDATA[prod-cache-myintent.3vcrot.0001.use1.cache.amazonaws.com]]></host>
+                        <port><![CDATA[11211]]></port>
+                        <persistent><![CDATA[1]]></persistent>
+                    </server>
+                    <server>
+                        <host><![CDATA[dev-cache-myintent.3vcrot.0001.use1.cache.amazonaws.com]></host>
+                        <port><![CDATA[11211]]></port>
+                        <persistent><![CDATA[1]]></persistent>
+                    </server>
+                    <server>
+                        <host><![CDATA[yourserver1.n3vrvk.0004.use1.cache.amazonaws.com]]></host>
+                        <port><![CDATA[11211]]></port>
+                        <persistent><![CDATA[1]]></persistent>
+                    </server>
+                    <server>
+                        <host><![CDATA[yourserver1.n3vrvk.0005.use1.cache.amazonaws.com]]></host>
+                        <port><![CDATA[11211]]></port>
+                        <persistent><![CDATA[1]]></persistent>
+                    </server>
+                    */ -->
+>>>>>>> master
                 </servers>
                 <compression><![CDATA[0]]></compression>
                 <cache_dir><![CDATA[]]></cache_dir>
