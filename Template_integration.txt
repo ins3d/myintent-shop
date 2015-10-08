@@ -1,0 +1,100 @@
+StoreCreditPro - Template Integration Guide
+---------------------------------------------
+
+INTEGRATE CREDIT BLOCK IN SHOPPING CART
+----------------------------------------------
+
+1. edit the file app/design/frontend/default_package/your_theme/template/checkout/cart.phtml
+
+2. copy this code:
+<?php echo Mage::helper('core/mwstorecreditpro')->formShoppingCartCredits(); ?>
+
+3. before this code:
+<?php echo $this->getChildHtml('coupon') ?>
+
+SHOW EARNED CREDIT IN TOTALS CHECKOUT CART
+-----------------------------------
+
+1. edit the file app/design/frontend/default_package/your_theme/template/checkout/cart/totals.phtml
+
+2. copy this code:
+<?php echo Mage::helper('core/mwstorecreditpro')->buyCreditShoppingCart(); ?>
+
+3. before this code:
+<?php echo $this->renderTotals(); ?>
+
+SHOW EARNED CREDIT IN TOTALS CHECKOUT PAGE 
+-----------------------------------
+Display earned and redeemed points in order review total
+
+1. edit the file app/design/frontend/default_package/your_theme/template/checkout/onepage/review/totals.phtml
+
+2. copy this code:
+<?php echo Mage::helper('core/mwstorecreditpro')->buyCreditOnepageReview(); ?>
+
+3. after this code:
+<?php $_colspan = $this->helper('tax')->displayCartBothPrices() ? 5 : 3; ?>
+
+
+SHOW EARNED CREDIT IN TOTALS CREATE ORDER ADMIN
+-----------------------------------
+Display earned and redeemed points in order total
+
+1. edit the file app/design/adminhtml/default_package/your_theme/template/sales/order/create/totals.phtml
+
+2. copy this code:
+ <?php echo Mage::helper('core/mwstorecreditpro')->buyCreditCreateOrderAmin(); ?>
+
+3. before this code:
+<?php echo $this->renderTotals(); ?>
+
+
+DISPLAY FORM CREDIT  IN ONEPAGE CHECKOUT
+-------------------------------------------
+
+1. app/design/frontend/default_package/your_theme/template/checkout/onepage/payment.phtml
+
+copy this code:
+<?php echo Mage::helper('core/mwstorecreditpro')->formOnepageCheckoutCredits(); ?>
+
+before this code:
+
+<form action="" id="co-payment-form">
+
+2. app/design/frontend/default_package/your_theme/template/checkout/onepage/shipping_method.phtml
+
+copy this code:
+;setTimeout(updateMwFormCredit, 5000);
+
+after this code:
+
+shippingMethod.save()
+
+
+DISPLAY FORM CREDIT IN ONEPAGE CHECKOUT (ONETEP CHECKOUT MAGE-WORLD)
+-------------------------------------------
+
+app/design/frontend/default_package/your_theme/template/mw_onestepcheckout/daskboard/onepage/payment.phtml
+
+copy this code:
+<?php echo Mage::helper('core/mwstorecreditpro')->formOnepageCheckoutCredits(); ?>
+
+before this code:
+
+<div  id="co-payment-form">
+
+And  
+app/design/frontend/default_package/your_theme/template/mw_onestepcheckout/daskboard.phtml
+
+copy this code:
+
+if($MW_Onestepcheckout('#mw-checkout-payment-storecredit').length)
+{
+	updateMwFormCredit();
+}
+
+after code: (in function updateShippingMethod() )
+
+<?php if(Mage::getStoreConfig('onestepcheckout/ajax_update_other/ajax_shipping_payment')):?>
+	updatePaymentType();
+<?php endif;?>

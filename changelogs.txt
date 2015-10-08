@@ -1,0 +1,16 @@
+Store Credit Pro module - changelogs
+---------------------------
+Legend:
++ new feature added
+* bug fix
+v1.0.4(September 30, 2014)
++ Upgrade to compatible with Magento 1.9
+
+v1.0.3
+* Update translate file
+
+v1.0.2
++ support multiple currencies
+
+v1.0
++ Extension release
